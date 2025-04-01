@@ -1,6 +1,5 @@
 import Input from "../components/Input"
 import Button from "../components/Button"
-import instagramIcon from "../public/instagram_black.svg"
 
 function Footer() {
   return (

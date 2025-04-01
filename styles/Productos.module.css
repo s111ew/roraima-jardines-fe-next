@@ -1,0 +1,54 @@
+.products {
+  display: flex;
+  flex-direction: column;
+  --sage-green: rgba(197, 216, 197, 0.9);
+  --off-white: rgba(236, 238, 234, 1);
+  --green-border-gradient: linear-gradient(
+    71deg,
+    #1d962c -27%,
+    #88c18f 129.68%
+  );
+  --green-basic: rgba(29, 150, 44, 1);
+  --text-dark: rgba(35, 18, 18, 1);
+  --navbar-background: linear-gradient(
+    180deg,
+    rgba(30, 51, 33, 1) 0%,
+    rgba(32, 53, 34, 1) 100%
+  );
+  --hero-background: linear-gradient(
+    180deg,
+    rgba(32, 53, 34, 1) 0%,
+    rgba(48, 82, 53, 1) 100%
+  );
+  --product-cards-background: linear-gradient(180deg, #375d3c 0%, #548d5b 100%);
+  --testimonial-background: linear-gradient(180deg, #69a671 0%, #99c79f 100%);
+  --footer-background: linear-gradient(180deg, #cadecb 0%, #e5eee5 99.7%);
+}
+
+.card {
+  width: 650px;
+  background-color: var(--off-white);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border-radius: 75px;
+  padding: 67px;
+}
+
+.informationContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding-top: 36px;
+}

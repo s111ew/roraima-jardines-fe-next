@@ -6,7 +6,7 @@ export default function Productos() {
     <>
       <Head>
         <title>Productos - Roraima Jardines</title>
-        <meta name="description" content="Discover our amazing products!" />
+        <meta name="Productos" content="" />
       </Head>
       <Products />
     </>

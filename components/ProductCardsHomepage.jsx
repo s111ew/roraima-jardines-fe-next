@@ -1,4 +1,4 @@
-import ProductCard from "../components/ProductCard.jsx"
+import ProductCard from "./ProductCardHomepage.jsx"
 
 function ProductCards() {
   return(

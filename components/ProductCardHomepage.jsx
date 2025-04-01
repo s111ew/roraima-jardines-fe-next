@@ -1,7 +1,7 @@
 import Button from "./Button"
 import { useState } from "react"
 
-function ProductCard({ src, src2, alt, title, desc }) {
+export default function ProductCard({ src, src2, alt, title, desc }) {
   const [currentSrc, setCurrentSrc] = useState(src)
 
 
@@ -26,5 +26,3 @@ function ProductCard({ src, src2, alt, title, desc }) {
     </div>
   )
 }
-
-export default ProductCard

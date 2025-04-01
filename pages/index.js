@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Hero from "@/components/Hero";
-import ProductCards from "@/components/ProductCards";
+import ProductCards from "@/components/ProductCardsHomepage";
 import Testimonial from "@/components/Testimonials";
 
 export default function Home() {

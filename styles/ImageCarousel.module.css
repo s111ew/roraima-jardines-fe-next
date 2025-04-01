@@ -1,0 +1,55 @@
+body {
+  --sage-green: rgba(197, 216, 197, 0.9);
+  --off-white: rgba(236, 238, 234, 1);
+  --green-border-gradient: linear-gradient(
+    71deg,
+    #1d962c -27%,
+    #88c18f 129.68%
+  );
+  --green-basic: rgba(29, 150, 44, 1);
+  --text-dark: rgba(35, 18, 18, 1);
+  --navbar-background: linear-gradient(
+    180deg,
+    rgba(30, 51, 33, 1) 0%,
+    rgba(32, 53, 34, 1) 100%
+  );
+  --hero-background: linear-gradient(
+    180deg,
+    rgba(32, 53, 34, 1) 0%,
+    rgba(48, 82, 53, 1) 100%
+  );
+  --product-cards-background: linear-gradient(180deg, #375d3c 0%, #548d5b 100%);
+  --testimonial-background: linear-gradient(180deg, #69a671 0%, #99c79f 100%);
+  --footer-background: linear-gradient(180deg, #cadecb 0%, #e5eee5 99.7%);
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageContainer {
+  display: flex;
+  overflow-x: scroll;
+  padding-left: 125px;
+  gap: 120px;
+}
+
+.image {
+  border-radius: 8px;
+  width: auto;
+}
+
+.legend {
+  display: flex;
+  gap: 22px;
+  padding: 6px 10px;
+  align-items: center;
+}
+
+.dot {
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
