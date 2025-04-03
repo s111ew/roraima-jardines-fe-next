@@ -7,6 +7,7 @@ body {
     #88c18f 129.68%
   );
   --green-basic: rgba(29, 150, 44, 1);
+  --green-light: rgba(208, 224, 209, 1);
   --text-dark: rgba(35, 18, 18, 1);
   --navbar-background: linear-gradient(
     180deg,
@@ -32,13 +33,25 @@ body {
 .imageContainer {
   display: flex;
   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
   padding-left: 125px;
   gap: 120px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.imageContainer::-webkit-scrollbar {
+  display: none;
 }
 
 .image {
   border-radius: 8px;
   width: auto;
+  scroll-snap-align: center;
+}
+
+.image:last-child {
+  margin-right: 62.5px;
 }
 
 .legend {
@@ -46,10 +59,18 @@ body {
   gap: 22px;
   padding: 6px 10px;
   align-items: center;
+  background-color: var(--green-light);
+  border-radius: 5px;
+  margin-top: 8px;
 }
 
 .dot {
   border-radius: 50%;
   width: 8px;
   height: 8px;
+  background-color: var(--off-white);
+}
+
+.dot.active {
+  background-color: var(--green-basic) !important;
 }

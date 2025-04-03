@@ -19,7 +19,8 @@ function Navbar() {
     };
   }, []);
 
-  const logoSize = Math.max(68, 150 - scrollValue)
+  // const logoSize = Math.max(68, 150 - scrollValue)
+  const logoSize = 68
 
   return (
     <nav className='navbar'>
