@@ -1,0 +1,52 @@
+.footer {
+  position: relative;
+  z-index: -2;
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--footer-background);
+  padding: 32px 328px;
+}
+
+.footer > h2 {
+  margin: 32px 0px;
+}
+
+.formContainer {
+  padding: 16px 0px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16.8px;
+  padding-right: 100px;
+}
+
+.socialMediaContainer {
+  gap: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 48px;
+}
+
+.socialMediaLink {
+  display: flex;
+  gap: 5px;
+}
+
+.creditContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}

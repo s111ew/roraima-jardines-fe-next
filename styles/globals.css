@@ -107,6 +107,11 @@ p {
   gap: 38px;
 }
 
+.links-container > li > a {
+  text-decoration: none;
+  color: inherit;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -330,52 +335,6 @@ section {
   height: 383px;
   align-self: flex-end;
   margin-top: 124px;
-}
-
-footer {
-  position: relative;
-  z-index: -2;
-  color: var(--text-dark);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: var(--footer-background);
-  padding: 32px 328px;
-}
-
-footer > h2 {
-  margin: 32px 0px;
-}
-
-.form-container {
-  padding: 16px 0px;
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 16.8px;
-  padding-right: 100px;
-}
-
-.social-media-container {
-  gap: 100px;
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 48px;
-}
-
-.social-media-link {
-  display: flex;
-  gap: 5px;
 }
 
 .input-container {

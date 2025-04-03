@@ -1,11 +1,13 @@
 import { useEffect, useRef } from "react";
 import styles from "../styles/ImageCarousel.module.css";
 
-export default function ImageCarousel({ images }) {
+export default function ImageCarousel({ cardNumber, images }) {
   const imageContainerRef = useRef(null);
   const observerRef = useRef(null);
 
   useEffect(() => {
+    addActiveStyle(`image-${cardNumber}-1`)
+    
     const options = {
       root: imageContainerRef.current,
       rootMargin: "0px",
@@ -20,7 +22,7 @@ export default function ImageCarousel({ images }) {
       });
     }, options);
 
-    const imageElements = document.querySelectorAll(`.${styles.image}`);
+    const imageElements = document.querySelectorAll(`.${CSS.escape(styles.image)}[data-card="${cardNumber}"]`);
     imageElements.forEach((img) => observerRef.current.observe(img));
 
     return () => {
@@ -31,10 +33,10 @@ export default function ImageCarousel({ images }) {
   }, []);
 
   function addActiveStyle(id) {
-    const dotId = id.split("-")[1];
-    const dotToTarget = document.querySelector(`#dot-${dotId}`);
+    const dotId = id.split("-")[2];
+    const dotToTarget = document.querySelector(`#dot-${cardNumber}-${dotId}`);
 
-    document.querySelectorAll(`.${styles.active}`).forEach((dot) => {
+    document.querySelectorAll(`.${CSS.escape(styles.active)}[data-card="${cardNumber}"]`).forEach((dot) => {
       dot.classList.remove(styles.active);
     });
 
@@ -48,8 +50,9 @@ export default function ImageCarousel({ images }) {
       <div className={styles.imageContainer} ref={imageContainerRef}>
         {images.map((image, index) => (
           <img
-            id={`image-${index + 1}`}
+            id={`image-${cardNumber}-${index + 1}`}
             className={styles.image}
+            data-card={cardNumber}
             key={image.key}
             src={image.src}
           />
@@ -57,7 +60,7 @@ export default function ImageCarousel({ images }) {
       </div>
       <div className={styles.legend}>
         {images.map((image, index) => (
-          <div id={`dot-${index + 1}`} className={styles.dot} key={image.key}></div>
+          <div id={`dot-${cardNumber}-${index + 1}`} className={styles.dot} data-card={cardNumber} key={image.key}></div>
         ))}
       </div>
     </div>

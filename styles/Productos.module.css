@@ -20,9 +20,43 @@
     rgba(32, 53, 34, 1) 0%,
     rgba(48, 82, 53, 1) 100%
   );
+  --product-segment-2-background: linear-gradient(
+    180deg,
+    rgba(55, 93, 60, 1) 0%,
+    rgba(84, 141, 91, 1) 100%
+  );
+  --product-segment-3-background: linear-gradient(
+    180deg,
+    rgba(105, 166, 113, 1) 0%,
+    rgba(153, 199, 159, 1) 100%
+  );
   --product-cards-background: linear-gradient(180deg, #375d3c 0%, #548d5b 100%);
   --testimonial-background: linear-gradient(180deg, #69a671 0%, #99c79f 100%);
   --footer-background: linear-gradient(180deg, #cadecb 0%, #e5eee5 99.7%);
+}
+
+.title {
+  margin: 48px 0px 64px 0px;
+  color: var(--off-white);
+}
+
+.cardContainer {
+  width: 100%;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContainer:nth-child(1) {
+  background: var(--hero-background);
+}
+.cardContainer:nth-child(2) {
+  background: var(--product-segment-2-background);
+}
+.cardContainer:nth-child(3) {
+  background: var(--product-segment-3-background);
 }
 
 .card {
@@ -44,6 +78,7 @@
 .accordionContainer {
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 
 .buttonContainer {

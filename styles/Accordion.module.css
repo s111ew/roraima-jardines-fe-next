@@ -1,0 +1,28 @@
+.accordion {
+  --text-dark: rgba(35, 18, 18, 1);
+  --white-2: rgba(236, 238, 234, 0.4);
+  --green-main: rgba(29, 150, 44, 1);
+  --green-alt: rgba(208, 224, 209, 1);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+.accordionTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer {
+  width: 384px;
+  background-color: var(--white-2);
+  border: 1px solid var(--green-main);
+}
+
+.body {
+  background-color: var(--green-alt);
+}
