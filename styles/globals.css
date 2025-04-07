@@ -49,7 +49,7 @@ h6 {
   src: url(../public/Sen_variable.woff2);
 }
 
-html {
+:root {
   --sage-green: rgba(197, 216, 197, 0.9);
   --off-white: rgba(236, 238, 234, 1);
   --green-border-gradient: linear-gradient(
@@ -69,6 +69,16 @@ html {
     rgba(32, 53, 34, 1) 0%,
     rgba(48, 82, 53, 1) 100%
   );
+  --product-segment-2-background: linear-gradient(
+    180deg,
+    rgba(55, 93, 60, 1) 0%,
+    rgba(84, 141, 91, 1) 100%
+  );
+  --product-segment-3-background: linear-gradient(
+    180deg,
+    rgba(105, 166, 113, 1) 0%,
+    rgba(153, 199, 159, 1) 100%
+  );
   --product-cards-background: linear-gradient(180deg, #375d3c 0%, #548d5b 100%);
   --testimonial-background: linear-gradient(180deg, #69a671 0%, #99c79f 100%);
   --footer-background: linear-gradient(180deg, #cadecb 0%, #e5eee5 99.7%);
@@ -85,31 +95,6 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 16.8px;
-}
-
-.navbar {
-  position: sticky;
-  top: 0px;
-  z-index: 1000;
-  color: var(--off-white);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--navbar-background);
-  padding: 8px 60px;
-}
-
-.links-container {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 38px;
-}
-
-.links-container > li > a {
-  text-decoration: none;
-  color: inherit;
 }
 
 section {

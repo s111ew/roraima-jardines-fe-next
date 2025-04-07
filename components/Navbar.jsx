@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link'
 import Image from 'next/image';
 import Button from '../components/Button';
+import styles from '../styles/Navbar.module.css'
 
 function Navbar() {
   const [scrollValue, setScrollValue] = useState(0)
@@ -19,11 +20,18 @@ function Navbar() {
     };
   }, []);
 
+  function scrollToBottom() {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth',
+  });
+  }
+
   // const logoSize = Math.max(68, 150 - scrollValue)
   const logoSize = 68
 
   return (
-    <nav className='navbar'>
+    <nav className={styles.navbar}>
       <Link href='/' style={{ position: 'relative', width: `${logoSize}px`, height: `${logoSize}px` }}>
         <Image 
           src="/Logo.svg" 
@@ -33,12 +41,12 @@ function Navbar() {
           priority
         />
       </Link>
-      <ul className='links-container'>
-        <li className='link'><Link href='/productos/'>Productos</Link></li>
-        <li className='link'><Link href='/jardin'>Haz tu Jardín</Link></li>
-        <li className='link'><Link href='/historia'>Nuestra Historia</Link></li>
-        <li className='link'><Link href='/contacto'>Contacto</Link></li>
-        <li className='link'><Button text={'Puntos de venta'} /></li>
+      <ul className={styles.linksContainer}>
+        <li className={styles.link}><Link href='/productos/'>Productos</Link></li>
+        <li className={styles.link}><Link href='/jardin'>Haz tu Jardín</Link></li>
+        <li className={styles.link}><Link href='/historia'>Nuestra Historia</Link></li>
+        <li className={styles.link}><span onClick={scrollToBottom}>Contacto</span></li>
+        <li className={styles.link}><Button text={'Puntos de venta'} /></li>
       </ul>
     </nav>
   );

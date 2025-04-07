@@ -1,0 +1,24 @@
+.navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+  color: var(--off-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--navbar-background);
+  padding: 8px 60px;
+}
+
+.linksContainer {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 38px;
+}
+
+.linksContainer > li > a {
+  text-decoration: none;
+  color: inherit;
+}

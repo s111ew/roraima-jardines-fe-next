@@ -1,38 +1,6 @@
 .products {
   display: flex;
   flex-direction: column;
-  --sage-green: rgba(197, 216, 197, 0.9);
-  --off-white: rgba(236, 238, 234, 1);
-  --green-border-gradient: linear-gradient(
-    71deg,
-    #1d962c -27%,
-    #88c18f 129.68%
-  );
-  --green-basic: rgba(29, 150, 44, 1);
-  --text-dark: rgba(35, 18, 18, 1);
-  --navbar-background: linear-gradient(
-    180deg,
-    rgba(30, 51, 33, 1) 0%,
-    rgba(32, 53, 34, 1) 100%
-  );
-  --hero-background: linear-gradient(
-    180deg,
-    rgba(32, 53, 34, 1) 0%,
-    rgba(48, 82, 53, 1) 100%
-  );
-  --product-segment-2-background: linear-gradient(
-    180deg,
-    rgba(55, 93, 60, 1) 0%,
-    rgba(84, 141, 91, 1) 100%
-  );
-  --product-segment-3-background: linear-gradient(
-    180deg,
-    rgba(105, 166, 113, 1) 0%,
-    rgba(153, 199, 159, 1) 100%
-  );
-  --product-cards-background: linear-gradient(180deg, #375d3c 0%, #548d5b 100%);
-  --testimonial-background: linear-gradient(180deg, #69a671 0%, #99c79f 100%);
-  --footer-background: linear-gradient(180deg, #cadecb 0%, #e5eee5 99.7%);
 }
 
 .title {
