@@ -1,6 +1,8 @@
+import styles from "../styles/Input.module.css"
+
 function Input({ text, isTextArea }) {
   return (
-    <div className="input-container">
+    <div className={styles.inputContainer}>
       <label htmlFor={ text }>{ text }</label>
       { isTextArea ? <textarea id={ text } name={ text } rows='5' style={{resize: 'none'}}></textarea> : <input id={ text } name={ text } type="text" ></input> }
     </div>

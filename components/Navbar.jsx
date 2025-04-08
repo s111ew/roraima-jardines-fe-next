@@ -42,11 +42,11 @@ function Navbar() {
         />
       </Link>
       <ul className={styles.linksContainer}>
-        <li className={styles.link}><Link href='/productos/'>Productos</Link></li>
+        <li className={styles.link}><Link href='/productos'>Productos</Link></li>
         <li className={styles.link}><Link href='/jardin'>Haz tu Jardín</Link></li>
         <li className={styles.link}><Link href='/historia'>Nuestra Historia</Link></li>
         <li className={styles.link}><span onClick={scrollToBottom}>Contacto</span></li>
-        <li className={styles.link}><Button text={'Puntos de venta'} /></li>
+        <li className={styles.link}><Link href='/puntos_de_venta'><Button text={'Puntos de venta'} /></Link></li>
       </ul>
     </nav>
   );

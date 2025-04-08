@@ -53,6 +53,26 @@
 .imageContainerFirstBottom > .image:nth-child(3) {
   margin-bottom: 22px;
 }
+.imageContainerSecond {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 95px;
+  gap: 35px;
+}
+.imageContainerSecond > .image:nth-child(1) {
+  margin-bottom: 210px;
+}
+.imageContainerSecond > .image:nth-child(2) {
+  margin-bottom: 183px;
+}
+.imageContainerSecond > .image:nth-child(4) {
+  margin-bottom: 95px;
+}
+.imageContainerThird {
+  margin-top: 48px;
+}
 .image {
   border-radius: 12px;
 }

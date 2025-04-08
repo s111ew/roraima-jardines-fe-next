@@ -49,13 +49,50 @@ export default function Historia() {
           <div className={styles.contentContainer}>
             <p>Queremos contribuir a crear zonas verdes con un mínimo de impacto ambiental y un mayor ahorro de de agua. </p>
             <p>Por eso desarrollamos productos 100% ecológicos, y así también equilibrar el desgaste que genera el abuso de abonos de origen químico.</p>
-            <div className={styles.imageContainer}></div>
+            <div className={styles.imageContainerSecond}>
+                <Image
+                    className={styles.image}
+                    src='/historia_images/Story 5.jpg'
+                    width={257}
+                    height={238}
+                    alt=""
+                />
+                <Image
+                    className={styles.image}
+                    src='/historia_images/Story 6.jpg'
+                    width={185}
+                    height={169}
+                    alt=""
+                />
+                <Image
+                    className={styles.image}
+                    src='/historia_images/Story7.jpg'
+                    width={208}
+                    height={267}
+                    alt=""
+                />
+                <Image
+                    className={styles.image}
+                    src='/historia_images/Story8.jpg'
+                    width={234}
+                    height={204}
+                    alt=""
+                />
+              </div>
           </div>
         </div>
         <div className={`${styles.section} ${styles.third}`}>
           <div className={styles.contentContainer}>
             <p>El origen de nuestro nombre viene del monte Roraima en Venezuela, una de las formaciones geológicas más antiguas de la Tierra, cuyas plantas y animales son únicos en el mundo.</p>
-            <div className={styles.imageContainer}></div>
+            <div className={styles.imageContainerThird}>
+              <Image
+                className={styles.image}
+                src='/historia_images/Story 10.jpg'
+                width={613}
+                height={407}
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </>

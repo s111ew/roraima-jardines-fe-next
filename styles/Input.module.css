@@ -1,0 +1,23 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inputContainer > input,
+.inputContainer > textarea {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: var(--sage-green);
+  border-radius: 8px;
+  border: 1px solid var(--green-basic);
+}
+
+.inputContainer > input:focus,
+.inputContainer > textarea:focus {
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid var(--green-basic);
+  outline: none;
+  box-shadow: inset 0px 0px 0px 2px var(--green-basic);
+}

@@ -1,0 +1,44 @@
+.section {
+  color: var(--off-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 0px;
+}
+
+.section > p {
+  width: 784px;
+}
+
+.section.intro {
+  background: var(--hero-background);
+  gap: 32px;
+}
+
+.section.body {
+  background: var(--product-segment-2-background);
+  gap: 72px;
+}
+
+.introTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputContainer {
+  width: 784px;
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.inputContainer > * {
+  flex: 1;
+}
+
+.mapsContainer {
+  width: 784px;
+  display: flex;
+  gap: 61px;
+}
