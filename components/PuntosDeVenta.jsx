@@ -5,7 +5,7 @@ import { useState } from "react"
 
 export default function PuntosDeVenta() {
   const [zipCode, updateZipCode] = useState(null)
-  
+
   return(
     <>
       <div className={`${styles.section} ${styles.intro}`}>
@@ -17,11 +17,11 @@ export default function PuntosDeVenta() {
       </div>
       <div className={`${styles.section} ${styles.body}`}>
         <div className={styles.inputContainer}>
-            <Input text={'Código Postal'}/>
+            <Input text={'Código Postal'} />
             <Button text={'Buscar'} />
         </div>
         <div className={styles.mapsContainer}>
-
+          
         </div>
       </div>
     </>
