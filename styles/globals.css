@@ -58,6 +58,7 @@ h6 {
     #88c18f 129.68%
   );
   --green-basic: rgba(29, 150, 44, 1);
+  --green-alt: rgba(208, 224, 209, 1);
   --text-dark: rgba(35, 18, 18, 1);
   --navbar-background: linear-gradient(
     180deg,

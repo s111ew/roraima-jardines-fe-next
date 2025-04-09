@@ -1,0 +1,108 @@
+.storeCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 25px;
+  background-color: var(--off-white);
+  color: var(--text-dark);
+  width: 303px;
+  border-bottom: 0.5px solid grey;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.bubble {
+  color: var(--off-white);
+  background-color: var(--green-basic);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emailLink {
+  color: var(--text-dark);
+}
+
+.locationContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.hours {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 10px 0px;
+}
+
+.day {
+  display: flex;
+  justify-content: space-between;
+}
+
+.day > p {
+  font-size: 12px;
+}
+
+.sizeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--green-alt);
+  margin-bottom: 34px;
+}
+
+.sizes {
+  display: flex;
+  flex-direction: column;
+}
+
+.sustrato,
+.huerto {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sustratoKey,
+.huertoKey {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.green {
+  background-color: var(--green-basic);
+}
+
+.black {
+  background-color: var(--text-dark);
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link > * {
+  width: 100%;
+}

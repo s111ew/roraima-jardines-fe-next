@@ -2,9 +2,27 @@ import styles from "../styles/PuntosDeVenta.module.css"
 import Button from "./Button"
 import Input from "./Input"
 import { useState } from "react"
+import StoreCard from "./StoreCard"
+import stores from "@/public/data/stores"
 
 export default function PuntosDeVenta() {
   const [zipCode, updateZipCode] = useState(null)
+  const storeCards = stores.map(store =>
+    <StoreCard
+      key={store.index}
+      index={store.index}
+      storeName={store.name}
+      distance={'0'}
+      address={store.street}
+      zip={store.zip}
+      phone={store.tel}
+      isLink={store.isLink}
+      email={store.email}
+      hours={store.hours}
+      sizes={store.products}
+      link={store.mapsLink}
+    />
+  )
 
   return(
     <>
@@ -21,7 +39,10 @@ export default function PuntosDeVenta() {
             <Button text={'Buscar'} />
         </div>
         <div className={styles.mapsContainer}>
-          
+          <div className={styles.storeCardContainer}>
+            {storeCards}
+          </div>
+          <div className={styles.mapPlaceholder}></div>
         </div>
       </div>
     </>

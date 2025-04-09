@@ -40,5 +40,20 @@
 .mapsContainer {
   width: 784px;
   display: flex;
-  gap: 61px;
+  justify-content: space-between;
+}
+
+.storeCardContainer {
+  height: 1083px;
+  border-radius: 33px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.mapPlaceholder {
+  width: 430px;
+  height: 495px;
+  background-color: gray;
+  border-radius: 8px;
 }

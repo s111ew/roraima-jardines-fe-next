@@ -2,7 +2,6 @@
   --text-dark: rgba(35, 18, 18, 1);
   --white-2: rgba(236, 238, 234, 0.4);
   --green-main: rgba(29, 150, 44, 1);
-  --green-alt: rgba(208, 224, 209, 1);
   color: var(--text-dark);
   display: flex;
   flex-direction: column;
