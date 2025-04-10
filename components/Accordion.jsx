@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import styles from '../styles/Accordion.module.css'
 
-export default function Accordion({ title, content, location }) {
-  const [isOpen, setIsOpen] = useState(false)
+export default function Accordion({ isOpenDefault, title, content, location }) {
+  const [isOpen, setIsOpen] = useState(isOpenDefault)
 
   function handleClick() {
     isOpen ? setIsOpen(false) : setIsOpen(true)

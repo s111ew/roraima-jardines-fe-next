@@ -1,0 +1,34 @@
+.table {
+  empty-cells: hide;
+  color: var(--text-dark);
+  width: 100%;
+  border-spacing: 0px;
+}
+
+.rowHeader,
+.columnHeader {
+  background-color: var(--off-white);
+  border: 0.5px solid var(--green-basic);
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 20px;
+}
+
+.rowHeader {
+  width: 268px;
+  height: 81px;
+  border-radius: 5px 0px 0px 5px;
+}
+.columnHeader {
+  width: 172px;
+  height: 60px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.cell {
+  background-color: var(--green-alt);
+  border: 0.5px solid var(--green-basic);
+  text-align: center;
+}

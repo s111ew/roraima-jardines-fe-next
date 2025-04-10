@@ -6,7 +6,7 @@ export default function ImageCarousel({ cardNumber, images }) {
   const observerRef = useRef(null);
 
   useEffect(() => {
-    addActiveStyle(`image-${cardNumber}-1`)
+    setTimeout(() => addActiveStyle(`image-${cardNumber}-1`), 100)
     
     const options = {
       root: imageContainerRef.current,

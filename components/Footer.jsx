@@ -33,7 +33,8 @@ function Footer() {
       </div>
       <div className={styles.creditContainer}>
         <span>Copyright © 2025 Roraima Jardines</span>
-        <Accordion 
+        <Accordion
+          isOpenDefault={false}
           title='Créditos de página web' 
           content={
             <>

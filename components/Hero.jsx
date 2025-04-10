@@ -1,4 +1,5 @@
 import Button from "../components/Button"
+import Link from "next/link"
 
 function Hero() {
   return(
@@ -7,7 +8,7 @@ function Hero() {
         <h1>Sustrato y abono<br></br> 100% ecológico</h1>
         <div className="hero-call-to-action">
           <p>Para plantas más sanas y frutos y vegetales más sabrosos</p>
-          <Button text="Encuentra un punto de venta" />
+          <Link className="hero-call-to-action-link" href='/puntos_de_venta'><Button text="Encuentra un punto de venta" /></Link>
         </div>
       </div>
       <div className="hero-information-container">

@@ -52,6 +52,7 @@ h6 {
 :root {
   --sage-green: rgba(197, 216, 197, 0.9);
   --off-white: rgba(236, 238, 234, 1);
+  --white-alt: rgba(236, 238, 234, 0.4);
   --green-border-gradient: linear-gradient(
     71deg,
     #1d962c -27%,
@@ -83,6 +84,38 @@ h6 {
   --product-cards-background: linear-gradient(180deg, #375d3c 0%, #548d5b 100%);
   --testimonial-background: linear-gradient(180deg, #69a671 0%, #99c79f 100%);
   --footer-background: linear-gradient(180deg, #cadecb 0%, #e5eee5 99.7%);
+  --spring-background: linear-gradient(
+    178deg,
+    #46764c 1.32%,
+    #e4c556 101.77%,
+    #99c79f 229.62%
+  );
+  --summer-background: linear-gradient(
+    175deg,
+    #46764c 4.36%,
+    #66aba4 100.42%,
+    #99c79f 222.27%
+  );
+  --autumn-background: linear-gradient(
+    175deg,
+    #46764c 4.36%,
+    #d07d25 100.42%,
+    #99c79f 222.27%
+  );
+  --winter-background: linear-gradient(
+    175deg,
+    #46764c 4.36%,
+    #3f497c 100.42%,
+    #99c79f 222.27%
+  );
+}
+
+a {
+  text-decoration: none;
+}
+
+a > * {
+  width: 100%;
 }
 
 body {
@@ -130,6 +163,11 @@ section {
 .hero-call-to-action > p {
   font-size: 20px;
   margin-bottom: 48px;
+}
+
+.hero-call-to-action-link {
+  width: 300px;
+  display: block;
 }
 
 .hero-information-container {

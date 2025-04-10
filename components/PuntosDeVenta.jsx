@@ -27,7 +27,7 @@ export default function PuntosDeVenta() {
   return(
     <>
       <div className={`${styles.section} ${styles.intro}`}>
-        <h1>Puntos De Venta</h1>
+        <h1 className={styles.title}>Puntos De Venta</h1>
         <div className={styles.introTextContainer}>
           <p>Estamos en venta exclusivamente en los siguientes pequeños comercios y viveros.</p>
           <p>Introduce tu código postal en el buscador para encontrar tu tienda más próxima.</p>

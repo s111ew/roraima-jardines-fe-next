@@ -4,8 +4,9 @@
 }
 
 .title {
-  margin: 48px 0px 64px 0px;
+  margin: 16px 0px 64px 0px;
   color: var(--off-white);
+  font-size: 20px;
 }
 
 .cardContainer {

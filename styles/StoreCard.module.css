@@ -98,11 +98,3 @@
 .black {
   background-color: var(--text-dark);
 }
-
-.link {
-  text-decoration: none;
-}
-
-.link > * {
-  width: 100%;
-}

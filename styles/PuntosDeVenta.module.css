@@ -6,6 +6,10 @@
   padding: 64px 0px;
 }
 
+.title {
+  font-size: 20px;
+}
+
 .section > p {
   width: 784px;
 }

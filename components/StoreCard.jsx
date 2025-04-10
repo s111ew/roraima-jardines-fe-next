@@ -26,7 +26,8 @@ export default function StoreCard({ index, storeName, distance, address, zip, ph
       </div>
       <p className={styles.phone}>{phone}</p>
       {emailContent}
-      <Accordion 
+      <Accordion
+        isOpenDefault={false} 
         title='Horario' 
         location='body' 
         content={

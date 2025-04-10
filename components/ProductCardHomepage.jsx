@@ -1,7 +1,8 @@
 import Button from "./Button"
+import Link from "next/link"
 import { useState } from "react"
 
-export default function ProductCard({ src, src2, alt, title, desc }) {
+export default function ProductCard({ src, src2, alt, title, desc, sectionToScrollTo }) {
   const [currentSrc, setCurrentSrc] = useState(src)
 
 
@@ -21,7 +22,7 @@ export default function ProductCard({ src, src2, alt, title, desc }) {
           <h2>{title}</h2>
           <p>{desc}</p>
         </div>
-        <Button text={"Más Informatión"} />
+        <Link href={`/productos${'#' + sectionToScrollTo}`}><Button text="Más Informatión" /></Link>
       </div>
     </div>
   )
