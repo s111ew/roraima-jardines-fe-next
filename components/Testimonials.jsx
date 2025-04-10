@@ -5,7 +5,7 @@ function Testimonial() {
     <section className="testimonials">
       <h2>Nuestros Clientes</h2>
       <div className="testimonials-container">
-        <TestimonialCard text={"La tierra es excepcional; su textura es perfecta para el drenaje y retener la humedad, lo que ha permitido que mis plantas crezcan sanas y vigorosas."} logo='testimonial_images/flores-carmen.jpg' storeName={'Flores Carmen'} ownerName={'Nacho y Leticia'} />
+        <TestimonialCard text={"Gran calidad de los productos, precio adecuado y buen servicio de entrega a las tiendas."} logo='testimonial_images/flores-carmen.jpg' storeName={'Flores Carmen'} ownerName={'Nacho y Leticia'} />
         <TestimonialCard text={"Vendemos el sustrato de Roraima Jardines desde hace más de 15 años sabiendo que ofrecemos un producto de calidad. Quienes los prueban, repiten."} logo='testimonial_images/delicias.jpg' storeName={'Vivero Delicias'} ownerName={'Manuela'} />
         <TestimonialCard text={"La tierra es excepcional; su textura es perfecta para el drenaje y retener la humedad, lo que ha permitido que mis plantas crezcan sanas y vigorosas."} logo='testimonial_images/floristeria-el-valle.jpg' storeName={'Floritería El Valle'} ownerName={'Kellyng'} />
       </div>

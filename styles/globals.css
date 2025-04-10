@@ -283,21 +283,6 @@ section {
   padding: 32px 0px;
 }
 
-.testimonial-card {
-  width: 357px;
-  height: 228px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--off-white);
-  border-radius: 33px;
-  padding: 25px;
-}
-
-.testimonial-top {
-  position: relative;
-}
-
 .quote-icon {
   position: absolute;
 }
@@ -305,29 +290,6 @@ section {
 .quote-icon.start {
   top: -5px;
   left: -10px;
-}
-
-.quote-icon.end {
-  bottom: -5px;
-  right: 0px;
-}
-
-.testimonial-bottom {
-  display: flex;
-  gap: 24px;
-  align-items: flex-end;
-}
-
-.testimonial-photo {
-  width: 96px;
-  height: 78px;
-  border-radius: 8px;
-}
-
-.testimonial-information {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
 }
 
 .testimonial-images {

@@ -1,0 +1,53 @@
+.card {
+  width: 357px;
+  height: 304px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--off-white);
+  border-radius: 33px;
+  padding: 25px;
+}
+
+.top {
+  position: relative;
+}
+
+.quote {
+  position: absolute;
+}
+
+.start {
+  top: -5px;
+  left: -10px;
+}
+
+.end {
+  bottom: -5px;
+  right: 0px;
+}
+
+.bottom {
+  display: flex;
+  gap: 24px;
+  align-items: flex-end;
+}
+
+.body {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.photo {
+  width: 96px;
+  height: 78px;
+  border-radius: 8px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
