@@ -14,7 +14,7 @@ export default function Accordion({ isOpenDefault, title, content, location }) {
         <p>{title}</p>
         <img src="/arrow_black.svg" alt="" style={isOpen ? {transform: 'rotateX(180deg)'} : null}/>
       </div>
-      {isOpen ? content : ''}
+        {isOpen ? <div className={styles.accordionContent}>{content}</div> : ''}
     </div>
   )
 }

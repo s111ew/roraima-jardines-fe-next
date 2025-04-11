@@ -108,6 +108,8 @@ h6 {
     #3f497c 100.42%,
     #99c79f 222.27%
   );
+  --table-background: rgba(236, 238, 234, 0.8);
+  --table-header: rgba(236, 238, 234, 0.9);
 }
 
 a {
@@ -321,34 +323,4 @@ section {
   height: 383px;
   align-self: flex-end;
   margin-top: 124px;
-}
-
-.button-default {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  padding: 8px 20px;
-  color: white;
-  background-color: var(--green-basic);
-  border: 1px solid transparent;
-}
-
-.button-default::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  margin: -2px;
-  border-radius: 9px;
-  background: var(--green-border-gradient);
-}
-
-.button-text {
-  display: flex;
-  gap: 10px;
 }

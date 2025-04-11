@@ -16,6 +16,10 @@
   justify-content: space-between;
 }
 
+.accordionContent {
+  margin-top: 24px;
+}
+
 .footer {
   width: 384px;
   background-color: var(--white-2);

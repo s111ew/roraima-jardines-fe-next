@@ -28,8 +28,8 @@ export default function ProductCard({ isTitle, cardNumber, images, title, descri
             location='body'/>
         </div>
         <div className={styles.buttonContainer}>
-          <Link href='/puntos_de_venta'><Button text="Puntos de venta" /></Link>
-          <Link href='/jardin'><Button text="Haz tu jardín" /></Link>
+          <Link href='/puntos_de_venta'><Button text="Puntos de venta" colour='green' /></Link>
+          <Link href='/jardin'><Button text="Haz tu jardín" colour='white' /></Link>
         </div>
       </div>
     </div>

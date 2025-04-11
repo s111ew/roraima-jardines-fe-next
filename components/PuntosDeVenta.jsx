@@ -36,7 +36,7 @@ export default function PuntosDeVenta() {
       <div className={`${styles.section} ${styles.body}`}>
         <div className={styles.inputContainer}>
             <Input text={'Código Postal'} />
-            <Button text={'Buscar'} />
+            <Button text={'Buscar'} colour='green'/>
         </div>
         <div className={styles.mapsContainer}>
           <div className={styles.storeCardContainer}>

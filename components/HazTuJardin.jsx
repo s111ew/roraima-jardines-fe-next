@@ -65,8 +65,8 @@ export default function HazTuJardin() {
 
   const downloadPDF = () => {
     const link = document.createElement('a');
-    link.href = '/files/haz-tu-jardin.pdf';
-    link.download = 'haz-tu-jardin.pdf';
+    link.href = '/files/HazTuJardin.pdf';
+    link.download = 'HazTuJardin.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -136,7 +136,7 @@ export default function HazTuJardin() {
             />
           </div>
           <div className={styles.buttonContainer}>
-            <Link href='/puntos_de_venta'><Button text='Encuentra un Punto de Venta' /></Link>
+            <Link href='/puntos_de_venta'><Button text='Encuentra un Punto de Venta' colour='green'/></Link>
             <ButtonAlt text='Descarga la guía en PDF' onClick={downloadPDF} />
           </div>
         </div>

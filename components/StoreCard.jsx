@@ -83,7 +83,7 @@ export default function StoreCard({ index, storeName, distance, address, zip, ph
         </div>
       </div>
       <a className={styles.link} href={link} target="_blank">
-        <Button text='Cómo llegar' />
+        <Button text='Cómo llegar' colour='green' />
       </a>
     </div>
   )

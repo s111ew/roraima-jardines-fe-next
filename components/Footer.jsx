@@ -1,11 +1,18 @@
 import styles from "../styles/Footer.module.css"
+import RollingText from "./RollingText"
 import Input from "../components/Input"
 import Button from "../components/Button"
 import Accordion from "./Accordion"
 
 function Footer() {
+  const rollingWords = ['plantas', 'rosales', 'siembras', 'vegetales', 'frutos', 'jardín']
+
   return (
     <footer className={`${styles.footer} section`}>
+      <div className={styles.rollingTextContainer}>
+        <h3>Damos vida a tus</h3>
+        <RollingText words={rollingWords} />
+      </div>
       <h2>Consulta Con Nosotros</h2>
       <div className={styles.formContainer} >
         <p className={styles.contactInfo}>
@@ -17,7 +24,7 @@ function Footer() {
           <Input text="Nombre*" isTextArea={false} />
           <Input text="Email*" isTextArea={false} />
           <Input text="Mensaje*" isTextArea={true} />
-          <Button text="Enviar mensaje" />
+          <Button text="Enviar mensaje" colour='green' />
         </form>
       </div>
       <h2>Síguenos en redes</h2>

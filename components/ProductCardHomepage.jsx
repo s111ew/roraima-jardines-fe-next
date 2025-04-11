@@ -22,7 +22,7 @@ export default function ProductCard({ src, src2, alt, title, desc, sectionToScro
           <h2>{title}</h2>
           <p>{desc}</p>
         </div>
-        <Link href={`/productos${'#' + sectionToScrollTo}`}><Button text="Más Informatión" /></Link>
+        <Link href={`/productos${'#' + sectionToScrollTo}`}><Button text="Más Informatión" colour='green'/></Link>
       </div>
     </div>
   )
