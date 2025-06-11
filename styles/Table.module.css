@@ -1,5 +1,5 @@
 .table {
-  empty-cells: hide;
+  /* empty-cells: hide; */
   color: var(--text-dark);
   width: 100%;
   border-spacing: 0px;
@@ -32,4 +32,39 @@
   border-bottom: 0.5px dotted var(--green-basic);
   border-right: 0.5px dotted var(--green-basic);
   text-align: center;
+  position: relative;
+}
+
+.last {
+  border-bottom-right-radius: 5px;
+}
+
+.dataDuo,
+.dataSingle {
+  height: 18px;
+  border-radius: 5px;
+  position: absolute;
+  top: 41%;
+  left: 20px;
+  z-index: 10;
+}
+.dataDuo {
+  background: var(--table-data-gradient);
+}
+.dataSingle {
+  background-color: var(--text-dark);
+}
+
+.dataDuo[data-length="1"],
+.dataSingle[data-length="1"] {
+  width: 80%;
+}
+.dataDuo[data-length="3"],
+.dataSingle[data-length="3"] {
+  width: 280%;
+}
+
+.dataDuo[data-length="2"],
+.dataSingle[data-length="2"] {
+  width: 178%;
 }

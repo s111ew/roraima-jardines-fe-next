@@ -74,8 +74,8 @@ export default function Historia() {
                 <Image
                     className={styles.image}
                     src='/historia_images/Story8.jpg'
-                    width={234}
-                    height={204}
+                    width={204}
+                    height={234}
                     alt=""
                 />
               </div>

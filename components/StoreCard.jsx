@@ -7,9 +7,9 @@ export default function StoreCard({ index, storeName, distance, address, zip, ph
   if (!email) {
     emailContent = ''
   } else if (email && !isLink) {
-    emailContent = <p className={styles.email}>{email}</p>
+    emailContent = <a className={styles.emailLink} href={`mailto:${email}`}><p className={styles.email} style={{textDecoration: "underline"}} >{email}</p></a>
   } else if (email && isLink) {
-    emailContent = <a className={styles.emailLink} href={email}><p className={styles.email}>{email}</p></a>
+    emailContent = <a className={styles.emailLink} href={email}><p className={styles.email} style={{textDecoration: "underline"}} >Página web</p></a>
   }
   return(
     <div className={styles.storeCard}>

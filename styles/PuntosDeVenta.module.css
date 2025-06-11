@@ -49,7 +49,7 @@
 
 .storeCardContainer {
   height: 1083px;
-  border-radius: 33px;
+  border-radius: 8px;
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
