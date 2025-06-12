@@ -1,0 +1,47 @@
+.container {
+  position: relative;
+  border-radius: 12px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.caption {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 8px;
+  background-color: var(--caption-background);
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  transition: opacity 0.3s;
+}
+
+.captionText {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.hidden {
+  opacity: 0%;
+}
+
+.visible {
+  opacity: 100%;
+}
+
+.boxShadow1 {
+  box-shadow: var(--shadow-1);
+}
+
+.boxShadow2 {
+  box-shadow: var(--shadow-2);
+}
+
+.boxShadow3 {
+  box-shadow: var(--shadow-3);
+}

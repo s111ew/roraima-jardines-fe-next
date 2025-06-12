@@ -39,6 +39,10 @@
   gap: 72px;
 }
 
+.label {
+  padding-left: 6px;
+}
+
 .legendContainer {
   width: 100%;
   display: flex;

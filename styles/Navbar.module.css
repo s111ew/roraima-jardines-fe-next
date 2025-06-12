@@ -21,3 +21,11 @@
 .linksContainer > li > a {
   color: inherit;
 }
+
+.link {
+  cursor: pointer;
+}
+
+.active {
+  font-weight: bold;
+}

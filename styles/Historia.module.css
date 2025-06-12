@@ -32,10 +32,11 @@
   padding-bottom: 32px;
 }
 .imageContainerFirstParent {
+  padding-top: 24px;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  gap: 36px;
+  width: 90%;
+  gap: 24px;
 }
 .imageContainerFirstTop {
   display: flex;
@@ -45,12 +46,12 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  gap: 35px;
+  gap: 24px;
 }
-.imageContainerFirstBottom > .image:nth-child(2) {
+.imageContainerFirstBottom > div:nth-child(2) {
   margin-bottom: 73px;
 }
-.imageContainerFirstBottom > .image:nth-child(3) {
+.imageContainerFirstBottom > div:nth-child(3) {
   margin-bottom: 22px;
 }
 .imageContainerSecond {
@@ -59,20 +60,17 @@
   justify-content: center;
   align-items: flex-end;
   margin-top: 95px;
-  gap: 35px;
+  gap: 24px;
 }
-.imageContainerSecond > .image:nth-child(1) {
+.imageContainerSecond > div:nth-child(1) {
   margin-bottom: 210px;
 }
-.imageContainerSecond > .image:nth-child(2) {
+.imageContainerSecond > div:nth-child(2) {
   margin-bottom: 183px;
 }
-.imageContainerSecond > .image:nth-child(4) {
+.imageContainerSecond > div:nth-child(4) {
   margin-bottom: 95px;
 }
 .imageContainerThird {
   margin-top: 48px;
-}
-.image {
-  border-radius: 12px;
 }

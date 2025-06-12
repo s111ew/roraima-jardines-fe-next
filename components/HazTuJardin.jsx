@@ -85,6 +85,7 @@ export default function HazTuJardin() {
       <div className={`${styles.section} ${styles.body} ${styles[currentSeasonIndex.name]}`}>
         <div className={styles.contentContainer}>
           <div className={styles.legendContainer}>
+            <p className={styles.label}>Selecciona una estación:</p>
             <SelectAccordion name="season" options={options} setCurrentSeason={setCurrentSeason} />
             <div className={styles.legend}>
               <div className={styles.legendInner}>
