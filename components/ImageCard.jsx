@@ -33,6 +33,7 @@ export default function ImageCard ({ src, alt, width, height, caption, segment})
       />
       <div
         className={`${styles.caption} ${!isMouseEntered ? styles.hidden : ''} ${isMouseEntered ? styles.visible : ''}`}
+        aria-hidden="true"
       >
         <p
           className={styles.captionText}

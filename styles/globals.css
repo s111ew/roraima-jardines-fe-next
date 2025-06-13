@@ -161,11 +161,12 @@ section {
 }
 
 .hero-main-container {
-  padding-left: 26%;
+  padding: 0px 249px;
   align-self: flex-start;
   display: flex;
   flex-direction: column;
   gap: 192px;
+  width: 100%;
 }
 
 .hero-main-container > h1 {
@@ -184,23 +185,19 @@ section {
 }
 
 .hero-information-container {
-  width: 40%;
   display: flex;
-  flex-direction: column;
-  gap: 144px;
+  justify-content: space-between;
 }
 
 .hero-information {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  width: 230px;
 }
 
-.hero-information:nth-child(2) {
-  align-self: center;
-}
-.hero-information:nth-child(3) {
-  align-self: flex-end;
+.hero-information > h2 {
+  font-size: 20px;
 }
 
 .product-cards {
@@ -226,12 +223,14 @@ section {
   width: 784px;
   height: 337px;
   display: flex;
+  box-shadow: var(--shadow-2);
+  border-radius: 33px;
 }
 
 .product-card-image {
   width: 470px;
-  border-top-left-radius: 33px;
-  border-bottom-left-radius: 33px;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
 }
 
 .product-card-text {
@@ -241,8 +240,8 @@ section {
   flex-direction: column;
   justify-content: space-between;
   padding: 25px;
-  border-top-right-radius: 33px;
-  border-bottom-right-radius: 33px;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
 }
 
 .product-card-text-container {
@@ -260,23 +259,15 @@ section {
   margin: 72px 0px;
 }
 
-.images-container > img {
-  border-radius: 12px;
-}
-
-#homepage-img-11 {
-  width: 176px;
-  height: 225px;
+.images-container > div:first-child {
   align-self: flex-end;
 }
-#homepage-img-10 {
-  width: 180px;
-  height: 321px;
+
+.images-container > div:nth-child(2) {
   align-self: center;
 }
-#homepage-img-9 {
-  width: 220px;
-  height: 275px;
+
+.images-container > div:nth-child(3) {
   align-self: flex-start;
 }
 
@@ -307,31 +298,11 @@ section {
 
 .testimonial-images {
   display: flex;
-  gap: 32px;
+  gap: 24px;
   padding: 72px 0px;
 }
 
-.testimonial-images > img {
-  border-radius: 12px;
-}
-
-#homepage-img-12 {
-  width: 200px;
-  height: 194px;
-}
-#homepage-img-13 {
-  width: 262px;
-  height: 348px;
-  align-self: flex-end;
-  margin-bottom: 50px;
-}
-#homepage-img-14 {
-  width: 186px;
-  height: 248px;
-}
-#homepage-img-15 {
-  width: 232px;
-  height: 383px;
-  align-self: flex-end;
+.testimonial-images > div:nth-child(2),
+.testimonial-images > div:nth-child(4) {
   margin-top: 124px;
 }

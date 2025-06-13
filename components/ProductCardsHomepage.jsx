@@ -1,4 +1,5 @@
 import ProductCard from "./ProductCardHomepage.jsx"
+import ImageCard from "./ImageCard.jsx"
 
 function ProductCards() {
   return(
@@ -10,9 +11,30 @@ function ProductCards() {
         <ProductCard src='product_images/Plantas 1.jpg' src2='product_images/Plantas 2.jpg' alt="" title="Plantas ornamentales" desc="Variedades de cactus, aptenias y mesen" sectionToScrollTo='image-3-1'/>
       </div>
       <div className="images-container">
-        <img className="homepage-image" id="homepage-img-11" src='homepage_images/HP11.jpg' alt="" />
-        <img className="homepage-image" id="homepage-img-10" src='homepage_images/HP10.jpg' alt="" />
-        <img className="homepage-image" id="homepage-img-9" src='homepage_images/HP9.jpg' alt="" />
+        <ImageCard
+          src={"/homepage_images/HP11.jpg"}
+          width={176}
+          height={225}
+          alt={"Cáctus arcoiris"}
+          caption={"Cáctus arcoiris"}
+          segment={2}
+        />
+        <ImageCard
+          src={"/homepage_images/HP10.jpg"}
+          width={180}
+          height={321}
+          alt={"Diferentes variedades de cáctus y suculentas en diferentes tamaños plantados en el sustrato de Roraima Jardines"}
+          caption={"Cáctus arcoiris"}
+          segment={2}
+        />
+        <ImageCard
+          src={"/homepage_images/HP9.jpg"}
+          width={220}
+          height={275}
+          alt={"Suculenta Euphorbia Meloformis de la variedad 'Variegata'"}
+          caption={"Euphorbia meloformis"}
+          segment={2}
+        />
       </div>
     </section>
   )

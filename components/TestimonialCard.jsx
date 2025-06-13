@@ -11,8 +11,8 @@ function TestimonalCard({text, logo, storeName, ownerName}) {
       <div className={styles.bottom}>
         <img className={styles.photo} src={logo} alt="" />
         <div className={styles.info}>
-          <h3 className={styles.name}>{ownerName}</h3>
-          <p className={styles.store}>{storeName}</p>
+          <p className={styles.name}>{ownerName}</p>
+          <h3 className={styles.store}>{storeName}</h3>
         </div>
       </div>
     </div>

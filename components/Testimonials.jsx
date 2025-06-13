@@ -1,4 +1,5 @@
 import TestimonialCard from "../components/TestimonialCard";
+import ImageCard from "./ImageCard";
 
 function Testimonial() {
   return(
@@ -10,10 +11,38 @@ function Testimonial() {
         <TestimonialCard text={"La tierra es excepcional; su textura es perfecta para el drenaje y retener la humedad, lo que ha permitido que mis plantas crezcan sanas y vigorosas."} logo='testimonial_images/floristeria-el-valle.jpg' storeName={'Floritería El Valle'} ownerName={'Kellyng'} />
       </div>
       <div className="testimonial-images">
-        <img id="homepage-img-12" src='homepage_images/HP12.jpg' alt="" />
-        <img id="homepage-img-13" src='homepage_images/HP13.jpg' alt="" />
-        <img id="homepage-img-14" src='homepage_images/HP14.jpg' alt="" />
-        <img id="homepage-img-15" src='homepage_images/HP15.jpg' alt="" />
+        <ImageCard
+          src={'/homepage_images/HP12.jpg'}
+          width={200}
+          height={194}
+          alt={'Cientos de plantas Mesen floreadas cubren el suelo creando un tapiz verde, naranja y violeta'}
+          caption={'Mesen'}
+          segment={3}
+        />
+        <ImageCard
+          src={'/homepage_images/HP13.jpg'}
+          width={262}
+          height={384}
+          alt={'Primer plano de las flores violetas de las plantas Mesen'}
+          caption={'Mesen'}
+          segment={3}
+        />
+        <ImageCard
+          src={'/homepage_images/HP14.jpg'}
+          width={186}
+          height={248}
+          alt={'Primer plano de las flores violetas de las plantas Mesen'}
+          caption={'Mesen'}
+          segment={3}
+        />
+        <ImageCard
+          src={'/homepage_images/HP15.jpg'}
+          width={232}
+          height={383}
+          alt={'Plano general de las plantas Mesen con flores naranjas'}
+          caption={'Mesen'}
+          segment={3}
+        />
       </div>
       <div className="testimonials-container">
       <TestimonialCard text={"La calidad es excelente: es rica en nutrientes, tiene una textura ideal para trabajar y ha mejorado notablemente el crecimiento de mis plantas."} logo='testimonial_images/jardineria-vela.jpg' storeName={'Jardinería Vela'} ownerName={'Isabel'} />

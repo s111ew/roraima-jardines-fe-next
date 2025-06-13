@@ -10,8 +10,7 @@ function Hero() {
           <p>Para plantas más sanas y frutos y vegetales más sabrosos</p>
           <Link className="hero-call-to-action-link" href='/puntos_de_venta'><Button text="Encuentra un punto de venta" colour='green'/></Link>
         </div>
-      </div>
-      <div className="hero-information-container">
+        <div className="hero-information-container">
         <div className="hero-information">
           <h2>100% Ecológico</h2>
           <p>Evita la dependencia de abonos de origen químico.</p>
@@ -24,6 +23,7 @@ function Hero() {
           <h2>Hecho en Aragón</h2>
           <p>Producico y envasado en Pinseque, Zaragoza.</p>
         </div>
+      </div>
       </div>
     </section>
   )
