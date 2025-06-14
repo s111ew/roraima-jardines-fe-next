@@ -48,3 +48,10 @@
 .dot.active {
   background-color: var(--green-basic) !important;
 }
+
+@media (max-width: 1199px) {
+  .imageContainer {
+    height: auto;
+    max-width: 303px;
+  }
+}

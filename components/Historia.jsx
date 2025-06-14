@@ -1,8 +1,26 @@
 import styles from "../styles/Historia.module.css"
-import Image from "next/image"
 import ImageCard from "./ImageCard"
+import { useState, useEffect } from "react"
 
 export default function Historia() {
+  const [pageWidth, setPageWidth] = useState(0);
+
+  useEffect(() => {
+    setPageWidth(window.innerWidth);
+
+    function onResize() {
+      setPageWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', onResize);
+
+    onResize();
+
+    return () => {
+      window.removeEventListener('resize', onResize);
+    };
+  }, []);
+
   return(
       <>
         <div className={`${styles.section} ${styles.first}`}>
@@ -48,42 +66,89 @@ export default function Historia() {
             <p>Queremos contribuir a crear zonas verdes con un mínimo de impacto ambiental y un mayor ahorro de de agua. </p>
             <p>Por eso desarrollamos productos 100% ecológicos, y así también equilibrar el desgaste que genera el abuso de abonos de origen químico.</p>
             <div className={styles.imageContainerSecond}>
-                <ImageCard
-                    className={styles.image}
-                    src='/historia_images/Story 5.jpg'
-                    width={257}
-                    height={238}
-                    alt="Diferentes variedades de cáctus y suculentas en diferentes tamaños plantados en el sustrato de Roraima Jardines"
-                    caption="Cáctus espiral"
-                    segment={2}
-                />
-                <ImageCard
-                    className={styles.image}
-                    src='/historia_images/Story 6.jpg'
-                    width={185}
-                    height={169}
-                    alt="Cáctus arcoiris"
-                    caption="Cáctus arcoiris"
-                    segment={2}
-                />
-                <ImageCard
-                    className={styles.image}
-                    src='/historia_images/Story7.jpg'
-                    width={208}
-                    height={267}
-                    alt="Suculenta Euphorbia Meloformis de la variedad 'Variegata'"
-                    caption="Euphorbia meloformis"
-                    segment={2}
-                />
-                <ImageCard
-                    className={styles.image}
-                    src='/historia_images/Story8.jpg'
-                    width={204}
-                    height={234}
-                    alt="Vista superior de un cáctus 'Eriocyse senilis' con espinas largas rizadas y flores rosadas"
-                    caption="Eriocyse senilis"
-                    segment={2}
-                />
+              {pageWidth >= 1200 ? (
+                <>
+                  <ImageCard
+                      className={styles.image}
+                      src='/historia_images/Story 5.jpg'
+                      width={257}
+                      height={238}
+                      alt="Diferentes variedades de cáctus y suculentas en diferentes tamaños plantados en el sustrato de Roraima Jardines"
+                      caption="Cáctus espiral"
+                      segment={2}
+                  />
+                  <ImageCard
+                      className={styles.image}
+                      src='/historia_images/Story 6.jpg'
+                      width={185}
+                      height={169}
+                      alt="Cáctus arcoiris"
+                      caption="Cáctus arcoiris"
+                      segment={2}
+                  />
+                  <ImageCard
+                      className={styles.image}
+                      src='/historia_images/Story7.jpg'
+                      width={208}
+                      height={267}
+                      alt="Suculenta Euphorbia Meloformis de la variedad 'Variegata'"
+                      caption="Euphorbia meloformis"
+                      segment={2}
+                  />
+                  <ImageCard
+                      className={styles.image}
+                      src='/historia_images/Story8.jpg'
+                      width={204}
+                      height={234}
+                      alt="Vista superior de un cáctus 'Eriocyse senilis' con espinas largas rizadas y flores rosadas"
+                      caption="Eriocyse senilis"
+                      segment={2}
+                  />
+                </>
+              ) : (
+                <>
+                  <div className={styles.imageContainerSecondTop}>
+                    <ImageCard
+                        className={styles.image}
+                        src='/historia_images/Story 5.jpg'
+                        width={257}
+                        height={238}
+                        alt="Diferentes variedades de cáctus y suculentas en diferentes tamaños plantados en el sustrato de Roraima Jardines"
+                        caption="Cáctus espiral"
+                        segment={2}
+                    />
+                    <ImageCard
+                        className={styles.image}
+                        src='/historia_images/Story 6.jpg'
+                        width={185}
+                        height={169}
+                        alt="Cáctus arcoiris"
+                        caption="Cáctus arcoiris"
+                        segment={2}
+                    />
+                  </div>
+                  <div className={styles.imageContainerSecondBottom}>
+                    <ImageCard
+                        className={styles.image}
+                        src='/historia_images/Story7.jpg'
+                        width={208}
+                        height={267}
+                        alt="Suculenta Euphorbia Meloformis de la variedad 'Variegata'"
+                        caption="Euphorbia meloformis"
+                        segment={2}
+                    />
+                    <ImageCard
+                        className={styles.image}
+                        src='/historia_images/Story8.jpg'
+                        width={204}
+                        height={234}
+                        alt="Vista superior de un cáctus 'Eriocyse senilis' con espinas largas rizadas y flores rosadas"
+                        caption="Eriocyse senilis"
+                        segment={2}
+                    />
+                  </div>
+                </>
+              )}
               </div>
           </div>
         </div>

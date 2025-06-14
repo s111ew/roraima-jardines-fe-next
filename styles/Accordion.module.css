@@ -8,6 +8,7 @@
   font-size: 14px;
   padding: 10px 16px;
   border-radius: 8px;
+  width: 100%;
 }
 
 .accordionTop {
@@ -21,7 +22,6 @@
 }
 
 .footer {
-  width: 384px;
   background-color: var(--white-2);
   border: 1px solid var(--green-main);
 }

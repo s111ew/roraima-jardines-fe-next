@@ -3,11 +3,18 @@
   top: 0px;
   z-index: 1000;
   color: var(--off-white);
+  background: var(--navbar-background);
+  padding: 8px 60px;
+}
+
+.navContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--navbar-background);
-  padding: 8px 60px;
+}
+
+.burgerContainer {
+  cursor: pointer;
 }
 
 .linksContainer {
@@ -18,14 +25,31 @@
   gap: 38px;
 }
 
-.linksContainer > li > a {
+.linksContainerVertical {
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 51px;
+  padding: 0px !important;
+}
+
+.link > a,
+.link > span {
   color: inherit;
+  font-size: 20px;
+}
+
+.buttonLink > a {
+  font-size: 16px !important;
 }
 
 .link {
   cursor: pointer;
 }
 
-.active {
+.buttonLink .active {
   font-weight: bold;
 }
