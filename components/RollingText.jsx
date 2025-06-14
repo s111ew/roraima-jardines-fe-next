@@ -12,16 +12,14 @@ export default function RollingText({ words }) {
         setIndex((prevIndex) => (prevIndex + 1) % words.length)
         setAnimating(false)
       }, 300)
-    }, 5000)
+    }, 3000)
 
     return () => clearInterval(interval)
   }, [words.length])
 
   return (
-    <div className={styles.rollingText}>
-      <h3 className={`${styles.word} ${animating ? styles.animate : ''}`}>
+      <span className={`${styles.word} ${animating ? styles.animate : ''}`}>
         {words[index]}
-      </h3>
-    </div>
+      </span>
   )
 }

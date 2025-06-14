@@ -2,7 +2,7 @@ import styles from "../styles/ImageCard.module.css"
 import { useState } from "react"
 import Image from "next/image"
 
-export default function ImageCard ({ src, alt, width, height, caption, segment}) {
+export default function ImageCard ({ src, alt, width, height, caption, segment, style}) {
   const [isMouseEntered, setIsMouseEntered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -22,7 +22,11 @@ export default function ImageCard ({ src, alt, width, height, caption, segment})
       className={`${styles.container} ${segment === 1 ? styles.boxShadow1 : ''} ${segment === 2 ? styles.boxShadow2 : ''} ${segment === 3 ? styles.boxShadow3 : ''}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      style={{width: `${width}px`, height: `${height}px`}}
+      style={{
+        width: `${width}px`, 
+        height: `${height}px`,
+        ...style
+      }}
     >
       <Image
         className={styles.image}

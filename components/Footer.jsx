@@ -10,8 +10,7 @@ function Footer() {
   return (
     <footer className={`${styles.footer} section`}>
       <div className={styles.rollingTextContainer}>
-        <h3>Damos vida a tus</h3>
-        <RollingText words={rollingWords} />
+        <h3>Damos vida a tus <RollingText words={rollingWords} /></h3>
       </div>
       <h2>Consulta Con Nosotros</h2>
       <div className={styles.formContainer} >

@@ -120,6 +120,7 @@ h6 {
   --shadow-1: 1px 2px 7.2px 0px #1e3321;
   --shadow-2: 1px 2px 7.2px 0px #375d3c;
   --shadow-3: 1px 2px 7.2px 0px #548d5b;
+  --shadow-2-top: 1px -2px 7.2px 0px #375d3c;
 }
 
 a {
@@ -152,12 +153,19 @@ section {
 }
 
 .hero {
+  position: relative;
   background: var(--hero-background);
   padding: 168px 0px;
   display: flex;
   flex-direction: column;
   gap: 192px;
   color: var(--off-white);
+}
+
+.hero-title {
+  padding: 10px 0px;
+  font-size: 48px;
+  line-height: 54px;
 }
 
 .hero-main-container {
@@ -174,9 +182,16 @@ section {
   font-weight: 400;
 }
 
+.hero-call-to-action {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  padding: 24px 0px;
+}
+
 .hero-call-to-action > p {
   font-size: 20px;
-  margin-bottom: 48px;
 }
 
 .hero-call-to-action-link {
@@ -223,7 +238,7 @@ section {
   width: 784px;
   height: 337px;
   display: flex;
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-2-top);
   border-radius: 33px;
 }
 
