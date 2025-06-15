@@ -289,6 +289,7 @@ section {
 .testimonials {
   background: var(--testimonial-background);
   padding: 48px 0px;
+  overflow: hidden;
 }
 
 .testimonials > h2 {
@@ -407,6 +408,11 @@ section {
     gap: 20px;
     height: 324px;
     justify-content: center;
+  }
+
+  .testimonials-container {
+    gap: 16px;
+    overflow: hidden;
   }
 }
 

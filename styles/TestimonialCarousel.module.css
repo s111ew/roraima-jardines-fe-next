@@ -1,0 +1,58 @@
+.carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.cardContainer {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cardContainer::-webkit-scrollbar {
+  display: none;
+}
+
+#testimonial-1 {
+  padding-left: 100%;
+}
+
+#testimonial-2 {
+  padding-right: 100%;
+}
+
+.card {
+  scroll-snap-align: center;
+  padding: 1rem;
+  flex: 0 0 auto;
+}
+
+.legend {
+  display: flex;
+  gap: 22px;
+  padding: 6px 10px;
+  align-items: center;
+  background-color: var(--green-alt);
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+.dot {
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: var(--off-white);
+}
+
+.dot.active {
+  background-color: var(--green-basic) !important;
+}

@@ -51,3 +51,29 @@
   flex-direction: column;
   gap: 8px;
 }
+
+@media (max-width: 1199px) {
+  .card {
+    width: 310px;
+    height: 311px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--off-white);
+    border-radius: 33px;
+    padding: 25px;
+  }
+
+  .bottom {
+    gap: 16px;
+  }
+
+  .photo {
+    width: 72px;
+    height: 58px;
+  }
+
+  .info > h3 {
+    font-size: 16px;
+  }
+}
