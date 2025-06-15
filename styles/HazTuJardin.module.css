@@ -10,7 +10,8 @@
   font-size: 20px;
 }
 
-.contentContainer {
+.contentContainer,
+.contentContainerIntro {
   width: 784px;
   display: flex;
   flex-direction: column;
@@ -106,4 +107,32 @@
 
 .buttonContainer > * {
   flex: 1;
+}
+
+@media (max-width: 1199px) {
+  .contentContainer {
+    width: 419px;
+  }
+
+  .contentContainerIntro {
+    width: clamp(419px, 60%, 592px);
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .contentContainer {
+    width: 303px;
+  }
+
+  .contentContainerIntro {
+    width: clamp(303px, 60%, 419px);
+  }
+
+  .tableContainer {
+    width: 120%;
+  }
 }

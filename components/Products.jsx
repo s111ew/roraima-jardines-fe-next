@@ -25,6 +25,7 @@ export default function Products() {
   return(
     <section className={styles.products}>
       <div className={`${styles.segment} ${styles.first}`}>
+        <h2 className={styles.title}>Nuestros Productos</h2>
         <div className={styles.cardWrapper}>
           <ProductCard
             isTitle={true}

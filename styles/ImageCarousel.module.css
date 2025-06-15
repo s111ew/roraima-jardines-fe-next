@@ -51,7 +51,13 @@
 
 @media (max-width: 1199px) {
   .imageContainer {
-    height: auto;
-    max-width: 303px;
+    height: 258px;
+    padding-left: 100px;
+    gap: 50px;
+  }
+  .imageContainer > .image {
+    height: 100%;
+    width: auto;
+    flex-shrink: 0;
   }
 }

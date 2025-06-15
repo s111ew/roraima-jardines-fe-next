@@ -24,3 +24,14 @@
   height: 18px;
   pointer-events: none;
 }
+
+@media (max-width: 1199px) {
+  .selectWrapper {
+    width: 419px;
+  }
+}
+@media (max-width: 500px) {
+  .selectWrapper {
+    width: 303px;
+  }
+}

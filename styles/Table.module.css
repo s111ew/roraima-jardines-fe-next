@@ -17,7 +17,7 @@
 }
 
 .rowHeader {
-  width: 268px;
+  text-align: start;
   height: 81px;
   border-radius: 5px 0px 0px 5px;
 }
@@ -45,7 +45,7 @@
   border-radius: 5px;
   position: absolute;
   top: 35%;
-  left: 20px;
+  left: 11%;
   z-index: 10;
 }
 .dataDuo {
@@ -67,4 +67,24 @@
 .dataDuo[data-length="2"],
 .dataSingle[data-length="2"] {
   width: 178%;
+}
+
+@media (max-width: 1199px) {
+  .rowHeader,
+  .columnHeader {
+    font-size: 14px;
+    line-height: 16.8px;
+    padding: 8px 10px;
+  }
+
+  .columnHeader {
+    width: 88px;
+    padding: 0px;
+  }
+
+  .dataDuo,
+  .dataSingle {
+    height: 14px;
+    top: 42%;
+  }
 }

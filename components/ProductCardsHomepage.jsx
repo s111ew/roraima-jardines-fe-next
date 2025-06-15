@@ -1,7 +1,26 @@
 import ProductCard from "./ProductCardHomepage.jsx"
 import ImageCard from "./ImageCard.jsx"
+import { useState, useEffect } from "react";
 
 function ProductCards() {
+  const [pageWidth, setPageWidth] = useState(0);
+  
+    useEffect(() => {
+      setPageWidth(window.innerWidth);
+  
+      function onResize() {
+        setPageWidth(window.innerWidth);
+      }
+  
+      window.addEventListener('resize', onResize);
+  
+      onResize();
+  
+      return () => {
+        window.removeEventListener('resize', onResize);
+      };
+    }, []);
+
   return(
     <section className="product-cards">
       <h2>Nuestros Productos</h2>
@@ -13,24 +32,24 @@ function ProductCards() {
       <div className="images-container">
         <ImageCard
           src={"/homepage_images/HP11.jpg"}
-          width={176}
-          height={225}
+          width={pageWidth < 1200 ? 114 : 176}
+          height={pageWidth < 1200 ? 147 : 225}
           alt={"Cáctus arcoiris"}
           caption={"Cáctus arcoiris"}
           segment={2}
         />
         <ImageCard
           src={"/homepage_images/HP10.jpg"}
-          width={180}
-          height={321}
+          width={pageWidth < 1200 ? 117 : 180}
+          height={pageWidth < 1200 ? 209 : 321}
           alt={"Diferentes variedades de cáctus y suculentas en diferentes tamaños plantados en el sustrato de Roraima Jardines"}
           caption={"Cáctus arcoiris"}
           segment={2}
         />
         <ImageCard
           src={"/homepage_images/HP9.jpg"}
-          width={220}
-          height={275}
+          width={pageWidth < 1200 ? 143 : 220}
+          height={pageWidth < 1200 ? 179 : 275}
           alt={"Suculenta Euphorbia Meloformis de la variedad 'Variegata'"}
           caption={"Euphorbia meloformis"}
           segment={2}

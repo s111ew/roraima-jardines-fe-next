@@ -75,7 +75,7 @@ export default function HazTuJardin() {
   return(
     <>
       <div className={`${styles.section} ${styles.intro}`}>
-        <div className={styles.contentContainer}>
+        <div className={styles.contentContainerIntro}>
           <h1 className={styles.title}>Haz Tu Jardín</h1>
           <div className={styles.introTextContainer}>
             <p>Sigue nuestro calendario de preparaciones, sembrado, abonado y mantenimiento para sacarle el mejor partido a tu jardín durante todo el año. </p>
