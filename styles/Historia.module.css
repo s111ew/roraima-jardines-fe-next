@@ -144,8 +144,8 @@
   }
   .imageContainerSecondBottom > div:nth-child(2) {
     margin: 0px;
-    width: 138px !important;
-    height: 120px !important;
+    width: 120px !important;
+    height: 138px !important;
   }
   .imageContainerThird > div:first-child {
     margin: 0px;

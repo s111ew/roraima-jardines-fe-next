@@ -11,7 +11,7 @@ export default function ImageCarousel({ cardNumber, images }) {
     const options = {
       root: imageContainerRef.current,
       rootMargin: "0px",
-      threshold: 1.0,
+      threshold: 0.5,
     };
 
     observerRef.current = new IntersectionObserver((entries) => {

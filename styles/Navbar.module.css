@@ -4,7 +4,7 @@
   z-index: 1000;
   color: var(--off-white);
   background: var(--navbar-background);
-  padding: 8px 60px;
+  padding: 8px 47px;
 }
 
 .navContainer {
@@ -52,4 +52,10 @@
 
 .buttonLink .active {
   font-weight: bold;
+}
+
+@media (max-width: 1199px) {
+  .navbar {
+    padding: 8px 20px;
+  }
 }

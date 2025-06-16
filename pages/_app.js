@@ -6,7 +6,9 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Navbar />
-      <Component {...pageProps} />
+      <div className="content-wrapper">
+        <Component {...pageProps} />
+      </div>
       <Footer />
     </>
   );

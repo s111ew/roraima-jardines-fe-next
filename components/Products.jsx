@@ -5,22 +5,22 @@ import ProductCard from './ProductCardProduct'
 export default function Products() {
   const images = [
     [
-      {key: 1, src: `${prefix}/product_showcase/Sustrato1.png`},
-      {key: 2, src: `${prefix}/product_showcase/Sustrato2.jpg`},
-      {key: 3, src: `${prefix}/product_showcase/Sustrato3.png`},
-      {key: 4, src: `${prefix}/product_showcase/Sustrato4.jpg`}
+      {key: 1, src: `${prefix}/product_showcase/Sustrato1.webp`},
+      {key: 2, src: `${prefix}/product_showcase/Sustrato2.webp`},
+      {key: 3, src: `${prefix}/product_showcase/Sustrato3.webp`},
+      {key: 4, src: `${prefix}/product_showcase/Sustrato4.webp`}
     ],
     [
-      {key: 1, src: `${prefix}/product_showcase/Huerto1.png`},
-      {key: 2, src: `${prefix}/product_showcase/Huerto2.jpg`},
-      {key: 3, src: `${prefix}/product_showcase/Huerto3.jpg`},
-      {key: 4, src: `${prefix}/product_showcase/Huerto4.jpg`}
+      {key: 1, src: `${prefix}/product_showcase/Huerto1.webp`},
+      {key: 2, src: `${prefix}/product_showcase/Huerto2.webp`},
+      {key: 3, src: `${prefix}/product_showcase/Huerto3.webp`},
+      {key: 4, src: `${prefix}/product_showcase/Huerto4.webp`}
     ],
     [
-      {key: 1, src: `${prefix}/product_showcase/Plantas1.png`},
-      {key: 2, src: `${prefix}/product_showcase/Plantas2.jpg`},
-      {key: 3, src: `${prefix}/product_showcase/Plantas3.png`},
-      {key: 4, src: `${prefix}/product_showcase/Plantas4.jpg`}
+      {key: 1, src: `${prefix}/product_showcase/Plantas1.webp`},
+      {key: 2, src: `${prefix}/product_showcase/Plantas2.webp`},
+      {key: 3, src: `${prefix}/product_showcase/Plantas3.webp`},
+      {key: 4, src: `${prefix}/product_showcase/Plantas4.webp`}
     ]
   ]
   return(

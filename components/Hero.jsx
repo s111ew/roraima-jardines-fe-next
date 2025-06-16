@@ -26,7 +26,7 @@ function Hero() {
   return(
     <section className="hero">
       <ImageCard
-        src={`${prefix}/homepage_images/HP0.jpg`}
+        src={`${prefix}/homepage_images/HP0.webp`}
         alt={"Primer plano de una planta suculenta madre perla floreando"}
         caption={"Suculenta madre perla"}
         width={pageWidth < 1200 ? 202 : 230}
@@ -39,7 +39,7 @@ function Hero() {
         }}
       />
       <ImageCard
-        src={`${prefix}/homepage_images/HP1.jpg`}
+        src={`${prefix}/homepage_images/HP1.webp`}
         alt={"Planta Jade adulta rodeada por plantas similares de menor tamaño"}
         caption={"Jade"}
         width={pageWidth < 1200 ? 90 : 122}
@@ -52,7 +52,7 @@ function Hero() {
         }}
       />
       <ImageCard
-        src={`${prefix}/homepage_images/HP2.jpg`}
+        src={`${prefix}/homepage_images/HP2.webp`}
         alt={"Primer plano de las hojas de una planta Jade con los bordes rojizos"}
         caption={"Jade"}
         width={pageWidth < 1200 ? 190 : 257}
@@ -65,7 +65,7 @@ function Hero() {
         }}
       />
       <ImageCard
-        src={`${prefix}/homepage_images/HP3.jpg`}
+        src={`${prefix}/homepage_images/HP3.webp`}
         alt={"Una planta aptenia con flores rosadas de cerca"}
         caption={"Aptenia"}
         width={pageWidth < 1200 ? 127 : 216}
@@ -78,7 +78,7 @@ function Hero() {
         }}
       />
       <ImageCard
-        src={`${prefix}/homepage_images/HP4.jpg`}
+        src={`${prefix}/homepage_images/HP4.webp`}
         alt={"Varias plantas aptenias floreadas de tamaño mediano"}
         caption={"Aptenias"}
         width={pageWidth < 1200 ? 97 : 165}

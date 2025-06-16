@@ -42,7 +42,6 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
-  overflow-x: hidden;
 }
 
 @font-face {
@@ -144,6 +143,10 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+}
+
+.content-wrapper {
+  overflow-x: hidden;
 }
 
 section {
@@ -290,7 +293,7 @@ section {
 .testimonials {
   background: var(--testimonial-background);
   padding: 48px 0px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .testimonials > h2 {
