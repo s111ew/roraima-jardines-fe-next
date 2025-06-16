@@ -34,8 +34,8 @@ function Hero() {
         segment={1}
         style={{
           position: "absolute",
-          right: "95px",
-          top: pageWidth < 1200 ? "218px" : "143px"
+          right: pageWidth < 521 ? "20px"  : "95px",
+          top: pageWidth < 1200 ? (pageWidth < 521 ? "200px"  : "218px") : "143px"
         }}
       />
       <ImageCard
@@ -48,7 +48,7 @@ function Hero() {
         style={{
           position: "absolute",
           left: "16px",
-          top: pageWidth < 1200 ? "441px" : "466px"
+          top: pageWidth < 1200 ? (pageWidth < 521 ? "571px"  : "441px") : "466px"
         }}
       />
       <ImageCard
@@ -60,8 +60,8 @@ function Hero() {
         segment={1}
         style={{
           position: "absolute",
-          left: "25px",
-          top: pageWidth < 1200 ? "578px" : "650px"
+          left: pageWidth < 521 ? "120px"  : "25px",
+          top: pageWidth < 1200 ? (pageWidth < 521 ? "648px"  : "578px") : "650px"
         }}
       />
       <ImageCard
@@ -73,8 +73,8 @@ function Hero() {
         segment={1}
         style={{
           position: "absolute",
-          right: "109px",
-          top: pageWidth < 1200 ? "571px" : "626px"
+          right: pageWidth < 521 ? "46px"  : "109px",
+          top: pageWidth < 1200 ? (pageWidth < 521 ? "1078px"  : "571px") : "626px"
         }}
       />
       <ImageCard
@@ -86,8 +86,8 @@ function Hero() {
         segment={1}
         style={{
           position: "absolute",
-          right: "27px",
-          top: pageWidth < 1200 ? "683px" : "812px"
+          right: pageWidth < 521 ? "17px"  : "27px",
+          top: pageWidth < 1200 ? (pageWidth < 521 ? "1188px"  : "683px") : "812px"
         }}
       />
       <div className="hero-main-container">

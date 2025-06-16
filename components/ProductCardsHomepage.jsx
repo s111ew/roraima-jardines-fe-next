@@ -31,30 +31,65 @@ function ProductCards() {
         <ProductCard src={`${prefix}/product_images/Plantas 1.jpg`} src2={`${prefix}/product_images/Plantas 2.jpg`} alt="" title="Plantas ornamentales" desc="Variedades de cactus, aptenias y mesen" sectionToScrollTo='image-3-1'/>
       </div>
       <div className="images-container">
-        <ImageCard
-          src={`${prefix}/homepage_images/HP11.jpg`}
-          width={pageWidth < 1200 ? 114 : 176}
-          height={pageWidth < 1200 ? 147 : 225}
-          alt={"Cáctus arcoiris"}
-          caption={"Cáctus arcoiris"}
-          segment={2}
-        />
-        <ImageCard
-          src={`${prefix}/homepage_images/HP10.jpg`}
-          width={pageWidth < 1200 ? 117 : 180}
-          height={pageWidth < 1200 ? 209 : 321}
-          alt={"Diferentes variedades de cáctus y suculentas en diferentes tamaños plantados en el sustrato de Roraima Jardines"}
-          caption={"Cáctus arcoiris"}
-          segment={2}
-        />
-        <ImageCard
-          src={`${prefix}/homepage_images/HP9.jpg`}
-          width={pageWidth < 1200 ? 143 : 220}
-          height={pageWidth < 1200 ? 179 : 275}
-          alt={"Suculenta Euphorbia Meloformis de la variedad 'Variegata'"}
-          caption={"Euphorbia meloformis"}
-          segment={2}
-        />
+        {pageWidth < 521 ? (
+          <>
+            <div className="images-container-left">
+              <ImageCard
+                src={`${prefix}/homepage_images/HP10.jpg`}
+                width={pageWidth < 1200 ? 117 : 180}
+                height={pageWidth < 1200 ? 209 : 321}
+                alt={"Diferentes variedades de cáctus y suculentas en diferentes tamaños plantados en el sustrato de Roraima Jardines"}
+                caption={"Cáctus arcoiris"}
+                segment={2}
+              />
+            </div>
+            <div className="images-container-right">
+              <ImageCard
+                src={`${prefix}/homepage_images/HP9.jpg`}
+                width={pageWidth < 1200 ? 143 : 220}
+                height={pageWidth < 1200 ? 179 : 275}
+                alt={"Suculenta Euphorbia Meloformis de la variedad 'Variegata'"}
+                caption={"Euphorbia meloformis"}
+                segment={2}
+              />
+              <ImageCard
+                src={`${prefix}/homepage_images/HP11.jpg`}
+                width={pageWidth < 1200 ? 114 : 176}
+                height={pageWidth < 1200 ? 147 : 225}
+                alt={"Cáctus arcoiris"}
+                caption={"Cáctus arcoiris"}
+                segment={2}
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            <ImageCard
+              src={`${prefix}/homepage_images/HP11.jpg`}
+              width={pageWidth < 1200 ? 114 : 176}
+              height={pageWidth < 1200 ? 147 : 225}
+              alt={"Cáctus arcoiris"}
+              caption={"Cáctus arcoiris"}
+              segment={2}
+            />
+            <ImageCard
+              src={`${prefix}/homepage_images/HP10.jpg`}
+              width={pageWidth < 1200 ? 117 : 180}
+              height={pageWidth < 1200 ? 209 : 321}
+              alt={"Diferentes variedades de cáctus y suculentas en diferentes tamaños plantados en el sustrato de Roraima Jardines"}
+              caption={"Cáctus arcoiris"}
+              segment={2}
+            />
+            <ImageCard
+              src={`${prefix}/homepage_images/HP9.jpg`}
+              width={pageWidth < 1200 ? 143 : 220}
+              height={pageWidth < 1200 ? 179 : 275}
+              alt={"Suculenta Euphorbia Meloformis de la variedad 'Variegata'"}
+              caption={"Euphorbia meloformis"}
+              segment={2}
+            />
+          </>
+        )}
       </div>
     </section>
   )

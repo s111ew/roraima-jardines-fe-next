@@ -1,3 +1,4 @@
+import { prefix } from "@/public/data/prefix"
 import styles from "../styles/SelectAccordion.module.css"
 
 export default function SelectAccordion({ name, options, setCurrentSeason }) {
@@ -13,7 +14,7 @@ export default function SelectAccordion({ name, options, setCurrentSeason }) {
       <select onChange={e => handleChange(e.target.value)} className={styles.select} name={name}>
         {optionElements}
       </select>
-      <img className={styles.arrow} src="/arrow_black.svg" alt="arrow icon" />
+      <img className={styles.arrow} src={`${prefix}/arrow_black.svg`} alt="arrow icon" />
     </div>
   )
 }

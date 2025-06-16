@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styles from '../styles/Accordion.module.css'
+import { prefix } from '@/public/data/prefix'
 
 export default function Accordion({ isOpenDefault, title, content, location }) {
   const [isOpen, setIsOpen] = useState(isOpenDefault)
@@ -12,7 +13,7 @@ export default function Accordion({ isOpenDefault, title, content, location }) {
     <div className={`${styles.accordion} ${styles[location] || ''}`} onClick={handleClick}>
       <div className={styles.accordionTop}>
         <p>{title}</p>
-        <img src="/arrow_black.svg" alt="" style={isOpen ? {transform: 'rotateX(180deg)'} : null}/>
+        <img src={`${prefix}/arrow_black.svg`} alt="" style={isOpen ? {transform: 'rotateX(180deg)'} : null}/>
       </div>
         {isOpen ? <div className={styles.accordionContent}>{content}</div> : ''}
     </div>
