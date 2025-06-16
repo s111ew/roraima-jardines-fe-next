@@ -1,25 +1,26 @@
+import { prefix } from '@/public/data/prefix'
 import styles from '../styles/Productos.module.css'
 import ProductCard from './ProductCardProduct'
 
 export default function Products() {
   const images = [
     [
-      {key: 1, src: 'product_showcase/Sustrato 1.png'},
-      {key: 2, src: 'product_showcase/Sustrato 2.jpg'},
-      {key: 3, src: 'product_showcase/Sustrato 3.png'},
-      {key: 4, src: 'product_showcase/Sustrato 4.jpg'}
+      {key: 1, src: `${prefix}/product_showcase/Sustrato1.png`},
+      {key: 2, src: `${prefix}/product_showcase/Sustrato2.jpg`},
+      {key: 3, src: `${prefix}/product_showcase/Sustrato3.png`},
+      {key: 4, src: `${prefix}/product_showcase/Sustrato4.jpg`}
     ],
     [
-      {key: 1, src: 'product_showcase/Huerto 1.png'},
-      {key: 2, src: 'product_showcase/Huerto 2.jpg'},
-      {key: 3, src: 'product_showcase/Huerto 3.jpg'},
-      {key: 4, src: 'product_showcase/Huerto 4.jpg'}
+      {key: 1, src: `${prefix}/product_showcase/Huerto1.png`},
+      {key: 2, src: `${prefix}/product_showcase/Huerto2.jpg`},
+      {key: 3, src: `${prefix}/product_showcase/Huerto3.jpg`},
+      {key: 4, src: `${prefix}/product_showcase/Huerto4.jpg`}
     ],
     [
-      {key: 1, src: 'product_showcase/Plantas 1.png'},
-      {key: 2, src: 'product_showcase/Plantas 2.jpg'},
-      {key: 3, src: 'product_showcase/Plantas 3.png'},
-      {key: 4, src: 'product_showcase/Plantas 4.jpg'}
+      {key: 1, src: `${prefix}/product_showcase/Plantas1.png`},
+      {key: 2, src: `${prefix}/product_showcase/Plantas2.jpg`},
+      {key: 3, src: `${prefix}/product_showcase/Plantas3.png`},
+      {key: 4, src: `${prefix}/product_showcase/Plantas4.jpg`}
     ]
   ]
   return(

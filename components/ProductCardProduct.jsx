@@ -4,7 +4,7 @@ import Accordion from "./Accordion"
 import Button from "./Button"
 import ImageCarousel from "./ImageCarousel"
 
-export default function ProductCard({ isTitle, cardNumber, images, title, description, sizes, accordionTitlePrimary, accordionContentPrimary, accordionContentSecondary }) {
+export default function ProductCard({ cardNumber, images, title, description, sizes, accordionTitlePrimary, accordionContentPrimary, accordionContentSecondary }) {
   return(
     <div id={`card-${cardNumber}`} className={styles.card}>
       <ImageCarousel cardNumber={cardNumber} images={images}/>

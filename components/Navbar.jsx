@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image';
 import Button from '../components/Button';
 import styles from '../styles/Navbar.module.css'
+import { prefix } from '@/public/data/prefix';
 
 function Navbar() {
   const [pageWidth, setPageWidth] = useState(0);
@@ -61,7 +62,7 @@ function Navbar() {
           }}
         >
           <Image 
-            src="/Logo.svg" 
+            src={`${prefix}/Logo.svg`}
             alt="Roraima Jardines logo" 
             fill
             style={{ objectFit: 'contain', transition: 'width 0.1s ease-out' }}
@@ -74,7 +75,7 @@ function Navbar() {
               className={styles.burgerContainer}
               onClick={toggleOpen}
             >
-              {isOpen ? <img src='/close.svg'></img> : <img src='/burger.svg'></img>}
+              {isOpen ? <img src={`${prefix}/close.svg`}></img> : <img src={`${prefix}/burger.svg`}></img>}
             </div>
           )
         }

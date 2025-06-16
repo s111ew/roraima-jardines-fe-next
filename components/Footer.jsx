@@ -3,6 +3,7 @@ import RollingText from "./RollingText"
 import Input from "../components/Input"
 import Button from "../components/Button"
 import Accordion from "./Accordion"
+import { prefix } from "@/public/data/prefix"
 
 function Footer() {
   const rollingWords = ['plantas', 'rosales', 'siembras', 'vegetales', 'frutos', 'jardín']
@@ -33,11 +34,11 @@ function Footer() {
           <h2>Síguenos en redes</h2>
           <div className={styles.socialMediaLinks}>
             <div className={styles.socialMediaLink}>
-              <img src='facebook_black.svg'></img>
+              <img src={`${prefix}/facebook_black.svg`}></img>
               <span>Facebook</span>
             </div>
             <div className={styles.socialMediaLink}>
-              <img src='instagram_black.svg'></img>
+              <img src={`${prefix}/instagram_black.svg`}></img>
               <span>Instagram</span>
             </div>
           </div>

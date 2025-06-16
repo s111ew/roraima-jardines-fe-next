@@ -2,6 +2,7 @@ import TestimonialCard from "../components/TestimonialCard";
 import TestimonialCarousel from "./TestimonialCarousel";
 import ImageCard from "./ImageCard";
 import { useState, useEffect } from "react";
+import { prefix } from "@/public/data/prefix";
 
 function Testimonial() {
   const [pageWidth, setPageWidth] = useState(0);
@@ -86,7 +87,7 @@ function Testimonial() {
         {
           pageWidth < 1200 ? '' : (
             <ImageCard
-              src={'/homepage_images/HP12.jpg'}
+              src={`${prefix}/homepage_images/HP12.jpg`}
               width={200}
               height={194}
               alt={'Cientos de plantas Mesen floreadas cubren el suelo creando un tapiz verde, naranja y violeta'}
@@ -96,7 +97,7 @@ function Testimonial() {
           )
         }
         <ImageCard
-          src={'/homepage_images/HP13.jpg'}
+          src={`${prefix}/homepage_images/HP13.jpg`}
           width={pageWidth < 1200 ? 170 : 262}
           height={pageWidth < 1200 ? 226 : 384}
           alt={'Primer plano de las flores violetas de las plantas Mesen'}
@@ -104,7 +105,7 @@ function Testimonial() {
           segment={3}
         />
         <ImageCard
-          src={'/homepage_images/HP14.jpg'}
+          src={`${prefix}/homepage_images/HP14.jpg`}
           width={pageWidth < 1200 ? 121 : 186}
           height={pageWidth < 1200 ? 160 : 248}
           alt={'Primer plano de las flores violetas de las plantas Mesen'}
@@ -114,7 +115,7 @@ function Testimonial() {
         {
           pageWidth < 1200 ? '' : (
             <ImageCard
-              src={'/homepage_images/HP15.jpg'}
+              src={`${prefix}/homepage_images/HP15.jpg`}
               width={232}
               height={383}
               alt={'Plano general de las plantas Mesen con flores naranjas'}
