@@ -59,6 +59,8 @@ h6 {
     #88c18f 129.68%
   );
   --green-basic: rgba(29, 150, 44, 1);
+  --green-2: rgba(86, 155, 95, 1);
+  --green-3: rgba(20, 105, 31, 1);
   --green-alt: rgba(208, 224, 209, 1);
   --text-dark: rgba(35, 18, 18, 1);
   --navbar-background: linear-gradient(
@@ -344,6 +346,8 @@ section {
   }
 
   .hero-information-container {
+    flex-direction: column;
+    gap: 96px;
     margin-top: 30px;
   }
 
@@ -417,16 +421,9 @@ section {
   }
 }
 
-@media (max-width: 951px) {
-  .hero-information-container {
-    flex-direction: column;
-    gap: 96px;
-  }
-}
-
 @media (max-width: 520px) {
   .hero {
-    padding: 64px 0px;
+    padding: 64px 0px 280px 0px;
   }
 
   .hero-main-container {
@@ -437,6 +434,7 @@ section {
   .hero-information-container {
     margin-top: 0px;
     margin-bottom: 40px;
+    margin-top: 34px;
   }
 
   .images-container-left {

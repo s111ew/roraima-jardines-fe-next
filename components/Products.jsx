@@ -1,8 +1,27 @@
 import { prefix } from '@/public/data/prefix'
 import styles from '../styles/Productos.module.css'
 import ProductCard from './ProductCardProduct'
+import { useState, useEffect } from 'react';
 
 export default function Products() {
+  const [pageWidth, setPageWidth] = useState(0);
+    
+      useEffect(() => {
+        setPageWidth(window.innerWidth);
+    
+        function onResize() {
+          setPageWidth(window.innerWidth);
+        }
+    
+        window.addEventListener('resize', onResize);
+    
+        onResize();
+    
+        return () => {
+          window.removeEventListener('resize', onResize);
+        };
+      }, []);
+
   const images = [
     [
       {key: 1, src: `${prefix}/product_showcase/Sustrato1.webp`},
@@ -17,10 +36,10 @@ export default function Products() {
       {key: 4, src: `${prefix}/product_showcase/Huerto4.webp`}
     ],
     [
-      {key: 1, src: `${prefix}/product_showcase/Plantas1.webp`},
+      {key: 1, src: pageWidth < 1200 ? `${prefix}/product_showcase/Plantas1small.webp` : `${prefix}/product_showcase/Plantas1.webp`},
       {key: 2, src: `${prefix}/product_showcase/Plantas2.webp`},
       {key: 3, src: `${prefix}/product_showcase/Plantas3.webp`},
-      {key: 4, src: `${prefix}/product_showcase/Plantas4.webp`}
+      {key: 4, src: pageWidth < 1200 ? `${prefix}/product_showcase/Plantas4small.webp` : `${prefix}/product_showcase/Plantas4.webp`}
     ]
   ]
   return(

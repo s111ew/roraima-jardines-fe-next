@@ -99,6 +99,10 @@
   gap: 16px;
 }
 
+.accordionContent > ul > li {
+  font-size: 16px;
+}
+
 .buttonContainer {
   width: 100%;
   display: flex;

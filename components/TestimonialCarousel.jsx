@@ -9,10 +9,10 @@ export default function TestimonialCarousel({ carouselId, testimonials }) {
   useEffect(() => {
 
     function addActiveStyle(index) {
-      const dotToActivate = containerRef.current.querySelector(`#dot-${carouselId}-${index}`);
+      const dotToActivate = containerRef.current?.querySelector(`#dot-${carouselId}-${index}`);
 
       // Clear all active dots in this instance
-      containerRef.current.querySelectorAll(`.${styles.dot}.${styles.active}`)
+      containerRef.current?.querySelectorAll(`.${styles.dot}.${styles.active}`)
         .forEach((dot) => dot.classList.remove(styles.active));
 
       if (dotToActivate) {

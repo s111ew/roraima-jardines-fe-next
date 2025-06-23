@@ -22,6 +22,14 @@
   background-color: var(--green-basic);
 }
 
+.buttonMain.green:hover {
+  background-color: var(--green-2);
+}
+
+.buttonMain.green:active {
+  background-color: var(--green-3);
+}
+
 .buttonMain.white {
   background-color: var(--off-white);
 }
@@ -38,4 +46,34 @@
 
 .buttonText.white {
   color: var(--text-dark);
+}
+
+.iconContainer {
+  height: 18px;
+  overflow: hidden;
+}
+
+.iconWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon.bottom {
+  opacity: 0;
+  transform: scaleY(-1);
+  transition: transform 0.5s ease, opacity 0s ease;
+}
+
+.icon.top {
+  transition: transform 0.5s ease, opacity 0s ease;
+}
+
+.icon.top.animating {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.icon.bottom.animating {
+  transform: translateY(-100%) scaleY(-1);
+  opacity: 100;
 }

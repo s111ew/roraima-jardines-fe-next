@@ -8,6 +8,7 @@ import { prefix } from '@/public/data/prefix';
 function Navbar() {
   const [pageWidth, setPageWidth] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const prevWidthRef = useRef(0); // Track previous width
 
   useEffect(() => {
@@ -46,6 +47,18 @@ function Navbar() {
     });
   }
 
+  function mouseEnter() {
+    if (!isVisible) {
+      setIsVisible(true)
+    }
+  }
+
+  function mouseLeave() {
+    if (isVisible) {
+      setIsVisible(false)
+    }
+  }
+
   return (
     <nav 
       className={styles.navbar}
@@ -54,7 +67,9 @@ function Navbar() {
       <div className={styles.navContainer}>
         <Link 
           href='/' 
-          style={{ position: 'relative', width: `${68}px`, height: `${68}px` }} 
+          className={`${styles.logoContainer} ${pageWidth < 1200 && isOpen ? styles.middle : ''}`}
+          onMouseEnter={mouseEnter}
+          onMouseLeave={mouseLeave}
           onClick={() => {
             if (pageWidth < 1200 && isOpen) {
               setIsOpen(false)
@@ -62,10 +77,16 @@ function Navbar() {
           }}
         >
           <Image 
+            src={`${prefix}/LogoCol.svg`}
+            alt="Roraima Jardines logo"
+            style={{zIndex: "10000", transition: "opacity 0.3s ease", opacity: isVisible ? "1" : "0"}} 
+            fill
+            priority
+          />
+          <Image 
             src={`${prefix}/Logo.svg`}
             alt="Roraima Jardines logo" 
             fill
-            style={{ objectFit: 'contain', transition: 'width 0.1s ease-out' }}
             priority
           />
         </Link>
