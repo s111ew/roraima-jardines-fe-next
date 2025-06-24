@@ -119,7 +119,7 @@ function Navbar() {
             <li className={styles.link} onClick={toggleOpen} ><Link href='/jardin'>Haz tu Jardín</Link></li>
             <li className={styles.link} onClick={toggleOpen} ><Link href='/historia'>Nuestra Historia</Link></li>
             <li className={styles.link} onClick={toggleOpen} ><span onClick={scrollToBottom}>Contacto</span></li>
-            <li className={styles.link} onClick={toggleOpen} ><Link href='/puntos_de_venta'><Button text={'Puntos de venta'} colour='green'/></Link></li>
+            <li className={`${styles.link} ${styles.buttonLink}`} onClick={toggleOpen} ><Link href='/puntos_de_venta'><Button text={'Puntos de venta'} colour='green'/></Link></li>
           </ul>
         )
       }

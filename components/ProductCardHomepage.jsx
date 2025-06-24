@@ -1,24 +1,32 @@
 import Button from "./Button"
 import Link from "next/link"
 import { useState } from "react"
+import styles from "../styles/ProductCardHomepage.module.css"
 
 export default function ProductCard({ src, src2, alt, title, desc, sectionToScrollTo }) {
-  const [currentSrc, setCurrentSrc] = useState(src)
+  const [isHovered, setIsHovered] = useState(false)
 
 
   function onMouseEnter() {
-    setCurrentSrc(src2)
+    if (!isHovered) {
+      setIsHovered(true)
+    }
   }
 
   function onMouseLeave() {
-    setCurrentSrc(src)
+    if (isHovered) {
+      setIsHovered(false)
+    }
   }
 
   return(
-    <div className="product-card" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-      <img className="product-card-image" src={ currentSrc } alt={ alt } />
-      <div className="product-card-text">
-        <div className="product-card-text-container">
+    <div className={styles.card} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+      <div className={styles.cardImagesContainer}>
+        <img className={`${styles.cardImage} ${isHovered ? styles.hidden : ''}`} src={ src } alt={ alt } />
+        <img className={styles.cardImage} src={ src2 } alt={ alt } />
+      </div> 
+      <div className={styles.cardText}>
+        <div className={styles.cardTextContainer}>
           <h2>{title}</h2>
           <p>{desc}</p>
         </div>

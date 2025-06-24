@@ -76,12 +76,6 @@
   gap: 16px;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .contactInfo {
   display: flex;
   flex-direction: column;
@@ -130,7 +124,7 @@
     display: block;
     padding-left: 0px;
   }
-  
+
   .top > h3,
   .top > h3 > span {
     font-size: 32px;

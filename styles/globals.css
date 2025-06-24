@@ -183,6 +183,20 @@ section {
   width: 100%;
 }
 
+.fade-in {
+  opacity: 0;
+}
+
+.animate {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+  }
+}
+
 .hero-main-container > h1 {
   font-size: 48px;
   font-weight: 400;
@@ -238,38 +252,6 @@ section {
   justify-content: center;
   padding: 32px 0px;
   gap: 72px;
-}
-
-.product-card {
-  width: 784px;
-  height: 337px;
-  display: flex;
-  box-shadow: var(--shadow-2-top);
-  border-radius: 33px;
-}
-
-.product-card-image {
-  width: 470px;
-  border-top-left-radius: inherit;
-  border-bottom-left-radius: inherit;
-}
-
-.product-card-text {
-  background-color: var(--off-white);
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 25px;
-  border-top-right-radius: inherit;
-  border-bottom-right-radius: inherit;
-}
-
-.product-card-text-container {
-  margin-top: 23px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
 }
 
 .images-container {
@@ -364,49 +346,6 @@ section {
     padding: 32px 0px;
     gap: 72px;
     width: 303px;
-  }
-
-  .product-card {
-    height: 407px;
-    display: grid;
-    width: 100%;
-    grid-template-rows: repeat(2, 1fr);
-    box-shadow: var(--shadow-2-top);
-    flex-direction: column;
-    border-radius: 33px;
-  }
-
-  .product-card-image {
-    border-top-left-radius: inherit;
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: inherit;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .product-card-text {
-    background-color: var(--off-white);
-    display: flex;
-    flex-grow: none;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 32px 25px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit;
-  }
-
-  .product-card-text-container {
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .product-card-text-container > h2 {
-    font-size: 16px;
-    line-height: 20px;
   }
 
   .images-container {

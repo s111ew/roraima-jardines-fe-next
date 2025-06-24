@@ -1,0 +1,46 @@
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.successMessage {
+  box-sizing: initial;
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--off-white);
+  border-radius: 8px;
+  transition: height 0.5s ease;
+}
+
+.successMessage.visible {
+  height: 100%;
+}
+
+.messageContainer {
+  display: flex;
+  padding: 0px 40px;
+  gap: 24px;
+  opacity: 0;
+  transition: opacity 1.5s ease-in;
+}
+
+.messageText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.visible > .messageContainer {
+  opacity: 1;
+}

@@ -1,9 +1,8 @@
 import styles from "../styles/Footer.module.css"
 import RollingText from "./RollingText"
-import Input from "../components/Input"
-import Button from "../components/Button"
 import Accordion from "./Accordion"
 import { prefix } from "@/public/data/prefix"
+import ContactForm from "./ContactForm"
 
 function Footer() {
   const rollingWords = ['plantas', 'rosales', 'siembras', 'vegetales', 'frutos', 'jardín']
@@ -22,12 +21,7 @@ function Footer() {
               <span>También puedes llamarnos o visitarnos:</span>
               <span>Teléfono<br></br>+34 616626407</span>
             </p>
-            <form className={styles.form} action="">
-              <Input text="Nombre*" isTextArea={false} />
-              <Input text="Email*" isTextArea={false} />
-              <Input text="Mensaje*" isTextArea={true} />
-              <Button text="Enviar mensaje" colour='green' />
-            </form>
+            <ContactForm />
             </div>
           </div>
         <div className={styles.socialMediaContainer}>

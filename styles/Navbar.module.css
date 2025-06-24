@@ -64,7 +64,7 @@
   cursor: pointer;
 }
 
-.link:hover {
+.link:not(.buttonLink):hover {
   animation: fade-in 0.7s ease-in forwards;
 }
 
