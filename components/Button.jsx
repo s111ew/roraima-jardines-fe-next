@@ -39,14 +39,14 @@ function Button({ text, onClick, colour }) {
               >
               <img
                 className={`${styles.icon} ${styles.top} ${isMoused ? styles.animating : ''}`} 
-                src={colour === 'green' ? `${prefix}/arrow_white.svg` : `${prefix}/arrow_black.svg`} 
-                style={colour === 'white' ? { transform: 'rotate(-90deg)' } : undefined} 
+                style={colour === 'white' ? {filter: 'invert(1)'} : undefined}
+                src={`${prefix}/arrow_white.svg`} 
                 alt="arrow" 
               />
               <img 
                 className={`${styles.icon} ${styles.bottom} ${isMoused ? styles.animating : ''}`} 
-                src={colour === 'green' ? `${prefix}/arrow_white.svg` : `${prefix}/arrow_black.svg`} 
-                style={colour === 'white' ? { transform: 'rotate(-90deg)' } : undefined} 
+                style={colour === 'white' ? {filter: 'invert(1)'} : undefined}
+                src={`${prefix}/arrow_white.svg`} 
                 alt="arrow" 
               />
             </div>

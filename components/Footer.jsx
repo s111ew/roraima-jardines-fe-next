@@ -44,9 +44,9 @@ function Footer() {
             title='Créditos de página web' 
             content={
               <>
-                <p>Diseño: <a href="" target="_blank" noreferrer>suh.ai</a></p>
-                <p>Desarrollo: <a href="" target="_blank" noreferrer>sam.tips</a></p>
-                <p>Desarrollo y mantenimiento: <a href="https://esmarketingzaragoza.es/" target="_blank" noreferrer>esmarketingzaragoza</a></p>
+                <p>Diseño: <a href="" target="_blank" noreferrer="true">suh.ai</a></p>
+                <p>Desarrollo: <a href="" target="_blank" noreferrer="true">sam.tips</a></p>
+                <p>Desarrollo y mantenimiento: <a href="https://esmarketingzaragoza.es/" target="_blank" noreferrer="true">esmarketingzaragoza</a></p>
               </>
             }
             location="footer"/>
