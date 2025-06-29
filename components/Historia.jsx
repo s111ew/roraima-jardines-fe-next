@@ -17,6 +17,11 @@ export default function Historia() {
 
     onResize();
 
+    const elements = document.querySelectorAll('.fade-in');
+    elements.forEach(el => {
+      el.classList.add('animate');
+    });
+
     return () => {
       window.removeEventListener('resize', onResize);
     };
@@ -26,9 +31,9 @@ export default function Historia() {
       <>
         <div className={`${styles.section} ${styles.first}`}>
           <div className={styles.contentContainer}>
-            <h1 className={styles.pageTitle}>Nuestra Historia</h1>
-            <p>Somos una pequeña empresa familiar con experiencia en la producción de plantas ornamentales, mantenimiento de áreas verdes, diseño de jardines y producción de tierras desde 1983.</p>
-            <p>Nuestro trabajo está directamente relacionado con el cuidado y conservación del medio ambiente y éste es nuestro principal objetivo.</p>
+            <h1 className={`${styles.pageTitle} fade-in`}>Nuestra Historia</h1>
+            <p className="fade-in" style={{ animationDelay: "0.5s" }}>Somos una pequeña empresa familiar con experiencia en la producción de plantas ornamentales, mantenimiento de áreas verdes, diseño de jardines y producción de tierras desde 1983.</p>
+            <p className="fade-in" style={{ animationDelay: "1s" }}>Nuestro trabajo está directamente relacionado con el cuidado y conservación del medio ambiente y éste es nuestro principal objetivo.</p>
             <div className={styles.imageContainerFirstParent}>
               <div className={styles.imageContainerFirstTop}>
                 <ImageCard

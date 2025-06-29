@@ -16,6 +16,11 @@ export default function Products() {
         window.addEventListener('resize', onResize);
     
         onResize();
+
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach(el => {
+          el.classList.add('animate');
+        });
     
         return () => {
           window.removeEventListener('resize', onResize);
@@ -45,7 +50,7 @@ export default function Products() {
   return(
     <section className={styles.products}>
       <div className={`${styles.segment} ${styles.first}`}>
-        <h2 className={styles.title}>Nuestros Productos</h2>
+        <h2 className={`${styles.title} fade-in`}>Nuestros Productos</h2>
         <div className={styles.cardWrapper}>
           <ProductCard
             isTitle={true}

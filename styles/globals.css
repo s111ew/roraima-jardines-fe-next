@@ -136,6 +136,7 @@ a > * {
 body {
   font-family: "Sen", Arial, Helvetica, sans-serif;
   font-size: 16px;
+  overscroll-behavior: none;
 }
 
 p {

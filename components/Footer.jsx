@@ -5,7 +5,7 @@ import { prefix } from "@/public/data/prefix"
 import ContactForm from "./ContactForm"
 
 function Footer() {
-  const rollingWords = ['plantas', 'rosales', 'siembras', 'vegetales', 'frutos', 'jardín']
+  const rollingWords = ['plantas', 'rosales', 'siembras', 'vegetales', 'frutos', 'jardín'];
 
   return (
     <footer className={`${styles.footer} section`}>

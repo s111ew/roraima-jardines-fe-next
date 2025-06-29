@@ -5,11 +5,18 @@ import Accordion from "./Accordion"
 import Table from "./Table"
 import Button from "./Button"
 import ButtonAlt from "./ButtonAlt"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import seasons from "@/public/data/seasons"
 
 export default function HazTuJardin() {
   const [currentSeason, setCurrentSeason] = useState("primavera")
+
+  useEffect(() => {
+    const elements = document.querySelectorAll('.fade-in');
+        elements.forEach(el => {
+          el.classList.add('animate');
+        });
+  }, [])
 
   let currentSeasonIndex
 
@@ -76,9 +83,9 @@ export default function HazTuJardin() {
     <>
       <div className={`${styles.section} ${styles.intro}`}>
         <div className={styles.contentContainerIntro}>
-          <h1 className={styles.title}>Haz Tu Jardín</h1>
+          <h1 className={`${styles.title} fade-in`}>Haz Tu Jardín</h1>
           <div className={styles.introTextContainer}>
-            <p>Sigue nuestro calendario de preparaciones, sembrado, abonado y mantenimiento para sacarle el mejor partido a tu jardín durante todo el año. </p>
+            <p className="fade-in" style={{ animationDelay: '0.5s' }}>Sigue nuestro calendario de preparaciones, sembrado, abonado y mantenimiento para sacarle el mejor partido a tu jardín durante todo el año. </p>
           </div>
         </div>
       </div>
