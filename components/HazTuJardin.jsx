@@ -7,6 +7,7 @@ import Button from "./Button"
 import ButtonAlt from "./ButtonAlt"
 import { useState, useEffect } from "react"
 import seasons from "@/public/data/seasons"
+import { prefix } from "@/public/data/prefix"
 
 export default function HazTuJardin() {
   const [currentSeason, setCurrentSeason] = useState("primavera")
@@ -72,7 +73,7 @@ export default function HazTuJardin() {
 
   const downloadPDF = () => {
     const link = document.createElement('a');
-    link.href = '/files/HazTuJardin.pdf';
+    link.href = `${prefix}/files/HazTuJardin.pdf`;
     link.download = 'HazTuJardin.pdf';
     document.body.appendChild(link);
     link.click();
