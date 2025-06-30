@@ -103,6 +103,10 @@
   gap: 5px;
 }
 
+.socialMediaLink:hover {
+  cursor: pointer;
+}
+
 .creditContainer {
   display: flex;
   justify-content: space-between;

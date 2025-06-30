@@ -1,7 +1,12 @@
 import Head from "next/head";
 import Products from "@/components/Products";
+import { useEffect } from "react";
 
-export default function Productos() {
+export default function Productos({ setCurrentPage }) {
+  useEffect(() => {
+    setCurrentPage(1);
+  }, []);
+
   return (
     <>
       <Head>

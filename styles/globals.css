@@ -53,6 +53,8 @@ h6 {
   --sage-green: rgba(197, 216, 197, 0.9);
   --off-white: rgba(236, 238, 234, 1);
   --white-alt: rgba(236, 238, 234, 0.4);
+  --red: #ad0b0b;
+  --red-light: #d9c5c5;
   --green-border-gradient: linear-gradient(
     71deg,
     #1d962c -27%,

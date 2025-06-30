@@ -5,7 +5,7 @@ import Button from '../components/Button';
 import styles from '../styles/Navbar.module.css'
 import { prefix } from '@/public/data/prefix';
 
-function Navbar() {
+function Navbar({ currentPage }) {
   const [pageWidth, setPageWidth] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -103,9 +103,9 @@ function Navbar() {
         {
           pageWidth >= 1200 && (
             <ul className={styles.linksContainer}>
-              <li className={styles.link} onClick={toggleOpen} ><Link href='/productos'>Productos</Link></li>
-              <li className={styles.link} onClick={toggleOpen} ><Link href='/jardin'>Haz tu Jardín</Link></li>
-              <li className={styles.link} onClick={toggleOpen} ><Link href='/historia'>Nuestra Historia</Link></li>
+              <li className={styles.link} onClick={toggleOpen} ><Link style={currentPage === 1 ? { fontWeight: "600" } : undefined } href='/productos'>Productos</Link></li>
+              <li className={styles.link} onClick={toggleOpen} ><Link style={currentPage === 2 ? { fontWeight: "600" } : undefined } href='/jardin'>Haz tu Jardín</Link></li>
+              <li className={styles.link} onClick={toggleOpen} ><Link style={currentPage === 3 ? { fontWeight: "600" } : undefined } href='/historia'>Nuestra Historia</Link></li>
               <li className={styles.link} onClick={toggleOpen} ><span onClick={scrollToBottom}>Contacto</span></li>
               <li className={`${styles.link} ${styles.buttonLink}`} onClick={toggleOpen}><Link href='/puntos_de_venta'><Button text={'Puntos de venta'} colour='green'/></Link></li>
             </ul>

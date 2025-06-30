@@ -1,7 +1,12 @@
 import Head from "next/head";
 import PuntosDeVenta from "@/components/PuntosDeVenta";
+import { useEffect } from "react";
 
-export default function Puntos() {
+export default function Puntos({ setCurrentPage }) {
+  useEffect(() => {
+    setCurrentPage(4);
+  }, []);
+
   return (
     <>
       <Head>

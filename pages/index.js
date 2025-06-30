@@ -2,8 +2,13 @@ import Head from "next/head";
 import Hero from "@/components/Hero";
 import ProductCards from "@/components/ProductCardsHomepage";
 import Testimonial from "@/components/Testimonials";
+import { useEffect } from "react";
 
-export default function Home() {
+export default function Home({ setCurrentPage }) {
+  useEffect(() => {
+    setCurrentPage(0);
+  }, []);
+
   return (
     <>
       <Head>

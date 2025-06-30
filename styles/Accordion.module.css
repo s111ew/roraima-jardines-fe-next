@@ -11,6 +11,10 @@
   width: 100%;
 }
 
+.accordion:hover {
+  cursor: pointer;
+}
+
 .accordionTop {
   display: flex;
   align-items: center;

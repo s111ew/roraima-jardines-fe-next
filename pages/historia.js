@@ -1,7 +1,12 @@
 import Head from "next/head";
 import Historia from "@/components/Historia";
+import { useEffect } from "react";
 
-export default function NuestraHistoria() {
+export default function NuestraHistoria({ setCurrentPage }) {
+  useEffect(() => {
+    setCurrentPage(3);
+  }, []);
+
   return (
     <>
       <Head>

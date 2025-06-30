@@ -13,6 +13,24 @@
   border: 1px solid var(--green-basic);
 }
 
+.inputContainer.error > input,
+.inputContainer.error > textarea,
+.inputContainer.error > input:focus,
+.inputContainer.error > textarea:focus,
+.inputContainer.error > textarea:hover,
+.inputContainer.error > input:hover {
+  background-color: var(--red-light);
+  border: 1px solid var(--red);
+}
+
+.inputContainer.error > input:focus,
+.inputContainer.error > textarea:focus {
+  background-color: white;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: inset 0px 0px 0px 2px var(--red);
+}
+
 .inputContainer > input:focus,
 .inputContainer > textarea:focus {
   background-color: white;
@@ -24,4 +42,17 @@
 
 .label {
   padding-left: 6px;
+}
+
+.errContainer {
+  display: flex;
+  gap: 8px;
+  padding-left: 8px;
+}
+
+.errMessage {
+  padding-top: 3px;
+  color: var(--red);
+  font-size: 12px;
+  line-height: 12px;
 }

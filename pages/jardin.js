@@ -1,7 +1,12 @@
 import Head from "next/head";
 import HazTuJardin from "@/components/HazTuJardin";
+import { useEffect } from "react";
 
-export default function Jardin() {
+export default function Jardin({ setCurrentPage }) {
+  useEffect(() => {
+    setCurrentPage(2);
+  }, []);
+
   return (
     <>
       <Head>
