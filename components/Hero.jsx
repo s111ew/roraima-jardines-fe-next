@@ -37,6 +37,7 @@ function Hero() {
         width={pageWidth < 1200 ? 202 : 230}
         height={pageWidth < 1200 ? 152 : 173}
         segment={1}
+        rateOfScroll={1.1}
         style={{
           position: "absolute",
           right: pageWidth < 521 ? "20px"  : "95px",
@@ -50,6 +51,7 @@ function Hero() {
         width={pageWidth < 1200 ? 90 : 122}
         height={pageWidth < 1200 ? 118 : 160}
         segment={1}
+        rateOfScroll={1.1}
         style={{
           position: "absolute",
           left: "16px",
@@ -76,6 +78,7 @@ function Hero() {
         width={pageWidth < 1200 ? 127 : 216}
         height={pageWidth < 1200 ? 96 : 163}
         segment={1}
+        rateOfScroll={1.12}
         style={{
           position: "absolute",
           right: pageWidth < 521 ? "96px"  : "109px",
@@ -89,6 +92,7 @@ function Hero() {
         width={pageWidth < 1200 ? 97 : 165}
         height={pageWidth < 1200 ? 117 : 199}
         segment={1}
+        rateOfScroll={1.05}
         style={{
           position: "absolute",
           right: pageWidth < 521 ? "50px"  : "27px",

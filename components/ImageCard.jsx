@@ -1,21 +1,31 @@
 import styles from "../styles/ImageCard.module.css"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Image from "next/image"
 
-export default function ImageCard ({ src, alt, width, height, caption, segment, style}) {
+export default function ImageCard({ src, alt, width, height, caption, segment, style, rateOfScroll }) {
   const [isMouseEntered, setIsMouseEntered] = useState(false);
+  const [offsetY, setOffsetY] = useState(0);
+
+  useEffect(() => {
+    if (!rateOfScroll) return;
+
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const parallaxOffset = scrollY * (rateOfScroll - 1);
+      setOffsetY(parallaxOffset);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [rateOfScroll]);
 
   const handleMouseEnter = () => {
-    if (!isMouseEntered) {
-      setIsMouseEntered(true)
-    }
-  }
+    setIsMouseEntered(true);
+  };
 
   const handleMouseLeave = () => {
-    if (isMouseEntered) {
-      setIsMouseEntered(false)
-    }
-  }
+    setIsMouseEntered(false);
+  };
 
   return (
     <div
@@ -23,9 +33,11 @@ export default function ImageCard ({ src, alt, width, height, caption, segment, 
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={{
-        width: `${width}px`, 
+        width: `${width}px`,
         height: `${height}px`,
-        ...style
+        ...style,
+        transform: rateOfScroll ? `translateY(${-offsetY}px)` : undefined,
+        willChange: rateOfScroll ? 'transform' : undefined,
       }}
     >
       <Image
@@ -39,10 +51,8 @@ export default function ImageCard ({ src, alt, width, height, caption, segment, 
         className={`${styles.caption} ${!isMouseEntered ? styles.hidden : ''} ${isMouseEntered ? styles.visible : ''}`}
         aria-hidden="true"
       >
-        <p
-          className={styles.captionText}
-        >{caption}</p>
+        <p className={styles.captionText}>{caption}</p>
       </div>
     </div>
-  )
+  );
 }

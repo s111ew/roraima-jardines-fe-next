@@ -43,6 +43,7 @@ export default function Historia() {
                   alt="Primer plano de flores de Echinopsis"
                   caption="Cáctus Echinopsis"
                   segment={1}
+                  rateOfScroll={1.16}
                 />
               </div>
               <div className={styles.imageContainerFirstBottom}>
@@ -62,6 +63,7 @@ export default function Historia() {
                     alt="Grupo de cáctus Echinopsis de diferentes tamaños con flores blancas y rosadas abiertas hacia el sol"
                     caption="Cáctus Echinopsis"
                     segment={1}
+                    rateOfScroll={1.16}
                 />
               </div>
             </div>
@@ -91,6 +93,7 @@ export default function Historia() {
                       alt="Cáctus arcoiris"
                       caption="Cáctus arcoiris"
                       segment={2}
+                      rateOfScroll={1.05}
                   />
                   <ImageCard
                       className={styles.image}
@@ -100,6 +103,7 @@ export default function Historia() {
                       alt="Suculenta Euphorbia Meloformis de la variedad 'Variegata'"
                       caption="Euphorbia meloformis"
                       segment={2}
+                      rateOfScroll={1.1}
                   />
                   <ImageCard
                       className={styles.image}
@@ -109,6 +113,7 @@ export default function Historia() {
                       alt="Vista superior de un cáctus 'Eriocyse senilis' con espinas largas rizadas y flores rosadas"
                       caption="Eriocyse senilis"
                       segment={2}
+                      rateOfScroll={1.08}
                   />
                 </>
               ) : (

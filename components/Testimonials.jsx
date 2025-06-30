@@ -104,6 +104,7 @@ function Testimonial() {
           alt={'Primer plano de las flores violetas de las plantas Mesen'}
           caption={'Mesen'}
           segment={3}
+          rateOfScroll={pageWidth < 1200 ? null : 1.03}
         />
         <ImageCard
           src={`${prefix}/homepage_images/HP14.webp`}
@@ -122,6 +123,7 @@ function Testimonial() {
               alt={'Plano general de las plantas Mesen con flores naranjas'}
               caption={'Mesen'}
               segment={3}
+              rateOfScroll={pageWidth < 1200 ? null : 1.03}
             />
           )
         }
