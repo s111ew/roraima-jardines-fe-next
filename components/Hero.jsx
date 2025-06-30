@@ -48,27 +48,14 @@ function Hero() {
         src={`${prefix}/homepage_images/HP1.webp`}
         alt={"Planta Jade adulta rodeada por plantas similares de menor tamaño"}
         caption={"Jade"}
-        width={pageWidth < 1200 ? 90 : 122}
-        height={pageWidth < 1200 ? 118 : 160}
+        width={pageWidth < 1200 ? 90 : 160}
+        height={pageWidth < 1200 ? 118 : 210}
         segment={1}
-        rateOfScroll={1.1}
+        rateOfScroll={1.16}
         style={{
           position: "absolute",
-          left: "16px",
-          top: pageWidth < 1200 ? (pageWidth < 521 ? "586px"  : "441px") : "466px"
-        }}
-      />
-      <ImageCard
-        src={`${prefix}/homepage_images/HP2.webp`}
-        alt={"Primer plano de las hojas de una planta Jade con los bordes rojizos"}
-        caption={"Jade"}
-        width={pageWidth < 1200 ? 190 : 257}
-        height={pageWidth < 1200 ? 107 : 144}
-        segment={1}
-        style={{
-          position: "absolute",
-          left: pageWidth < 521 ? "120px"  : "25px",
-          top: pageWidth < 1200 ? (pageWidth < 521 ? "663px"  : "578px") : "650px"
+          left: pageWidth < 521 ? "260px" : "24px",
+          top: pageWidth < 1200 ? (pageWidth < 521 ? "626px"  : "541px") : "496px"
         }}
       />
       <ImageCard
@@ -81,8 +68,8 @@ function Hero() {
         rateOfScroll={1.12}
         style={{
           position: "absolute",
-          right: pageWidth < 521 ? "96px"  : "109px",
-          top: pageWidth < 1200 ? (pageWidth < 521 ? "1335px"  : "571px") : "626px"
+          right: pageWidth < 521 ? "176px"  : "109px",
+          top: pageWidth < 1200 ? (pageWidth < 521 ? "1495px"  : "571px") : "626px"
         }}
       />
       <ImageCard

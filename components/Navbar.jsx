@@ -66,6 +66,7 @@ function Navbar({ currentPage }) {
     >
       <div className={styles.navContainer}>
         <Link 
+          tabIndex={0}
           href='/' 
           className={`${styles.logoContainer} ${pageWidth < 1200 && isOpen ? styles.middle : ''}`}
           onMouseEnter={mouseEnter}
@@ -103,11 +104,11 @@ function Navbar({ currentPage }) {
         {
           pageWidth >= 1200 && (
             <ul className={styles.linksContainer}>
-              <li className={styles.link} onClick={toggleOpen} ><Link style={currentPage === 1 ? { fontWeight: "600" } : undefined } href='/productos'>Productos</Link></li>
-              <li className={styles.link} onClick={toggleOpen} ><Link style={currentPage === 2 ? { fontWeight: "600" } : undefined } href='/jardin'>Haz tu Jardín</Link></li>
-              <li className={styles.link} onClick={toggleOpen} ><Link style={currentPage === 3 ? { fontWeight: "600" } : undefined } href='/historia'>Nuestra Historia</Link></li>
-              <li className={styles.link} onClick={toggleOpen} ><span onClick={scrollToBottom}>Contacto</span></li>
-              <li className={`${styles.link} ${styles.buttonLink}`} onClick={toggleOpen}><Link href='/puntos_de_venta'><Button text={'Puntos de venta'} colour='green'/></Link></li>
+              <li className={styles.link} onClick={toggleOpen} ><Link tabIndex={0} style={currentPage === 1 ? { fontWeight: "600" } : undefined } href='/productos'>Productos</Link></li>
+              <li className={styles.link} onClick={toggleOpen} ><Link tabIndex={0} style={currentPage === 2 ? { fontWeight: "600" } : undefined } href='/jardin'>Haz tu Jardín</Link></li>
+              <li className={styles.link} onClick={toggleOpen} ><Link tabIndex={0} style={currentPage === 3 ? { fontWeight: "600" } : undefined } href='/historia'>Nuestra Historia</Link></li>
+              <li className={styles.link} onClick={toggleOpen} ><span tabIndex={0} onClick={scrollToBottom}>Contacto</span></li>
+              <li className={`${styles.link} ${styles.buttonLink}`} onClick={toggleOpen}><Link tabIndex={0} href='/puntos_de_venta'><Button text={'Puntos de venta'} colour='green'/></Link></li>
             </ul>
           )
         }
@@ -115,9 +116,9 @@ function Navbar({ currentPage }) {
       {
         (pageWidth < 1200 && isOpen)  && (
           <ul className={styles.linksContainerVertical}>
-            <li className={styles.link} onClick={toggleOpen} ><Link href='/productos'>Productos</Link></li>
-            <li className={styles.link} onClick={toggleOpen} ><Link href='/jardin'>Haz tu Jardín</Link></li>
-            <li className={styles.link} onClick={toggleOpen} ><Link href='/historia'>Nuestra Historia</Link></li>
+            <li className={styles.link} onClick={toggleOpen} ><Link style={currentPage === 1 ? { fontWeight: "600" } : undefined } href='/productos'>Productos</Link></li>
+            <li className={styles.link} onClick={toggleOpen} ><Link style={currentPage === 2 ? { fontWeight: "600" } : undefined } href='/jardin'>Haz tu Jardín</Link></li>
+            <li className={styles.link} onClick={toggleOpen} ><Link style={currentPage === 3 ? { fontWeight: "600" } : undefined } href='/historia'>Nuestra Historia</Link></li>
             <li className={styles.link} onClick={toggleOpen} ><span onClick={scrollToBottom}>Contacto</span></li>
             <li className={`${styles.link} ${styles.buttonLink}`} onClick={toggleOpen} ><Link href='/puntos_de_venta'><Button text={'Puntos de venta'} colour='green'/></Link></li>
           </ul>

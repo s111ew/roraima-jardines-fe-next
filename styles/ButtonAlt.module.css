@@ -10,6 +10,10 @@
   border: 0.5px solid var(--green-basic);
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .buttonText {
   display: flex;
   gap: 10px;
