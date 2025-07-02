@@ -1,8 +1,9 @@
+import { prefix } from "@/public/data/prefix"
 import styles from "../styles/StoreCard.module.css"
 import Accordion from "./Accordion"
 import Button from "./Button"
 
-export default function StoreCard({ index, storeName, distance, address, zip, phone, isLink, email, hours, sizes, link }) {
+export default function StoreCard({ storeName, distance, address, zip, phone, isLink, email, hours, sizes, link, isSearched }) {
   let emailContent
   if (!email) {
     emailContent = ''
@@ -15,10 +16,12 @@ export default function StoreCard({ index, storeName, distance, address, zip, ph
     <div className={styles.storeCard}>
       <div className={styles.titleContainer}>
         <div className={styles.title}>
-          <div className={styles.bubble}>{index + 1}</div>
+          <img style={{ width: "25px", height: "41px"}} src={`${prefix}/marker.png`}></img>
           <h2 className={styles.name}>{storeName}</h2>
         </div>
-        {distance ? <p className={styles.distance}>a {distance}km de distancia</p> : ''}
+        {isSearched && (
+           <p className={styles.distance}>a <span style={{ fontWeight: "500" }}>{distance.toFixed(2)}</span> km de distancia</p>
+        )}
       </div>
       <div className={styles.locationContainer}>
         <p className={styles.address}>{address}</p>

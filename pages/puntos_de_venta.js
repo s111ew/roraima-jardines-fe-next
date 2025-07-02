@@ -1,6 +1,10 @@
 import Head from "next/head";
-import PuntosDeVenta from "@/components/PuntosDeVenta";
+import dynamic from "next/dynamic";
 import { useEffect } from "react";
+
+const PuntosDeVentaNoSSR = dynamic(() => import("@/components/PuntosDeVenta"), {
+  ssr: false,
+});
 
 export default function Puntos({ setCurrentPage }) {
   useEffect(() => {
@@ -18,7 +22,7 @@ export default function Puntos({ setCurrentPage }) {
           content="width=device-width, initial-scale=1, viewport-fit=cover"
         />
       </Head>
-      <PuntosDeVenta />
+      <PuntosDeVentaNoSSR />
     </>
   );
 }

@@ -18,6 +18,7 @@ const stores = [
     },
     products: ["5L, 10L, 20L, 50L", "50L"],
     mapsLink: "https://maps.app.goo.gl/ze6MZumWBwxopo8x7",
+    coords: [41.69892, -0.97834],
   },
   {
     index: 1,
@@ -38,6 +39,7 @@ const stores = [
     },
     products: ["5L, 10L, 20L, 50L", "50L"],
     mapsLink: "https://maps.app.goo.gl/niNC24cfDXyAAVQy8",
+    coords: [41.635692, -0.939878],
   },
   {
     index: 2,
@@ -58,6 +60,7 @@ const stores = [
     },
     products: ["5L, 10L, 20L, 50L", "50L"],
     mapsLink: "https://maps.app.goo.gl/TPq4p8sj3styyZuA8",
+    coords: [41.666552, -0.893519],
   },
   {
     index: 3,
@@ -78,6 +81,7 @@ const stores = [
     },
     products: ["5L, 10L", "50L"],
     mapsLink: "https://maps.app.goo.gl/pk8oepUVwBZrLYrg8",
+    coords: [41.657251, -0.805918],
   },
   {
     index: 4,
@@ -98,6 +102,7 @@ const stores = [
     },
     products: ["5L, 10L, 20L, 50L"],
     mapsLink: "https://maps.app.goo.gl/7kv3L2GyhZNjq8Kc6",
+    coords: [41.647633, -0.898414],
   },
   {
     index: 5,
@@ -118,6 +123,7 @@ const stores = [
     },
     products: ["5L, 10L, 20L, 50L", "50L"],
     mapsLink: "https://maps.app.goo.gl/BX2cWFhhtTjs5A798",
+    coords: [42.6292469, -0.3215118],
   },
   {
     index: 6,
@@ -138,6 +144,7 @@ const stores = [
     },
     products: ["5L"],
     mapsLink: "https://maps.app.goo.gl/gyUtkzimrUfy3SbF7",
+    coords: [42.5692689, -0.5492355],
   },
   {
     index: 7,
@@ -158,6 +165,7 @@ const stores = [
     },
     products: ["5L, 10L, 20L, 50L"],
     mapsLink: "https://maps.app.goo.gl/3VX7p8prX5wLBUQR9",
+    coords: [42.5181576, -0.3653836],
   },
   {
     index: 8,
@@ -178,6 +186,7 @@ const stores = [
     },
     products: ["5L, 10L, 20L, 50L"],
     mapsLink: "https://maps.app.goo.gl/a7Mw8wdVdqZFPBZPA",
+    coords: [42.12627, -1.13793],
   },
   {
     index: 9,
@@ -198,6 +207,7 @@ const stores = [
     },
     products: ["5L, 10L, 50L"],
     mapsLink: "https://maps.app.goo.gl/cJNyJJCFEVwYctPv5",
+    coords: [42.521178, -0.357715],
   },
   {
     index: 10,
@@ -210,6 +220,7 @@ const stores = [
     hours: {},
     products: ["5L, 10L, 20L"],
     mapsLink: "https://maps.app.goo.gl/kEmznMS36bzufsyH6",
+    coords: [41.718559, -1.026661],
   },
   {
     index: 11,
@@ -230,6 +241,7 @@ const stores = [
     },
     products: ["5L, 10L, 50L"],
     mapsLink: "https://maps.app.goo.gl/yYrxFESE6NgqMRbQ6",
+    coords: [41.717672, -1.02524],
   },
   {
     index: 12,
@@ -250,6 +262,7 @@ const stores = [
     },
     products: ["5L, 10L, 20L, 50L", "50L"],
     mapsLink: "https://maps.app.goo.gl/m694BuwXgziPdyLz5",
+    coords: [41.7088127, -0.9998344],
   },
   {
     index: 13,
@@ -270,6 +283,7 @@ const stores = [
     },
     products: ["5L, 10L, 20L, 50L"],
     mapsLink: "https://maps.app.goo.gl/H8jzz4WSbFzcauCK8",
+    coords: [41.790383, -1.216524],
   },
   {
     index: 14,
@@ -290,6 +304,7 @@ const stores = [
     },
     products: ["5L, 10L, 20L, 50L", "50L"],
     mapsLink: "https://maps.app.goo.gl/KKMdNNCDU98bxQnz6",
+    coords: [41.661158, -0.896153],
   },
   {
     index: 15,
@@ -310,6 +325,7 @@ const stores = [
     },
     products: ["5L, 10L"],
     mapsLink: "https://maps.app.goo.gl/7D4sW63VX1S3KkSt9",
+    coords: [41.6525261, -0.9103062],
   },
   {
     index: 16,
@@ -330,6 +346,7 @@ const stores = [
     },
     products: ["5L, 10L, 20L, 50L"],
     mapsLink: "https://maps.app.goo.gl/63W1EPY8nzuy9sjp8",
+    coords: [41.6449368, -0.9007635],
   },
   {
     index: 17,
@@ -350,6 +367,7 @@ const stores = [
     },
     products: ["5L, 10L, 20L, 50L", "50L"],
     mapsLink: "https://maps.app.goo.gl/KARkXF3zphr5g1Uj6",
+    coords: [41.638056, -0.895455],
   },
   {
     index: 18,
@@ -370,6 +388,7 @@ const stores = [
     },
     products: ["5L, 10L, 20L, 50L"],
     mapsLink: "https://maps.app.goo.gl/vmt9LPAJrcGNz4bcA",
+    coords: [41.634895, -0.877321],
   },
   {
     index: 19,
@@ -390,6 +409,7 @@ const stores = [
     },
     products: ["5L, 10L, 20L"],
     mapsLink: "https://maps.app.goo.gl/KvuZJFnTW3NHea489",
+    coords: [41.6609545, -0.8644621],
   },
   {
     index: 20,
@@ -410,6 +430,7 @@ const stores = [
     },
     products: ["5L, 10L"],
     mapsLink: "https://maps.app.goo.gl/4uAjJj8Dk9QTHv7h9",
+    coords: [41.661048, -0.863333],
   },
   {
     index: 21,
@@ -430,6 +451,7 @@ const stores = [
     },
     products: ["5L, 10L, 20L, 50L"],
     mapsLink: "https://maps.app.goo.gl/CLoMJvJj2TNvbfHD8",
+    coords: [41.6255, -0.877879],
   },
 ];
 
