@@ -41,7 +41,7 @@ export default function PuntosDeVenta() {
       stores.forEach(store => {
         const marker = L.marker(store.coords, { icon }).addTo(mapRef.current);
     
-        marker.bindPopup(`${store.name}, ${store.zip}`, { offset: L.point(14, 0) });
+        marker.bindPopup(`${store.name}, ${store.zip}`, { offset: L.point(1, -31) });
 
         marker.on("click", () => {
           const ref = cardRefs.current[store.index];
