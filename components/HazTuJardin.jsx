@@ -82,7 +82,13 @@ export default function HazTuJardin() {
 
   return(
     <>
-      <div className={`${styles.section} ${styles.intro}`}>
+      <div 
+        className={`${styles.section} ${styles.intro}`}
+        style={{
+          backgroundImage: `url(${prefix}/Texture.png), var(--hero-background)`,
+          backgroundRepeat: "repeat, no-repeat",
+          backgroundSize: "auto, cover",
+        }}>
         <div className={styles.contentContainerIntro}>
           <h1 className={`${styles.title} fade-in`}>Haz Tu Jardín</h1>
           <div className={styles.introTextContainer}>

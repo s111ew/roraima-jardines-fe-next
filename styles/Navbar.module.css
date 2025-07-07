@@ -3,7 +3,6 @@
   top: 0px;
   z-index: 1001;
   color: var(--off-white);
-  background: var(--navbar-background);
   padding: 8px 47px;
 }
 
@@ -29,6 +28,9 @@
 
 .burgerContainer {
   cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 30px;
 }
 
 .linksContainer {

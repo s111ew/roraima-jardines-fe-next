@@ -8,7 +8,14 @@ function Footer() {
   const rollingWords = ['plantas', 'rosales', 'siembras', 'vegetales', 'frutos', 'jardín'];
 
   return (
-    <footer className={`${styles.footer} section`}>
+    <footer 
+      id="footer" 
+      className={`${styles.footer} section`}
+      style={{
+        backgroundImage: `url(${prefix}/Texture.png), var(--footer-background)`,
+        backgroundRepeat: "repeat, no-repeat",
+        backgroundSize: "auto, cover",
+      }}>
       <div className={styles.content}>
         <div className={styles.top}>
           <h3>Damos vida a tus <RollingText words={rollingWords} /></h3>
@@ -27,14 +34,14 @@ function Footer() {
         <div className={styles.socialMediaContainer}>
           <h2>Síguenos en redes</h2>
           <div className={styles.socialMediaLinks}>
-            <div className={styles.socialMediaLink}>
+            <a href="https://www.facebook.com/people/Roraima-Jardines/100063591625020/" target="_blank" noreferrer="true" className={styles.socialMediaLink}>
               <img src={`${prefix}/facebook_black.svg`}></img>
               <span>Facebook</span>
-            </div>
-            <div className={styles.socialMediaLink}>
+            </a>
+            <a href="https://www.instagram.com/roraimajardines/" target="_blank" noreferrer="true" className={styles.socialMediaLink}>
               <img src={`${prefix}/instagram_black.svg`}></img>
               <span>Instagram</span>
-            </div>
+            </a>
           </div>
         </div>
         <div className={styles.creditContainer}>
@@ -44,8 +51,8 @@ function Footer() {
             title='Créditos de página web' 
             content={
               <>
-                <p>Diseño: <a href="" target="_blank" noreferrer="true">suh.ai</a></p>
-                <p>Desarrollo: <a href="" target="_blank" noreferrer="true">sam.tips</a></p>
+                <p>Diseño: <a href="https://suhai.design" target="_blank" noreferrer="true">suhai.design</a></p>
+                <p>Desarrollo: <a href="https://samcod.ing" target="_blank" noreferrer="true">samcod.ing</a></p>
                 <p>Desarrollo y mantenimiento: <a href="https://esmarketingzaragoza.es/" target="_blank" noreferrer="true">esmarketingzaragoza</a></p>
               </>
             }

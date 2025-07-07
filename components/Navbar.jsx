@@ -12,6 +12,7 @@ function Navbar({ currentPage }) {
   const prevWidthRef = useRef(0); // Track previous width
 
   useEffect(() => {
+
     function onResize() {
       const currentWidth = window.innerWidth;
 
@@ -40,12 +41,14 @@ function Navbar({ currentPage }) {
     }
   }
 
-  function scrollToBottom() {
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
-      behavior: 'smooth',
-    });
+  function scrollToFooter() {
+    const footer = document.getElementById('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
   }
+
+
 
   function mouseEnter() {
     if (!isVisible) {
@@ -62,7 +65,12 @@ function Navbar({ currentPage }) {
   return (
     <nav 
       className={styles.navbar}
-      style={isOpen && pageWidth < 1200 ? { height: "100vh" } : undefined}
+      style={{
+        backgroundImage: `url(${prefix}/Texture.png), var(--navbar-background)`,
+        backgroundRepeat: "repeat, no-repeat",
+        backgroundSize: "auto, cover",
+        ...(isOpen && pageWidth < 1200 ? { height: "100vh" } : {}),
+      }}
     >
       <div className={styles.navContainer}>
         <Link 
@@ -107,7 +115,7 @@ function Navbar({ currentPage }) {
               <li className={styles.link} onClick={toggleOpen} ><Link tabIndex={0} style={currentPage === 1 ? { fontWeight: "600" } : undefined } href='/productos'>Productos</Link></li>
               <li className={styles.link} onClick={toggleOpen} ><Link tabIndex={0} style={currentPage === 2 ? { fontWeight: "600" } : undefined } href='/jardin'>Haz tu Jardín</Link></li>
               <li className={styles.link} onClick={toggleOpen} ><Link tabIndex={0} style={currentPage === 3 ? { fontWeight: "600" } : undefined } href='/historia'>Nuestra Historia</Link></li>
-              <li className={styles.link} onClick={toggleOpen} ><span tabIndex={0} onClick={scrollToBottom}>Contacto</span></li>
+              <li className={styles.link} onClick={toggleOpen} ><span tabIndex={0} onClick={scrollToFooter}>Contacto</span></li>
               <li className={`${styles.link} ${styles.buttonLink}`} onClick={toggleOpen}><Link tabIndex={0} href='/puntos_de_venta'><Button text={'Puntos de venta'} colour='green'/></Link></li>
             </ul>
           )
@@ -119,7 +127,7 @@ function Navbar({ currentPage }) {
             <li className={styles.link} onClick={toggleOpen} ><Link style={currentPage === 1 ? { fontWeight: "600" } : undefined } href='/productos'>Productos</Link></li>
             <li className={styles.link} onClick={toggleOpen} ><Link style={currentPage === 2 ? { fontWeight: "600" } : undefined } href='/jardin'>Haz tu Jardín</Link></li>
             <li className={styles.link} onClick={toggleOpen} ><Link style={currentPage === 3 ? { fontWeight: "600" } : undefined } href='/historia'>Nuestra Historia</Link></li>
-            <li className={styles.link} onClick={toggleOpen} ><span onClick={scrollToBottom}>Contacto</span></li>
+            <li className={styles.link} onClick={toggleOpen} ><span onClick={scrollToFooter}>Contacto</span></li>
             <li className={`${styles.link} ${styles.buttonLink}`} onClick={toggleOpen} ><Link href='/puntos_de_venta'><Button text={'Puntos de venta'} colour='green'/></Link></li>
           </ul>
         )

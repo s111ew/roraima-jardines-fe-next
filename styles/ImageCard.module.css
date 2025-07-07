@@ -21,6 +21,11 @@
   transition: opacity 0.3s;
 }
 
+.captionLink:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
 .captionText {
   color: white;
   font-size: 10px;

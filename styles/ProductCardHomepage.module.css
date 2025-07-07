@@ -12,6 +12,7 @@
   border-top-left-radius: inherit;
   border-bottom-left-radius: inherit;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .cardImage:first-child {

@@ -6,6 +6,9 @@ import styles from "../styles/ProductCardHomepage.module.css"
 export default function ProductCard({ src, src2, alt, title, desc, sectionToScrollTo }) {
   const [isHovered, setIsHovered] = useState(false)
 
+  function onClick() {
+    window.location.href = `/productos${'#' + sectionToScrollTo}`
+  }
 
   function onMouseEnter() {
     if (!isHovered) {
@@ -21,7 +24,7 @@ export default function ProductCard({ src, src2, alt, title, desc, sectionToScro
 
   return(
     <div className={styles.card} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-      <div className={styles.cardImagesContainer}>
+      <div onClick={onClick} className={styles.cardImagesContainer}>
         <img className={`${styles.cardImage} ${isHovered ? styles.hidden : ''}`} src={ src } alt={ alt } />
         <img className={styles.cardImage} src={ src2 } alt={ alt } />
       </div> 

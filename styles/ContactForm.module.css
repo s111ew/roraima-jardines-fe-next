@@ -27,6 +27,13 @@
   height: 100%;
 }
 
+.closeButton {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  cursor: pointer;
+}
+
 .messageContainer {
   display: flex;
   padding: 0px 40px;

@@ -12,7 +12,7 @@ export default function RollingText({ words }) {
         setIndex((prevIndex) => (prevIndex + 1) % words.length)
         setAnimating(false)
       }, 300)
-    }, 3000)
+    }, 2000)  
 
     return () => clearInterval(interval)
   }, [words.length])

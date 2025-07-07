@@ -69,9 +69,14 @@ export default function ContactForm() {
     }
   };
 
+  const handleClose = () => {
+    setIsSent(false)
+  }
+
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
       <div className={`${styles.successMessage} ${isSent ? styles.visible : ''}`}>
+        <p onClick={handleClose} className={styles.closeButton}>X</p>
         <div className={styles.messageContainer}>
           <img className={styles.messageImage} src={`${prefix}/LogoBlk.svg`} alt="Logo" />
           <div className={styles.messageText}>

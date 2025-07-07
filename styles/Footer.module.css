@@ -99,6 +99,7 @@
 }
 
 .socialMediaLink {
+  color: var(--text-dark);
   display: flex;
   gap: 5px;
 }

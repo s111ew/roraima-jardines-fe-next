@@ -23,12 +23,18 @@ function ProductCards() {
     }, []);
 
   return(
-    <section className="product-cards">
+    <section 
+      className="product-cards"
+      style={{
+        backgroundImage: `url(${prefix}/Texture.png), var(--product-cards-background)`,
+        backgroundRepeat: "repeat, no-repeat",
+        backgroundSize: "auto, cover",
+      }}>
       <h2>Nuestros Productos</h2>
       <div className="product-card-container">
         <ProductCard src={`${prefix}/product_images/Sustrato 1.webp`} src2={`${prefix}/product_images/Sustrato 2.webp`} alt="" title="Sustrato Universal" desc="Para uso en macetas y jardinería" sectionToScrollTo=''/>
-        <ProductCard src={`${prefix}/product_images/Huerto-1.webp`} src2={`${prefix}/product_images/huerto2.webp`} alt="" title="Huerto & Jardin" desc="Para uso exterior" sectionToScrollTo='image-2-1'/>
-        <ProductCard src={`${prefix}/product_images/Plantas 1.webp`} src2={`${prefix}/product_images/Plantas 2.webp`} alt="" title="Plantas ornamentales" desc="Variedades de cactus, aptenias y mesen" sectionToScrollTo='image-3-1'/>
+        <ProductCard src={`${prefix}/product_images/Huerto-1.webp`} src2={`${prefix}/product_images/huerto2.webp`} alt="" title="Huerto & Jardin" desc="Para uso exterior" sectionToScrollTo='section2'/>
+        <ProductCard src={`${prefix}/product_images/Plantas 1.webp`} src2={`${prefix}/product_images/Plantas 2.webp`} alt="" title="Plantas ornamentales" desc="Variedades de cactus, aptenias y mesen" sectionToScrollTo='section3'/>
       </div>
       <div className="images-container">
         {pageWidth < 521 ? (
@@ -71,6 +77,7 @@ function ProductCards() {
               alt={"Cáctus arcoiris"}
               caption={"Cáctus arcoiris"}
               segment={2}
+              rateOfScroll={pageWidth < 1200 ? null : 1.05}
             />
             <ImageCard
               src={`${prefix}/homepage_images/HP10.webp`}
@@ -87,6 +94,8 @@ function ProductCards() {
               alt={"Suculenta Euphorbia Meloformis de la variedad 'Variegata'"}
               caption={"Euphorbia meloformis"}
               segment={2}
+              rateOfScroll={pageWidth < 1200 ? null : 1.05}
+              direction={"down"}
             />
           </>
         )}

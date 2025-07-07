@@ -66,7 +66,13 @@ function Testimonial() {
   }, []);
 
   return(
-    <section className="testimonials">
+    <section 
+      className="testimonials"
+      style={{
+        backgroundImage: `url(${prefix}/Texture.png), var(--testimonial-background)`,
+        backgroundRepeat: "repeat, no-repeat",
+        backgroundSize: "auto, cover",
+      }}>
       <h2>Nuestros Clientes</h2>
       <div className="testimonials-container">
         {
@@ -104,7 +110,7 @@ function Testimonial() {
           alt={'Primer plano de las flores violetas de las plantas Mesen'}
           caption={'Mesen'}
           segment={3}
-          rateOfScroll={pageWidth < 1200 ? null : 1.03}
+          rateOfScroll={pageWidth < 1200 ? null : 1.035}
         />
         <ImageCard
           src={`${prefix}/homepage_images/HP14.webp`}
@@ -123,7 +129,7 @@ function Testimonial() {
               alt={'Plano general de las plantas Mesen con flores naranjas'}
               caption={'Mesen'}
               segment={3}
-              rateOfScroll={pageWidth < 1200 ? null : 1.03}
+              rateOfScroll={pageWidth < 1200 ? null : 1.035}
             />
           )
         }

@@ -8,19 +8,31 @@ import stores from "@/public/data/stores"
 import { prefix } from "@/public/data/prefix"
 import locations from "@/public/data/locations"
 import calculateDistance from "@/public/tools/tools"
-import L from "leaflet"
+import L, { map } from "leaflet"
 import "leaflet/dist/leaflet.css"
 
 export default function PuntosDeVenta() {
+  const [pageWidth, setPageWidth] = useState(0);
   const [zipCode, setZipCode] = useState(null);
   const [isValidZipCode, setIsValidZipCode] = useState(true);
   const [isSearched, setIsSearched] = useState(false);
-  const [storesToRender, setStoresToRender] = useState(stores)
+  const [mapHeight, setMapHeight] = useState(undefined);
+  const [storesToRender, setStoresToRender] = useState(stores);
   const mapRef = useRef(null);
   const mapContainerRef = useRef(null);
   const cardRefs = useRef({});
 
   useEffect(() => {
+    setPageWidth(window.innerWidth);
+
+    function onResize() {
+      setPageWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', onResize);
+
+    onResize();
+
     const elements = document.querySelectorAll('.fade-in');
     elements.forEach(el => {
       el.classList.add('animate');
@@ -60,7 +72,16 @@ export default function PuntosDeVenta() {
         });
       });
     }
-  }, []);
+
+    if (pageWidth < 500 && mapContainerRef.current) {
+      setMapHeight(mapContainerRef.current.offsetWidth);
+    }
+
+    return () => {
+      window.removeEventListener('resize', onResize);
+    };
+
+  }, [pageWidth]);
 
   let storeCards = storesToRender.map(store => {
 
@@ -118,14 +139,26 @@ export default function PuntosDeVenta() {
 
   return(
     <>
-      <div className={`${styles.section} ${styles.intro}`}>
+      <div 
+        className={`${styles.section} ${styles.intro}`}
+        style={{
+          backgroundImage: `url(${prefix}/Texture.png), var(--hero-background)`,
+          backgroundRepeat: "repeat, no-repeat",
+          backgroundSize: "auto, cover",
+        }}>
         <h1 className={`${styles.title} fade-in`}>Puntos De Venta</h1>
         <div className={styles.introTextContainer}>
-          <p className="fade-in" style={{ animationDelay: "0.5s" }}>Estamos en venta exclusivamente en los siguientes pequeños comercios y viveros.</p>
-          <p className="fade-in" style={{ animationDelay: "1s" }}>Introduce tu código postal en el buscador para encontrar tu tienda más próxima.</p>
+          <p className="fade-in" style={{ animationDelay: "0.25s" }}>Estamos en venta exclusivamente en los siguientes pequeños comercios y viveros.</p>
+          <p className="fade-in" style={{ animationDelay: "0.5s" }}>Introduce tu código postal en el buscador para encontrar tu tienda más próxima.</p>
         </div>
       </div>
-      <div className={`${styles.section} ${styles.body}`}>
+      <div 
+        className={`${styles.section} ${styles.body}`}
+        style={{
+          backgroundImage: `url(${prefix}/Texture.png), var(--product-segment-2-background)`,
+          backgroundRepeat: "repeat, no-repeat",
+          backgroundSize: "auto, cover",
+        }}>
         <div className={styles.inputWrapper}>
             <p>Código Postal</p>
             <div className={styles.inputContainer}>
@@ -137,7 +170,11 @@ export default function PuntosDeVenta() {
           <div className={styles.storeCardContainer}>
             {storeCards}
           </div>
-          <div ref={mapContainerRef} className={styles.mapPlaceholder}></div>
+          <div 
+            ref={mapContainerRef} 
+            className={styles.mapPlaceholder}
+            style={pageWidth < 500 && mapHeight ? {height: `${mapHeight}px`} : undefined}
+          ></div>
         </div>
       </div>
     </>

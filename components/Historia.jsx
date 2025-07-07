@@ -29,11 +29,17 @@ export default function Historia() {
 
   return(
       <>
-        <div className={`${styles.section} ${styles.first}`}>
+        <div 
+          className={`${styles.section} ${styles.first}`}
+          style={{
+            backgroundImage: `url(${prefix}/Texture.png), var(--hero-background)`,
+            backgroundRepeat: "repeat, no-repeat",
+            backgroundSize: "auto, cover",
+          }}>
           <div className={styles.contentContainer}>
             <h1 className={`${styles.pageTitle} fade-in`}>Nuestra Historia</h1>
-            <p className="fade-in" style={{ animationDelay: "0.5s" }}>Somos una pequeña empresa familiar con experiencia en la producción de plantas ornamentales, mantenimiento de áreas verdes, diseño de jardines y producción de tierras desde 1983.</p>
-            <p className="fade-in" style={{ animationDelay: "1s" }}>Nuestro trabajo está directamente relacionado con el cuidado y conservación del medio ambiente y éste es nuestro principal objetivo.</p>
+            <p className="fade-in" style={{ animationDelay: "0.25s" }}>Somos una pequeña empresa familiar con experiencia en la producción de plantas ornamentales, mantenimiento de áreas verdes, diseño de jardines y producción de tierras desde 1983.</p>
+            <p className="fade-in" style={{ animationDelay: "0.5s" }}>Nuestro trabajo está directamente relacionado con el cuidado y conservación del medio ambiente y éste es nuestro principal objetivo.</p>
             <div className={styles.imageContainerFirstParent}>
               <div className={styles.imageContainerFirstTop}>
                 <ImageCard
@@ -69,10 +75,16 @@ export default function Historia() {
             </div>
           </div>
         </div>
-        <div className={`${styles.section} ${styles.second}`}>
+        <div 
+          className={`${styles.section} ${styles.second}`}
+          style={{
+            backgroundImage: `url(${prefix}/Texture.png), var(--product-segment-2-background)`,
+            backgroundRepeat: "repeat, no-repeat",
+            backgroundSize: "auto, cover",
+          }}>
           <div className={styles.contentContainer}>
-            <p>Queremos contribuir a crear zonas verdes con un mínimo de impacto ambiental y un mayor ahorro de de agua. </p>
-            <p>Por eso desarrollamos productos 100% ecológicos, y así también equilibrar el desgaste que genera el abuso de abonos de origen químico.</p>
+            <p className="fade-in" style={{ animationDelay: "0.75s" }}>Queremos contribuir a crear zonas verdes con un mínimo de impacto ambiental y un mayor ahorro de de agua. </p>
+            <p className="fade-in" style={{ animationDelay: "1s" }}>Por eso desarrollamos productos 100% ecológicos, y así también equilibrar el desgaste que genera el abuso de abonos de origen químico.</p>
             <div className={styles.imageContainerSecond}>
               {pageWidth >= 1200 ? (
                 <>
@@ -163,9 +175,15 @@ export default function Historia() {
               </div>
           </div>
         </div>
-        <div className={`${styles.section} ${styles.third}`}>
+        <div 
+          className={`${styles.section} ${styles.third}`}
+          style={{
+            backgroundImage: `url(${prefix}/Texture.png), var(--product-segment-3-background)`,
+            backgroundRepeat: "repeat, no-repeat",
+            backgroundSize: "auto, cover",
+          }}>
           <div className={styles.contentContainer}>
-            <p>El origen de nuestro nombre viene del monte Roraima en Venezuela, una de las formaciones geológicas más antiguas de la Tierra, cuyas plantas y animales son únicos en el mundo.</p>
+            <p className="fade-in" style={{ animationDelay: "1.25s" }}>El origen de nuestro nombre viene del monte Roraima en Venezuela, una de las formaciones geológicas más antiguas de la Tierra, cuyas plantas y animales son únicos en el mundo.</p>
             <div className={styles.imageContainerThird}>
               <ImageCard
                 className={styles.image}
@@ -175,6 +193,8 @@ export default function Historia() {
                 alt="Monte Roraima en el Parque Nacional Canaima en Venezuela"
                 caption="Monte Roraima, Venezuela"
                 segment={3}
+                isLink={true}
+                href={"https://nikonites.com/forum/threads/roraima-tepuy.8488/#axzz3Qi5aOCHZ"}
               />
             </div>
           </div>

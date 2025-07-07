@@ -29,7 +29,14 @@ function Hero() {
     }, []);
 
   return(
-    <section className="hero">
+    <section 
+      className="hero"
+      style={{
+        backgroundImage: `url(${prefix}/Texture.png), var(--hero-background)`,
+        backgroundRepeat: "repeat, no-repeat",
+        backgroundSize: "auto, cover",
+      }}
+      >
       <ImageCard
         src={`${prefix}/homepage_images/HP0.webp`}
         alt={"Primer plano de una planta suculenta madre perla floreando"}

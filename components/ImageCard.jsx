@@ -2,7 +2,7 @@ import styles from "../styles/ImageCard.module.css"
 import { useEffect, useState } from "react"
 import Image from "next/image"
 
-export default function ImageCard({ src, alt, width, height, caption, segment, style, rateOfScroll }) {
+export default function ImageCard({ src, alt, width, height, caption, segment, style, rateOfScroll, direction, isLink, href }) {
   const [isMouseEntered, setIsMouseEntered] = useState(false);
   const [offsetY, setOffsetY] = useState(0);
 
@@ -36,7 +36,7 @@ export default function ImageCard({ src, alt, width, height, caption, segment, s
         width: `${width}px`,
         height: `${height}px`,
         ...style,
-        transform: rateOfScroll ? `translateY(${-offsetY}px)` : undefined,
+        transform: rateOfScroll ? `translateY(${direction === "down" ? offsetY : -offsetY}px)` : undefined,
         willChange: rateOfScroll ? 'transform' : undefined,
       }}
     >
@@ -51,7 +51,7 @@ export default function ImageCard({ src, alt, width, height, caption, segment, s
         className={`${styles.caption} ${!isMouseEntered ? styles.hidden : ''} ${isMouseEntered ? styles.visible : ''}`}
         aria-hidden="true"
       >
-        <p className={styles.captionText}>{caption}</p>
+        {isLink ? <a className={styles.captionLink} href={href} noreferrer="true" target="_blank"><p className={styles.captionText}>{caption}</p></a> : <p className={styles.captionText}>{caption}</p>}
       </div>
     </div>
   );

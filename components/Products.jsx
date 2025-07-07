@@ -49,7 +49,13 @@ export default function Products() {
   ]
   return(
     <section className={styles.products}>
-      <div className={`${styles.segment} ${styles.first}`}>
+      <div 
+        className={`${styles.segment} ${styles.first}`}
+        style={{
+        backgroundImage: `url(${prefix}/Texture.png), var(--hero-background)`,
+        backgroundRepeat: "repeat, no-repeat",
+        backgroundSize: "auto, cover",
+      }}>
         <h2 className={`${styles.title} fade-in`}>Nuestros Productos</h2>
         <div className={styles.cardWrapper}>
           <ProductCard
@@ -77,9 +83,16 @@ export default function Products() {
               </ul>
             }
           />
+          <div id='section2'></div>
         </div>
       </div>
-      <div className={`${styles.segment} ${styles.second}`}>
+      <div 
+        className={`${styles.segment} ${styles.second}`}
+        style={{
+          backgroundImage: `url(${prefix}/Texture.png), var(--product-segment-2-background)`,
+          backgroundRepeat: "repeat, no-repeat",
+          backgroundSize: "auto, cover",
+        }}>
         <div className={styles.cardWrapper}>
           <ProductCard 
             isTitle={false}
@@ -105,9 +118,16 @@ export default function Products() {
               </ul>
             }
           />
+          <div id='section3'></div>
         </div>
       </div>
-      <div className={`${styles.segment} ${styles.third}`}>
+      <div 
+        className={`${styles.segment} ${styles.third}`}
+        style={{
+          backgroundImage: `url(${prefix}/Texture.png), var(--product-segment-3-background)`,
+          backgroundRepeat: "repeat, no-repeat",
+          backgroundSize: "auto, cover",
+        }}>
         <div className={styles.cardWrapper}>
           <ProductCard
             isTitle={false}
