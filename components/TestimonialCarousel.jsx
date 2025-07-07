@@ -11,7 +11,6 @@ export default function TestimonialCarousel({ carouselId, testimonials }) {
     function addActiveStyle(index) {
       const dotToActivate = containerRef.current?.querySelector(`#dot-${carouselId}-${index}`);
 
-      // Clear all active dots in this instance
       containerRef.current?.querySelectorAll(`.${styles.dot}.${styles.active}`)
         .forEach((dot) => dot.classList.remove(styles.active));
 
@@ -40,7 +39,20 @@ export default function TestimonialCarousel({ carouselId, testimonials }) {
     testimonialElements.forEach((el) => observerRef.current.observe(el));
 
     // Set 2nd dot active by default (after a brief delay)
-    setTimeout(() => addActiveStyle(2), 100);
+    setTimeout(() => {
+      const cardContainer = containerRef.current.querySelector(`.${styles.cardContainer}`);
+      const testimonialCards = containerRef.current.querySelectorAll(`.${styles.card}`);
+
+      if (cardContainer && testimonialCards.length >= 2) {
+        const secondCard = testimonialCards[0]; // index 1 = second
+        const scrollAmount = secondCard.offsetLeft;
+
+        cardContainer.scrollTo({
+          left: scrollAmount,
+          behavior: "smooth",
+        })
+      }
+    }, 100);
 
     return () => {
       if (observerRef.current) {
