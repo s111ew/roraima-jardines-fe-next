@@ -73,8 +73,8 @@ export default function HazTuJardin() {
 
   const downloadPDF = () => {
     const link = document.createElement('a');
-    link.href = `${prefix}/files/HazTuJardin.pdf`;
-    link.download = 'HazTuJardin.pdf';
+    link.href = `${prefix}/files/Guía_Roraima_Jardines.pdf`;
+    link.download = 'Guía_Roraima_Jardines.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

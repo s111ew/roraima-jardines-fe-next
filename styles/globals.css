@@ -79,16 +79,16 @@ h6 {
   --product-segment-2-background: linear-gradient(
     180deg,
     rgba(55, 93, 60, 1) 0%,
-    rgba(84, 141, 91, 1) 100%
+    rgba(76, 125, 81, 1) 100%
   );
   --product-segment-3-background: linear-gradient(
     180deg,
-    rgba(105, 166, 113, 1) 0%,
+    rgba(79, 133, 85, 1) 0%,
     rgba(153, 199, 159, 1) 100%
   );
   --product-cards-background: linear-gradient(180deg, #375d3c 0%, #548d5b 100%);
   --testimonial-background: linear-gradient(180deg, #69a671 0%, #99c79f 100%);
-  --footer-background: linear-gradient(180deg, #cadecb 0%, #e5eee5 99.7%);
+  --footer-background: linear-gradient(180deg, #aed7b3 0%, #e5eee5 99.7%);
   --spring-background: linear-gradient(
     178deg,
     #46764c 1.32%,
@@ -225,7 +225,8 @@ section {
 
 .hero-information-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 50px;
 }
 
 .hero-information {
@@ -333,6 +334,7 @@ section {
 
   .hero-information-container {
     flex-direction: column;
+    align-items: center;
     gap: 96px;
     margin-top: 30px;
   }

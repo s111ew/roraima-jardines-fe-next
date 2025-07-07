@@ -100,6 +100,8 @@ function Testimonial() {
               alt={'Cientos de plantas Mesen floreadas cubren el suelo creando un tapiz verde, naranja y violeta'}
               caption={'Mesen'}
               segment={3}
+              direction={"down"}
+              rateOfScroll={pageWidth < 1200 ? null : 1.035}
             />
           )
         }
@@ -110,7 +112,7 @@ function Testimonial() {
           alt={'Primer plano de las flores violetas de las plantas Mesen'}
           caption={'Mesen'}
           segment={3}
-          rateOfScroll={pageWidth < 1200 ? null : 1.035}
+          rateOfScroll={pageWidth < 1200 ? 1.015 : 1.035}
         />
         <ImageCard
           src={`${prefix}/homepage_images/HP14.webp`}
@@ -119,6 +121,8 @@ function Testimonial() {
           alt={'Primer plano de las flores violetas de las plantas Mesen'}
           caption={'Mesen'}
           segment={3}
+          direction={"down"}
+          rateOfScroll={pageWidth < 1200 ? 1.015 : 1.035}
         />
         {
           pageWidth < 1200 ? '' : (
