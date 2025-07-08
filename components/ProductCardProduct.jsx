@@ -3,11 +3,31 @@ import styles from "../styles/Productos.module.css"
 import Accordion from "./Accordion"
 import Button from "./Button"
 import ImageCarousel from "./ImageCarousel"
+import { useState, useEffect } from "react"
 
-export default function ProductCard({ cardNumber, images, title, description, sizes, accordionTitlePrimary, accordionContentPrimary, accordionContentSecondary }) {
+export default function ProductCard({ cardNumber, images, altImages, title, description, sizes, accordionTitlePrimary, accordionContentPrimary, accordionTitleSecondary, accordionContentSecondary }) {
+  const [pageWidth, setPageWidth] = useState(0);
+      
+  useEffect(() => {
+    setPageWidth(window.innerWidth);
+
+    function onResize() {
+      setPageWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', onResize);
+
+    onResize()
+
+    return () => {
+      window.removeEventListener('resize', onResize);
+    };
+
+  }, []);
+
   return(
     <div id={`card-${cardNumber}`} className={styles.card}>
-      <ImageCarousel cardNumber={cardNumber} images={images}/>
+      <ImageCarousel cardNumber={cardNumber} images={pageWidth < 1200 && altImages ? altImages : images}/>
       <div className={styles.informationContainer}>
         <h2>{title}</h2>
         <p>{description}</p>
@@ -21,7 +41,7 @@ export default function ProductCard({ cardNumber, images, title, description, si
           location='body'/>
         <Accordion 
           isOpenDefault={false}
-          title='Producción'
+          title={accordionTitleSecondary}
           content={accordionContentSecondary}
           location='body'/>
       </div>
