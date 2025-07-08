@@ -3,51 +3,11 @@ import TestimonialCarousel from "./TestimonialCarousel";
 import ImageCard from "./ImageCard";
 import { useState, useEffect } from "react";
 import { prefix } from "@/public/data/prefix";
+import styles from "@/styles/Testimonials.module.css"
+import testimonialText from "@/public/data/text/testimonials";
 
 function Testimonial() {
   const [pageWidth, setPageWidth] = useState(0);
-
-  const testimonials1 = [
-    {
-      text: "Gran calidad de los productos, precio adecuado y buen servicio de entrega a las tiendas.",
-      logo: 'testimonial_images/flores-carmen.webp', 
-      storeName: 'Flores Carmen', 
-      ownerName: 'Nacho y Leticia'
-    },
-    {
-      text: "Vendemos el sustrato de Roraima Jardines desde hace más de 15 años sabiendo que ofrecemos un producto de calidad. Quienes los prueban, repiten.",
-      logo: 'testimonial_images/delicias.webp', 
-      storeName: 'Vivero Delicias', 
-      ownerName: 'Manuela'
-    },
-    {
-      text: "La tierra es excepcional; su textura es perfecta para el drenaje y retener la humedad, lo que ha permitido que mis plantas crezcan sanas y vigorosas.",
-      logo: 'testimonial_images/floristeria-el-valle.webp', 
-      storeName: 'Floritería El Valle', 
-      ownerName: 'Kellyng'
-    }
-  ]
-
-  const testimonials2 = [
-    {
-      text: "La calidad es excelente: es rica en nutrientes, tiene una textura ideal para trabajar y ha mejorado notablemente el crecimiento de mis plantas.",
-      logo: 'testimonial_images/jardineria-vela.webp', 
-      storeName: 'Jardinería Vela', 
-      ownerName: 'Isabel'
-    },
-    {
-      text: "Estoy súper contenta con la amabilidad y la presentación de productos. Las entregas son puntuales y los resultados son estupendos.",
-      logo: 'testimonial_images/flores-benede.webp', 
-      storeName: 'Floristería Nieves', 
-      ownerName: 'Nieves'
-    },
-    {
-      text: "Todos los clientes repiten después de haber probado otros. Para nosotros el servicio es estupendo, pides y enseguida te lo llevan.",
-      logo: 'testimonial_images/rossiflor.webp', 
-      storeName: 'Rossiflor', 
-      ownerName: 'Begoña'
-    }
-  ]
   
   useEffect(() => {
     setPageWidth(window.innerWidth);
@@ -67,30 +27,30 @@ function Testimonial() {
 
   return(
     <section 
-      className="testimonials"
+      className={styles.testimonials}
       style={{
         backgroundImage: `url(${prefix}/Texture.png), var(--testimonial-background)`,
         backgroundRepeat: "repeat, no-repeat",
         backgroundSize: "auto, cover",
       }}>
-      <h2>Nuestros Clientes</h2>
-      <div className="testimonials-container">
+      <h2 className={styles.title}>{testimonialText.title}</h2>
+      <div className={styles.testimonialsContainer}>
         {
           pageWidth < 1200 ? (
             <TestimonialCarousel
               carouselId={1} 
-              testimonials={testimonials1}
+              testimonials={testimonialText.testimonials.slice(0, 3)}
             />
           ) : (
             <>
-              <TestimonialCard text={"Gran calidad de los productos, precio adecuado y buen servicio de entrega a las tiendas."} logo='testimonial_images/flores-carmen.webp' storeName={'Flores Carmen'} ownerName={'Nacho y Leticia'} />
-              <TestimonialCard text={"Vendemos el sustrato de Roraima Jardines desde hace más de 15 años sabiendo que ofrecemos un producto de calidad. Quienes los prueban, repiten."} logo='testimonial_images/delicias.webp' storeName={'Vivero Delicias'} ownerName={'Manuela'} />
-              <TestimonialCard text={"La tierra es excepcional; su textura es perfecta para el drenaje y retener la humedad, lo que ha permitido que mis plantas crezcan sanas y vigorosas."} logo='testimonial_images/floristeria-el-valle.webp' storeName={'Floritería El Valle'} ownerName={'Kellyng'} />
+              <TestimonialCard text={testimonialText.testimonials[0].text} logo={testimonialText.testimonials[0].logo} storeName={testimonialText.testimonials[0].storeName} ownerName={testimonialText.testimonials[0].ownerName} />
+              <TestimonialCard text={testimonialText.testimonials[1].text} logo={testimonialText.testimonials[1].logo} storeName={testimonialText.testimonials[1].storeName} ownerName={testimonialText.testimonials[1].ownerName} />
+              <TestimonialCard text={testimonialText.testimonials[2].text} logo={testimonialText.testimonials[2].logo} storeName={testimonialText.testimonials[2].storeName} ownerName={testimonialText.testimonials[2].ownerName} />
             </>
           )
         }
       </div>
-      <div className="testimonial-images">
+      <div className={styles.testimonialImages}>
         {
           pageWidth < 1200 ? '' : (
             <ImageCard
@@ -138,18 +98,18 @@ function Testimonial() {
           )
         }
       </div>
-      <div className="testimonials-container">
+      <div className={styles.testimonialsContainer}>
         {
           pageWidth < 1200 ? (
             <TestimonialCarousel
               carouselId={2} 
-              testimonials={testimonials2}
+              testimonials={testimonialText.testimonials.slice(3)}
             />
           ) : (
             <>
-              <TestimonialCard text={"La calidad es excelente: es rica en nutrientes, tiene una textura ideal para trabajar y ha mejorado notablemente el crecimiento de mis plantas."} logo='testimonial_images/jardineria-vela.webp' storeName={'Jardinería Vela'} ownerName={'Isabel'} />
-              <TestimonialCard text={"Estoy súper contenta con la amabilidad y la presentación de productos. Las entregas son puntuales y los resultados son estupendos."} logo='testimonial_images/flores-benede.webp' storeName={'Floristería Nieves'} ownerName={'Nieves'} />
-              <TestimonialCard text={"Todos los clientes repiten después de haber probado otros. Para nosotros el servicio es estupendo, pides y enseguida te lo llevan."} logo='testimonial_images/rossiflor.webp' storeName={'Rossiflor'} ownerName={'Begoña'} />
+              <TestimonialCard text={testimonialText.testimonials[3].text} logo={testimonialText.testimonials[3].logo} storeName={testimonialText.testimonials[3].storeName} ownerName={testimonialText.testimonials[3].ownerName} />
+              <TestimonialCard text={testimonialText.testimonials[4].text} logo={testimonialText.testimonials[4].logo} storeName={testimonialText.testimonials[4].storeName} ownerName={testimonialText.testimonials[4].ownerName} />
+              <TestimonialCard text={testimonialText.testimonials[5].text} logo={testimonialText.testimonials[5].logo} storeName={testimonialText.testimonials[5].storeName} ownerName={testimonialText.testimonials[5].ownerName} />
             </>
           )
         }

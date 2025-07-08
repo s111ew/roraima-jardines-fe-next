@@ -1,0 +1,43 @@
+.testimonials {
+  background: var(--testimonial-background);
+  padding: 48px 0px;
+  overflow-x: hidden;
+}
+
+.title {
+  padding: 32px 0px;
+  color: var(--off-white);
+}
+
+.testimonialsContainer {
+  display: flex;
+  gap: 40px;
+  padding: 32px 0px;
+}
+
+.quoteIcon {
+  position: absolute;
+}
+
+.quoteIcon.start {
+  top: -5px;
+  left: -10px;
+}
+
+.testimonialImages {
+  display: flex;
+  gap: 24px;
+  padding: 72px 0px;
+}
+
+.testimonialImages > div:nth-child(2),
+.testimonialImages > div:nth-child(4) {
+  margin-top: 124px;
+}
+
+@media (max-width: 1199px) {
+  .testimonialsContainer {
+    gap: 16px;
+    overflow: hidden;
+  }
+}

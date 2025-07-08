@@ -3,6 +3,8 @@ import Link from "next/link"
 import ImageCard from "./ImageCard"
 import { useState, useEffect } from "react";
 import { prefix } from "@/public/data/prefix";
+import heroText from "@/public/data/text/hero";
+import styles from "@/styles/Hero.module.css"
 
 function Hero() {
   const [pageWidth, setPageWidth] = useState(0);
@@ -30,7 +32,7 @@ function Hero() {
 
   return(
     <section 
-      className="hero"
+      className={styles.hero}
       style={{
         backgroundImage: `url(${prefix}/Texture.png), var(--hero-background)`,
         backgroundRepeat: "repeat, no-repeat",
@@ -96,24 +98,24 @@ function Hero() {
           top: pageWidth < 1200 ? (pageWidth < 521 ? "1450px"  : "1083px") : "782px"
         }}
       />
-      <div className="hero-main-container">
-        <h1 className="hero-title fade-in" style={{ animationDelay: '0s' }}>Sustrato y abono<br></br> 100% ecológico</h1>
-        <div className="hero-call-to-action">
-          <p className="fade-in" style={{ animationDelay: '0.5s' }}>Para plantas más sanas y frutos y vegetales más sabrosos</p>
-          <Link className="hero-call-to-action-link" href='/puntos_de_venta'><Button text="Encuentra un punto de venta" colour='green'/></Link>
+      <div className={styles.mainContainer}>
+        <h1 className={`${styles.title} fade-in`} style={{ animationDelay: '0s' }}>{heroText.title}</h1>
+        <div className={styles.callToAction}>
+          <p className="fade-in" style={{ animationDelay: '0.5s' }}>{heroText.subtitle}</p>
+          <Link className={styles.callToActionLink} href='/puntos_de_venta'><Button text={heroText.buttonText} colour='green'/></Link>
         </div>
-        <div className="hero-information-container fade-in" style={{ animationDelay: '1s' }}>
-          <div className="hero-information">
-            <h2>100% Ecológico</h2>
-            <p>Evita la dependencia de abonos de origen químico.</p>
+        <div className={`${styles.informationContainer} fade-in`} style={{ animationDelay: '1s' }}>
+          <div className={styles.information}>
+            <h2>{heroText.information[0].title}</h2>
+            <p>{heroText.information[0].subtitle}</p>
           </div>
-          <div className="hero-information">
-            <h2>Ahorra agua</h2>
-            <p>Gracias a su alto contenido en materia orgánica.</p>
+          <div className={styles.information}>
+            <h2>{heroText.information[1].title}</h2>
+            <p>{heroText.information[1].subtitle}</p>
           </div>
-          <div className="hero-information">
-            <h2>Hecho en Aragón</h2>
-            <p>Producico y envasado en Pinseque, Zaragoza.</p>
+          <div className={styles.information}>
+            <h2>{heroText.information[2].title}</h2>
+            <p>{heroText.information[2].subtitle}</p>
           </div>
         </div>
       </div>

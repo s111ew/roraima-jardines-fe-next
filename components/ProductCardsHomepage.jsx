@@ -2,6 +2,8 @@ import ProductCard from "./ProductCardHomepage.jsx"
 import ImageCard from "./ImageCard.jsx"
 import { useState, useEffect } from "react";
 import { prefix } from "@/public/data/prefix.js";
+import styles from "@/styles/ProductCardsHomepage.module.css"
+import homepageProductsText from "@/public/data/text/homepageProducts.js";
 
 function ProductCards() {
   const [pageWidth, setPageWidth] = useState(0);
@@ -24,19 +26,19 @@ function ProductCards() {
 
   return(
     <section 
-      className="product-cards"
+      className={styles.cards}
       style={{
         backgroundImage: `url(${prefix}/Texture.png), var(--product-cards-background)`,
         backgroundRepeat: "repeat, no-repeat",
         backgroundSize: "auto, cover",
       }}>
-      <h2>Nuestros Productos</h2>
-      <div className="product-card-container">
-        <ProductCard src={`${prefix}/product_images/Sustrato 1.webp`} src2={`${prefix}/product_images/Sustrato 2.webp`} alt="" title="Sustrato Universal" desc="Para uso en macetas y jardinería" sectionToScrollTo=''/>
-        <ProductCard src={`${prefix}/product_images/Huerto-1.webp`} src2={`${prefix}/product_images/huerto2.webp`} alt="" title="Huerto & Jardin" desc="Para uso exterior" sectionToScrollTo='section2'/>
-        <ProductCard src={`${prefix}/product_images/Plantas 1.webp`} src2={`${prefix}/product_images/Plantas 2.webp`} alt="" title="Plantas ornamentales" desc="Variedades de cactus, aptenias y mesen" sectionToScrollTo='section3'/>
+      <h2 className={styles.title}>{homepageProductsText.title}</h2>
+      <div className={styles.cardContainer}>
+        <ProductCard src={`${prefix}/product_images/Sustrato 1.webp`} src2={`${prefix}/product_images/Sustrato 2.webp`} alt="" title={homepageProductsText.cards[0].title} desc={homepageProductsText.cards[0].desc} sectionToScrollTo=''/>
+        <ProductCard src={`${prefix}/product_images/Huerto-1.webp`} src2={`${prefix}/product_images/huerto2.webp`} alt="" title={homepageProductsText.cards[1].title} desc={homepageProductsText.cards[1].desc} sectionToScrollTo='section2'/>
+        <ProductCard src={`${prefix}/product_images/Plantas 1.webp`} src2={`${prefix}/product_images/Plantas 2.webp`} alt="" title={homepageProductsText.cards[2].title} desc={homepageProductsText.cards[2].desc} sectionToScrollTo='section3'/>
       </div>
-      <div className="images-container">
+      <div className={styles.imageContainer}>
         <>
           { pageWidth > 520 &&
             <ImageCard

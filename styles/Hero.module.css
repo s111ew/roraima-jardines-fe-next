@@ -1,0 +1,99 @@
+.hero {
+  position: relative;
+  background: var(--hero-background);
+  padding: 168px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 192px;
+  color: var(--off-white);
+}
+
+.mainContainer {
+  padding: 0px 249px;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 192px;
+  width: 100%;
+}
+
+.title {
+  padding: 10px 0px;
+  font-size: 48px;
+  line-height: 54px;
+  font-weight: 400;
+  max-width: 450px;
+}
+
+.callToAction {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 24px 0px;
+}
+
+.callToAction > p {
+  font-size: 20px;
+}
+
+.callToActionLink {
+  width: 300px;
+}
+
+.informationContainer {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 230px;
+}
+
+.information > h2 {
+  font-size: 20px;
+}
+
+@media (max-width: 1199px) {
+  .hero {
+    padding: 120px 0px;
+  }
+
+  .mainContainer {
+    padding: 0px 121px;
+    gap: 156px;
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 400;
+  }
+
+  .informationContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 96px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    padding: 64px 0px 280px 0px;
+  }
+
+  .mainContainer {
+    padding: 0px 45px;
+    gap: 224px;
+  }
+
+  .informationContainer {
+    margin-top: 0px;
+    margin-bottom: 40px;
+    margin-top: 34px;
+  }
+}
