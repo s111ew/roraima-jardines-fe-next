@@ -54,6 +54,7 @@
 }
 
 .linksContainerVertical > a,
+.linksContainerVertical > li,
 .link > a,
 .link > span {
   color: inherit;
