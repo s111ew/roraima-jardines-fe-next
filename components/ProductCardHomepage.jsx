@@ -6,10 +6,6 @@ import styles from "../styles/ProductCardHomepage.module.css"
 export default function ProductCard({ src, src2, alt, title, desc, sectionToScrollTo }) {
   const [isHovered, setIsHovered] = useState(false)
 
-  function onClick() {
-    window.location.href = `/productos${'#' + sectionToScrollTo}`
-  }
-
   function onMouseEnter() {
     if (!isHovered) {
       setIsHovered(true)

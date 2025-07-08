@@ -40,8 +40,8 @@ export default function TestimonialCarousel({ carouselId, testimonials }) {
 
     // Set 2nd dot active by default (after a brief delay)
     setTimeout(() => {
-      const cardContainer = containerRef.current.querySelector(`.${styles.cardContainer}`);
-      const testimonialCards = containerRef.current.querySelectorAll(`.${styles.card}`);
+      const cardContainer = containerRef.current?.querySelector(`.${styles.cardContainer}`);
+      const testimonialCards = containerRef.current?.querySelectorAll(`.${styles.card}`);
 
       if (cardContainer && testimonialCards.length >= 2) {
         const secondCard = testimonialCards[0]; // index 1 = second

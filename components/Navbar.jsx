@@ -48,6 +48,11 @@ function Navbar({ currentPage }) {
     }
   }
 
+  function handleContactoClick() {
+    toggleOpen();
+    scrollToFooter();
+  }
+
 
 
   function mouseEnter() {
@@ -124,10 +129,10 @@ function Navbar({ currentPage }) {
       {
         (pageWidth < 1200 && isOpen)  && (
           <ul className={styles.linksContainerVertical}>
-            <li className={styles.link} onClick={toggleOpen} ><Link style={currentPage === 1 ? { fontWeight: "600" } : undefined } href='/productos'>Productos</Link></li>
-            <li className={styles.link} onClick={toggleOpen} ><Link style={currentPage === 2 ? { fontWeight: "600" } : undefined } href='/jardin'>Haz tu Jardín</Link></li>
-            <li className={styles.link} onClick={toggleOpen} ><Link style={currentPage === 3 ? { fontWeight: "600" } : undefined } href='/historia'>Nuestra Historia</Link></li>
-            <li className={styles.link} onClick={toggleOpen} ><span onClick={scrollToFooter}>Contacto</span></li>
+            <Link style={currentPage === 1 ? { fontWeight: "600" } : undefined } href='/productos' onClick={toggleOpen}><li className={styles.link}>Productos</li></Link>
+            <Link style={currentPage === 2 ? { fontWeight: "600" } : undefined } href='/jardin'  onClick={toggleOpen}><li className={styles.link}>Haz tu Jardín</li></Link>
+            <Link style={currentPage === 3 ? { fontWeight: "600" } : undefined } href='/historia'  onClick={toggleOpen}><li className={styles.link}>Nuestra Historia</li></Link>
+            <li className={styles.link} onClick={handleContactoClick}>Contacto</li>
             <li className={`${styles.link} ${styles.buttonLink}`} onClick={toggleOpen} ><Link href='/puntos_de_venta'><Button text={'Puntos de venta'} colour='green'/></Link></li>
           </ul>
         )
