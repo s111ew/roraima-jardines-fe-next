@@ -8,6 +8,7 @@ import ButtonAlt from "./ButtonAlt"
 import { useState, useEffect } from "react"
 import seasons from "@/public/data/seasons"
 import { prefix } from "@/public/data/prefix"
+import jardinText from "@/public/data/text/hazTuJardin"
 
 export default function HazTuJardin() {
   const [currentSeason, setCurrentSeason] = useState("primavera")
@@ -36,41 +37,23 @@ export default function HazTuJardin() {
       break;
   }
 
-  const [accordionText, setAccordionText] = useState(
-      <>
-        <p>Elige una maceta acorde al tamaño de la planta, ya que tendrá una altura y grosor considerables. De lo contrario, sus frutos serán más pequeños que los de cultivo en suelo.</p>
-        <p>Para la siembra te recomendamos colocar:</p>
-        <ul>
-          <li>Grava o piedras para el drenaje.</li>
-          <li>Rellenar la maceta con Sustrato Universal</li>
-          <li>Colocar el cepellón de la planta y terminar de llenar con abono Huerto & Jardín.</li>
-        </ul>
-      </>
-  )
+  function generateAccordionContent(content, list) {
+    const items = content.map(item => <p>{item}</p>)
 
-  const options = [
-    {
-      key: 0,
-      value: "primavera",
-      text: "Primavera"
-    },
-    {
-      key: 1,
-      value: "verano",
-      text: "Verano"
-    },
-    {
-      key: 2,
-      value: "otono",
-      text: "Otoño"
-    },
-    {
-      key: 3,
-      value: "invierno",
-      text: "Invierno"
-    },
-  ]
+    const listItems = list?.map(listItem => <li>{listItem}</li>)
 
+    return(
+      <div className={styles.accordionContent}>
+        {items}
+        {list ? 
+          <ul>
+            {listItems}
+          </ul> : ''}
+      </div>
+    )
+  }
+
+  // TODO: EXTRACT PDF TO hazTuJardin.js
   const downloadPDF = () => {
     const link = document.createElement('a');
     link.href = `${prefix}/files/Guía_Roraima_Jardines.pdf`;
@@ -90,25 +73,25 @@ export default function HazTuJardin() {
           backgroundSize: "auto, cover",
         }}>
         <div className={styles.contentContainerIntro}>
-          <h1 className={`${styles.title} fade-in`}>Haz Tu Jardín</h1>
+          <h1 className={`${styles.title} fade-in`}>{jardinText.title}</h1>
           <div className={styles.introTextContainer}>
-            <p className="fade-in" style={{ animationDelay: '0.5s' }}>Sigue nuestro calendario de preparaciones, sembrado, abonado y mantenimiento para sacarle el mejor partido a tu jardín durante todo el año. </p>
+            <p className="fade-in" style={{ animationDelay: '0.5s' }}>{jardinText.subTitle}</p>
           </div>
         </div>
       </div>
       <div className={`${styles.section} ${styles.body} ${styles[currentSeasonIndex.name]}`}>
         <div className={styles.contentContainer}>
           <div className={styles.legendContainer}>
-            <p className={styles.label}>Selecciona una estación:</p>
-            <SelectAccordion name="season" options={options} setCurrentSeason={setCurrentSeason} />
+            <p className={styles.label}>{jardinText.selectLabel}</p>
+            <SelectAccordion name="season" options={jardinText.selectOptions} setCurrentSeason={setCurrentSeason} />
             <div className={styles.legend}>
               <div className={styles.legendInner}>
                 <div className={`${styles.dot} ${styles.black}`}></div>
-                <p>Huerto & Jardin</p>
+                <p>{jardinText.legendValues[0]}</p>
               </div>
               <div className={styles.legendInner}>
                 <div className={`${styles.dot} ${styles.green}`}></div>
-                <p>Sustrato</p>
+                <p>{jardinText.legendValues[1]}</p>
               </div>
             </div>
           </div>
@@ -118,35 +101,20 @@ export default function HazTuJardin() {
           <div className={styles.accordionContainer}>
             <Accordion
               isOpenDefault={true} 
-              title='Consideraciones'
-              content={
-                <div className={styles.accordionContent}>
-                  <p>Cuando planifiques tu jardín ten en cuenta la compatibilidad de las plantas, para evitar la competecia por nutrientes entre las ellas.</p>
-                  <p>Así obtendrás un crecimiento armónico de todas ellas y crear un jardín más sostenible.</p>
-                </div>
-              }
+              title={jardinText.accordions[0].title}
+              content={generateAccordionContent(jardinText.accordions[0].content)}
               location='body'
             />
             <Accordion 
               isOpenDefault={false}
-              title='Cultivo en maceta'
-              content={
-                <div className={styles.accordionContent}>
-                  {accordionText}
-                </div>
-              }
+              title={jardinText.accordions[1].title}
+              content={generateAccordionContent(jardinText.accordions[1].content, jardinText.accordions[1].list)}
               location='body'
             />
             <Accordion 
               isOpenDefault={false}
-              title='Trasplantar en maceta'
-              content={
-                <div className={styles.accordionContent}>
-                  <p>Para trasplantar elije una maceta más grande que la actual.</p>
-                  <p>Coloca una capa de drenaje de 1 a 2 cm en el fondo seguido de otra capa de sustrato. </p>
-                  <p>Saca la planta cuidadosamente de la maceta y colócala el cepellón en el centro de la nueva maceta, rellena alrededor del cepellón con sustrato, presionando ligeramente.</p>
-                </div>
-              }
+              title={jardinText.accordions[2].title}
+              content={generateAccordionContent(jardinText.accordions[2].content)}
               location='body'
             />
           </div>
