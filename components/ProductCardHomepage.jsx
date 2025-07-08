@@ -24,10 +24,10 @@ export default function ProductCard({ src, src2, alt, title, desc, sectionToScro
 
   return(
     <div className={styles.card} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-      <div onClick={onClick} className={styles.cardImagesContainer}>
+      <Link href={`/productos${'#' + sectionToScrollTo}`} className={styles.cardImagesContainer}>
         <img className={`${styles.cardImage} ${isHovered ? styles.hidden : ''}`} src={ src } alt={ alt } />
-        <img className={styles.cardImage} src={ src2 } alt={ alt } />
-      </div> 
+        <img className={styles.cardImage} src={ src2 } alt={ alt } /> 
+      </Link>  
       <div className={styles.cardText}>
         <div className={styles.cardTextContainer}>
           <h2>{title}</h2>
