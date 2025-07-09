@@ -18,7 +18,7 @@ const testimonialText = {
     {
       text: "La tierra es excepcional; su textura es perfecta para el drenaje y retener la humedad, lo que ha permitido que mis plantas crezcan sanas y vigorosas.",
       logo: `${prefix}/testimonial_images/floristeria-el-valle.webp`,
-      storeName: "Floritería El Valle",
+      storeName: "Floristería El Valle",
       ownerName: "Kellyng",
     },
     {

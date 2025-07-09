@@ -5,7 +5,7 @@ import { prefix } from "@/public/data/prefix"
 import ContactForm from "./ContactForm"
 
 function Footer() {
-  const rollingWords = ['plantas', 'rosales', 'siembras', 'vegetales', 'frutos', 'jardín'];
+  const rollingWords = ['plantas', 'rosales', 'siembras', 'vegetales', 'frutos', 'jardines'];
 
   return (
     <footer 
@@ -25,7 +25,7 @@ function Footer() {
           <div className={styles.formContainer} >
             <p className={styles.contactInfo}>
               <span>Si necesitas contactarnos por algo, escríbenos aquí y te responderemos lo antes posible.</span>
-              <span>También puedes llamarnos o visitarnos:</span>
+              <span>También puedes llamarnos o escribirnos por WhatsApp:</span>
               <span>Teléfono<br></br>+34 616626407</span>
             </p>
             <ContactForm />

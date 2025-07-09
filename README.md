@@ -11,18 +11,18 @@ Static information website for Roraima Jardines.
 
 ## Project Structure
 
-/pages - Route-based components mapped to site URLs (e.g. /productos/)
-/components - Reusable UI components
-/public - Static assets (e.g. images, fonts, text files)
-/styles - Modular CSS files to style each component
-/node_modules - Auto-generated folder containing project dependencies
-.gitignore
-eslint.config.mjs
-jsconfig.json
-next.config.mjs
-package-lock.json
-package.json
-README.md
+- /pages - Route-based components mapped to site URLs (e.g. /productos/)
+- /components - Reusable UI components
+- /public - Static assets (e.g. images, fonts, text files)
+- /styles - Modular CSS files to style each component
+- /node_modules - Auto-generated folder containing project dependencies
+- .gitignore
+- eslint.config.mjs
+- jsconfig.json
+- next.config.mjs
+- package-lock.json
+- package.json
+- README.md
 
 ## Setup Instructions
 
@@ -47,7 +47,7 @@ npm run dev
 
 ## Build and deployment
 
-A production build of the project can be built using Next.js in the /out folder using:
+A production build of the project can be built using Next.js in the `/out` folder using:
 
 ```
 npm run build
