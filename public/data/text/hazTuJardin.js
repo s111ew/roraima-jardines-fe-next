@@ -57,6 +57,8 @@ const jardinText = {
       ],
     },
   ],
+  buttonText: ["Encuentra un Punto de Venta", "Descarga la guía en PDF"],
+  pdfName: "Guía_Roraima_Jardines.pdf",
 };
 
 export default jardinText;

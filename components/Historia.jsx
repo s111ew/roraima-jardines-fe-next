@@ -2,6 +2,7 @@ import { prefix } from "@/public/data/prefix";
 import styles from "../styles/Historia.module.css"
 import ImageCard from "./ImageCard"
 import { useState, useEffect } from "react"
+import historiaText from "@/public/data/text/historia";
 
 export default function Historia() {
   const [pageWidth, setPageWidth] = useState(0);
@@ -27,6 +28,24 @@ export default function Historia() {
     };
   }, []);
 
+  const section1Text = historiaText.section1Text.map((text, index) => {
+    return(
+      <p className="fade-in" style={{ animationDelay: `${(index + 1) * 0.25}s` }}>{text}</p>
+    )
+  })
+
+  const section2Text = historiaText.section2Text.map((text, index) => {
+    return(
+      <p className="fade-in" style={{ animationDelay: `${(index + historiaText.section1Text.length + 1) * 0.25}s` }}>{text}</p>
+    )
+  })
+
+  const section3Text = historiaText.section3Text.map((text, index) => {
+    return(
+      <p className="fade-in" style={{ animationDelay: `${(index + historiaText.section1Text.length + historiaText.section2Text.length + 1) * 0.25}s` }}>{text}</p>
+    )
+  })
+
   return(
       <>
         <div 
@@ -37,9 +56,8 @@ export default function Historia() {
             backgroundSize: "auto, cover",
           }}>
           <div className={styles.contentContainer}>
-            <h1 className={`${styles.pageTitle} fade-in`}>Nuestra Historia</h1>
-            <p className="fade-in" style={{ animationDelay: "0.25s" }}>Somos una pequeña empresa familiar con experiencia en la producción de plantas ornamentales, mantenimiento de áreas verdes, diseño de jardines y producción de tierras desde 1983.</p>
-            <p className="fade-in" style={{ animationDelay: "0.5s" }}>Nuestro trabajo está directamente relacionado con el cuidado y conservación del medio ambiente y éste es nuestro principal objetivo.</p>
+            <h1 className={`${styles.pageTitle} fade-in`}>{historiaText.title}</h1>
+            {section1Text}
               <div className={styles.imageContainerFirst}>
                 <ImageCard
                     src={`${prefix}/historia_images/Story3.webp`}
@@ -81,8 +99,7 @@ export default function Historia() {
             backgroundSize: "auto, cover",
           }}>
           <div className={styles.contentContainer}>
-            <p className="fade-in" style={{ animationDelay: "0.75s" }}>Queremos contribuir a crear zonas verdes con un mínimo de impacto ambiental y un mayor ahorro de de agua. </p>
-            <p className="fade-in" style={{ animationDelay: "1s" }}>Por eso desarrollamos productos 100% ecológicos, y así también equilibrar el desgaste que genera el abuso de abonos de origen químico.</p>
+            {section2Text}
             <div className={styles.imageContainerSecond}>
               { pageWidth < 1200 ? '' :
                 <ImageCard
@@ -141,7 +158,7 @@ export default function Historia() {
             backgroundSize: "auto, cover",
           }}>
           <div className={styles.contentContainer}>
-            <p className="fade-in" style={{ animationDelay: "1.25s" }}>El origen de nuestro nombre viene del monte Roraima en Venezuela, una de las formaciones geológicas más antiguas de la Tierra, cuyas plantas y animales son únicos en el mundo.</p>
+            {section3Text}
             <div className={styles.imageContainerThird}>
               <ImageCard
                 className={styles.image}

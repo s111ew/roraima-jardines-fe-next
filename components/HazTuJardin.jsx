@@ -53,11 +53,10 @@ export default function HazTuJardin() {
     )
   }
 
-  // TODO: EXTRACT PDF TO hazTuJardin.js
   const downloadPDF = () => {
     const link = document.createElement('a');
-    link.href = `${prefix}/files/Guía_Roraima_Jardines.pdf`;
-    link.download = 'Guía_Roraima_Jardines.pdf';
+    link.href = `${prefix}/files/${jardinText.pdfName}`;
+    link.download = `${jardinText.pdfName}`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -119,8 +118,8 @@ export default function HazTuJardin() {
             />
           </div>
           <div className={styles.buttonContainer}>
-            <Link href='/puntos_de_venta'><Button text='Encuentra un Punto de Venta' colour='green'/></Link>
-            <ButtonAlt text='Descarga la guía en PDF' onClick={downloadPDF} />
+            <Link href='/puntos_de_venta'><Button text={jardinText.buttonText[0]} colour='green'/></Link>
+            <ButtonAlt text={jardinText.buttonText[1]} onClick={downloadPDF} />
           </div>
         </div>
       </div>

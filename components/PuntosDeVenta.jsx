@@ -10,6 +10,7 @@ import locations from "@/public/data/locations"
 import calculateDistance from "@/public/tools/tools"
 import L, { map } from "leaflet"
 import "leaflet/dist/leaflet.css"
+import puntosText from "@/public/data/text/puntosDeVenta"
 
 export default function PuntosDeVenta() {
   const [pageWidth, setPageWidth] = useState(0);
@@ -137,6 +138,12 @@ export default function PuntosDeVenta() {
     }
   }
 
+  const subtitleText = puntosText.subtitles.map((text, index) => {
+      return(
+        <p className="fade-in" style={{ animationDelay: `${(index + 1) * 0.25}s` }}>{text}</p>
+      )
+    })
+
   return(
     <>
       <div 
@@ -146,10 +153,9 @@ export default function PuntosDeVenta() {
           backgroundRepeat: "repeat, no-repeat",
           backgroundSize: "auto, cover",
         }}>
-        <h1 className={`${styles.title} fade-in`}>Puntos De Venta</h1>
+        <h1 className={`${styles.title} fade-in`}>{puntosText.title}</h1>
         <div className={styles.introTextContainer}>
-          <p className="fade-in" style={{ animationDelay: "0.25s" }}>Estamos en venta exclusivamente en los siguientes pequeños comercios y viveros.</p>
-          <p className="fade-in" style={{ animationDelay: "0.5s" }}>Introduce tu código postal en el buscador para encontrar tu tienda más próxima.</p>
+          {subtitleText}
         </div>
       </div>
       <div 

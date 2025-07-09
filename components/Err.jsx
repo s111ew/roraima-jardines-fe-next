@@ -4,6 +4,7 @@ import ImageCard from "./ImageCard"
 import { useState, useEffect } from "react";
 import { prefix } from "@/public/data/prefix";
 import styles from "../styles/Err.module.css"
+import notFoundText from "@/public/data/text/notFound";
 
 function Error() {
   const [pageWidth, setPageWidth] = useState(0);
@@ -38,8 +39,8 @@ function Error() {
         backgroundSize: "auto, cover",
       }}>
       <div className={styles.mainContainer}>
-        <h1 className={`fade-in ${styles.title}`} style={{ animationDelay: '0s' }}>La página que buscas no existe o se ha movido.</h1>
-        <p className={`fade-in ${styles.subTitle}`} style={{ animationDelay: '0.5s' }}>Para plantas más sanas y frutos y vegetales más sabrosos</p>
+        <h1 className={`fade-in ${styles.title}`} style={{ animationDelay: '0s' }}>{notFoundText.title}</h1>
+        <p className={`fade-in ${styles.subTitle}`} style={{ animationDelay: '0.5s' }}>{notFoundText.subtitle}</p>
         <Link className={styles.link} href='/productos'><Button text="Nuestros productos" colour='green'/></Link>
       </div>
       <div className={styles.imageContainer}>
