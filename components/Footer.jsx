@@ -3,9 +3,21 @@ import RollingText from "./RollingText"
 import Accordion from "./Accordion"
 import { prefix } from "@/public/data/prefix"
 import ContactForm from "./ContactForm"
+import footerText from "@/public/data/text/footer"
 
 function Footer() {
-  const rollingWords = ['plantas', 'rosales', 'siembras', 'vegetales', 'frutos', 'jardines'];
+
+  const bodyText = footerText.bodyText.map(text => {
+    return(
+      <span>{text}</span>
+    )
+  })
+
+  const creditText = footerText.credit.map(credit => {
+    return(
+      <p>{credit.title}<a href={credit.link} target="_blank" noreferrer="true">{credit.linkBody}</a></p>
+    )
+  })
 
   return (
     <footer 
@@ -18,42 +30,38 @@ function Footer() {
       }}>
       <div className={styles.content}>
         <div className={styles.top}>
-          <h3>Damos vida a tus <RollingText words={rollingWords} /></h3>
+          <h3>{footerText.pre}<RollingText words={footerText.rollingText} /></h3>
         </div>
         <div className={styles.middle}>
-          <h4 className={styles.subtitle}>Consulta Con Nosotros</h4>
+          <h4 className={styles.subtitle}>{footerText.title}</h4>
           <div className={styles.formContainer} >
             <p className={styles.contactInfo}>
-              <span>Si necesitas contactarnos por algo, escríbenos aquí y te responderemos lo antes posible.</span>
-              <span>También puedes llamarnos o escribirnos por WhatsApp:</span>
-              <span>Teléfono<br></br>+34 616626407</span>
+              {bodyText}
             </p>
             <ContactForm />
             </div>
           </div>
         <div className={styles.socialMediaContainer}>
-          <h2>Síguenos en redes</h2>
+          <h2>{footerText.subtitle}</h2>
           <div className={styles.socialMediaLinks}>
-            <a href="https://www.facebook.com/people/Roraima-Jardines/100063591625020/" target="_blank" noreferrer="true" className={styles.socialMediaLink}>
+            <a href={footerText.facebookLink} target="_blank" noreferrer="true" className={styles.socialMediaLink}>
               <img src={`${prefix}/facebook_black.svg`}></img>
               <span>Facebook</span>
             </a>
-            <a href="https://www.instagram.com/roraimajardines/" target="_blank" noreferrer="true" className={styles.socialMediaLink}>
+            <a href={footerText.instagramLink} target="_blank" noreferrer="true" className={styles.socialMediaLink}>
               <img src={`${prefix}/instagram_black.svg`}></img>
               <span>Instagram</span>
             </a>
           </div>
         </div>
         <div className={styles.creditContainer}>
-          <span>Copyright © 2025 Roraima Jardines</span>
+          <span>{footerText.copyright}</span>
           <Accordion
             isOpenDefault={false}
             title='Créditos de página web' 
             content={
               <>
-                <p>Diseño: <a href="https://suhai.design" target="_blank" noreferrer="true">suhai.design</a></p>
-                <p>Desarrollo: <a href="https://samcod.ing" target="_blank" noreferrer="true">samcod.ing</a></p>
-                <p>Desarrollo y mantenimiento: <a href="https://esmarketingzaragoza.es/" target="_blank" noreferrer="true">esmarketingzaragoza</a></p>
+                {creditText}
               </>
             }
             location="footer"/>
