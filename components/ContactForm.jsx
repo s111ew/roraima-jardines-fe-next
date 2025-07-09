@@ -50,7 +50,7 @@ export default function ContactForm() {
     e.preventDefault();
 
     if (validName && validEmail && validMessage) {
-      // send message here
+      // HANDLE MESSAGE SEND HERE
       setIsSent(true);
       setName('');
       setEmail('');
