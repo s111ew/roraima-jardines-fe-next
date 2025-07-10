@@ -37,6 +37,9 @@ function Footer() {
           <div className={styles.formContainer} >
             <p className={styles.contactInfo}>
               {bodyText}
+              <a className={styles.link} href={`https://wa.me/${footerText.telNum.replace(/\D/g, '')}`} target="_blank">
+                {footerText.telNum}
+              </a>
             </p>
             <ContactForm />
             </div>

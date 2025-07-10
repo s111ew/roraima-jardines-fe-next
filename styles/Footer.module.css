@@ -98,14 +98,17 @@
   padding-bottom: 48px;
 }
 
-.socialMediaLink {
+.socialMediaLink,
+.link {
   color: var(--text-dark);
   display: flex;
   gap: 5px;
 }
 
-.socialMediaLink:hover {
+.socialMediaLink:hover,
+.link:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .creditContainer {

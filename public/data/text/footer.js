@@ -12,8 +12,8 @@ const footerText = {
   bodyText: [
     "Si necesitas contactarnos por algo, escríbenos aquí y te responderemos lo antes posible.",
     "También puedes llamarnos o escribirnos por WhatsApp:",
-    "Teléfono +34 616626407",
   ],
+  telNum: "+34 616626407",
   subtitle: "Síguenos en redes",
   facebookLink:
     "https://www.facebook.com/people/Roraima-Jardines/100063591625020/",
