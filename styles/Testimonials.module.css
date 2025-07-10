@@ -40,4 +40,21 @@
     gap: 16px;
     overflow: hidden;
   }
+
+  .testimonialImages {
+    padding: 32px 0px 0px 0px;
+  }
+
+  .testimonialImages > div:nth-child(1) {
+    margin-top: 40px;
+  }
+  .testimonialImages > div:nth-child(2) {
+    margin-top: -30px;
+  }
+  .title {
+    padding-bottom: 64px;
+  }
+  .testimonialsContainer {
+    padding-top: 0px;
+  }
 }
