@@ -53,7 +53,7 @@ A production build of the project can be built using Next.js in the `/out` folde
 npm run build
 ```
 
-The project is currently using Github Pages for deployment via the gh-pages npm package. It can be deployed using:
+The project is currently using Github Pages for deployment via the `gh-pages` npm package, but this can be changed by removing the `gh-pages` dependancy from the `package.json` file and setting up your own deployment. It can be deployed using:
 
 ```
 npm run deploy
