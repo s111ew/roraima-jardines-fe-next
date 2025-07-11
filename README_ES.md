@@ -253,7 +253,7 @@ Los componentes no contienen texto codificado; todo reside en un archivo en `pub
 
 # To Do:
 
-## Connect contact form with email inbox
+## Conectar el formulario de contacto con la bandeja de entrada de correo electrónico
 
 Hay un formulario de contacto en el componente `Footer.jsx` que contiene los siguientes campos:
 
@@ -332,12 +332,12 @@ Los datos de los testimonios se encuentran en el archivo `public/data/text/testi
 
 Estos datos se pueden editar, eliminar o añadir editando la matriz `testimonials` en el objeto `testimonialsText` de este archivo, con el siguiente formato (NOTA: este componente solo mostrará un máximo de 6 testimonios, por lo que para añadir uno nuevo, es necesario eliminar uno):
 
-| Clave      | Ejemplo                                                                                      | Descripción                                                                                      | Tipo de datos |
-| ---------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | -------------- |
-| text       | `"Gran calidad de los productos, precio adecuado y buen servicio de entrega a las tiendas."` | Cuerpo del testimonio o reseña                                                                   | string         |
-| logo       | `"${prefix}/testimonial_images/flores-carmen.webp"`                                          | Ruta al archivo de imagen del logo de la tienda (NOTA: la ruta relativa debe tener el prefijo `${prefix}/`) | string         |
-| storeName  | `"Flores Carmen"`                                                                            | Nombre de la tienda que emite la reseña                                                          | string         |
-| ownerName  | `"Nacho y Leticia"`                                                                          | Nombre del propietario o propietarios de la tienda                                               | string         |
+| Clave     | Ejemplo                                                                                      | Descripción                                                                                                 | Tipo de datos |
+| --------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------- |
+| text      | `"Gran calidad de los productos, precio adecuado y buen servicio de entrega a las tiendas."` | Cuerpo del testimonio o reseña                                                                              | string        |
+| logo      | `"${prefix}/testimonial_images/flores-carmen.webp"`                                          | Ruta al archivo de imagen del logo de la tienda (NOTA: la ruta relativa debe tener el prefijo `${prefix}/`) | string        |
+| storeName | `"Flores Carmen"`                                                                            | Nombre de la tienda que emite la reseña                                                                     | string        |
+| ownerName | `"Nacho y Leticia"`                                                                          | Nombre del propietario o propietarios de la tienda                                                          | string        |
 
 Dando como resultado un objeto que se ve así:
 

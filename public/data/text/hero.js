@@ -1,6 +1,6 @@
 const heroText = {
   title: "Sustrato y abono 100% ecológico",
-  subtitle: "Para plantas más sanas y frutos y vegetales más sabrosos",
+  subtitle: "Para plantas más sanas y cultivos más sabrosos",
   buttonText: "Encuentra un punto de venta",
   information: [
     {

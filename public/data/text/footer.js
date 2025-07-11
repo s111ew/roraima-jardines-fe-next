@@ -10,7 +10,7 @@ const footerText = {
   ],
   title: "Consulta Con Nosotros",
   bodyText: [
-    "Si necesitas contactarnos por algo, escríbenos aquí y te responderemos lo antes posible.",
+    "Si tienes alguna duda o consulta, escríbenos aquí y te responderemos lo antes posible.",
     "También puedes llamarnos o escribirnos por WhatsApp:",
   ],
   telNum: "+34 616626407",
