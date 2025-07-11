@@ -1,17 +1,17 @@
 # **_Roraima Jardines_**
 
-Sitio web de información estática de Roraima Jardines.
+Información estática de la página web de Roraima Jardines.
 
 # Pila de tecnología
 
-- [Next.js](https://nextjs.org/) Enrutamiento y agrupación
+- [Next.js](https://nextjs.org/) Routing y agrupación
 - [React](https://react.dev/) Desarrollo basado en componentes
 - [Leaflet.js](https://leafletjs.com/) Representación de componentes del mapa
-- [Open Street Map](https://www.openstreetmap.org/) Mapeo de código abierto
+- [Open Street Map](https://www.openstreetmap.org/) Mapa de Open Source
 
 # Estructura del proyecto
 
-- /pages - Componentes basados ​​en rutas asignados a las URL del sitio (e.g. /productos/)
+- /pages - Componentes basados ​​en rutas asignados a las URL de la página (e.g. /productos/)
 - /components - Componentes de interfaz de usuario reutilizables
 - /public - Recursos estáticos (e.g imágenes, fuentes, archivos de texto)
 - /styles - Archivos CSS modulares para aplicar estilo a cada componente
@@ -53,7 +53,7 @@ Se puede crear una compilación de producción del proyecto utilizando Next.js e
 npm run build
 ```
 
-El proyecto utiliza actualmente Github Pages para la implementación mediante el paquete npm `gh-pages`, pero esto puede cambiarse eliminando la dependencia `gh-pages` del archivo `package.json` y configurando una implementación propia. Se puede implementar mediante:
+El proyecto utiliza actualmente Github Pages para la implementación mediante el paquete npm `gh-pages`, pero puede cambiarse eliminando la dependencia `gh-pages` del archivo `package.json` y configurando una implementación propia. Se puede implementar mediante:
 
 ```
 npm run deploy
@@ -142,7 +142,7 @@ Página compuesta por los componentes servidos en cada ruta, correspondientes a 
     └── globals.css <- Global styles contained here such as colour variables
 ```
 
-Archivo CSS modular correspondiente a cada componente, utilizado para darles estilo.
+Archivo CSS modular correspondiente a cada componente.
 
 ## /public
 
@@ -251,7 +251,7 @@ Recursos estáticos, incluyendo fuentes e imágenes. Las imágenes se organizan 
 
 Los componentes no contienen texto codificado; todo reside en un archivo en `public/data/text`, uno por cada página. Esto crea un "mini CMS" donde el texto se puede editar y reemplazar fácilmente sin necesidad de profundizar en el código.
 
-# To Do:
+# Próximos pasos:
 
 ## Conectar el formulario de contacto con la bandeja de entrada de correo electrónico
 
@@ -263,13 +263,13 @@ Hay un formulario de contacto en el componente `Footer.jsx` que contiene los sig
 
 Sin embargo, esto aún no está conectado a ninguna bandeja de entrada de correo electrónico y será necesario agregar el código para esta función.
 
-La sección correspondiente se encuentra en el archivo `components/ContactForm.jsx`, en la línea `49`, dentro de la función `handleSubmit()`. He dejado un comentario en el código (`// HANDLE MESSAGE SEND HERE`) para mayor claridad.
+La sección correspondiente se encuentra en el archivo `components/ContactForm.jsx`, en la línea `49`, dentro de la función `handleSubmit()`. He dejado un comentario en el código (`// HANDLE MESSAGE SEND HERE`) para encontrarlo fácilmente.
 
-# Cómo
+# Cómo hacer cambios o añadir contenido:
 
-## Añadir un distribuidor
+## Añadir un punto de venta
 
-Los datos de los distribuidores se encuentran en el archivo `public/data/stores.js` y se importan al componente `PuntosDeVenta.jsx` durante la compilación.
+Los datos de las tiendas se encuentran en el archivo `public/data/stores.js` y se importan al componente `PuntosDeVenta.jsx` durante la compilación.
 
 Estos datos se pueden editar, eliminar o añadir editando la matriz de objetos `stores` en este archivo, asegurándose de que las nuevas entradas sean un objeto JS válido con el siguiente formato:
 
@@ -278,7 +278,7 @@ Estos datos se pueden editar, eliminar o añadir editando la matriz de objetos `
 | index    | `0`                                                                                                                                                                                                                                                                    | Clave numérica usada para renderizar el orden inicial de las tiendas en el componente. Debe ser única y secuencial.                                                     | int           |
 | name     | `"Viveros Delicias"`                                                                                                                                                                                                                                                   | Nombre del punto de venta                                                                                                                                               | string        |
 | street   | `"C/ La Estación S/N"`                                                                                                                                                                                                                                                 | Dirección del punto de venta                                                                                                                                            | string        |
-| zip      | `"50120 - Zaragoza"`                                                                                                                                                                                                                                                   | Código postal de la tienda y opcionalmente el nombre de la ciudad                                                                                                       | string        |
+| zip      | `"50120 - Zaragoza"`                                                                                                                                                                                                                                                   | Código postal de la tienda y el nombre de la ciudad                                                                                                                     | string        |
 | tel      | `"692 99 37 52"`                                                                                                                                                                                                                                                       | Número de teléfono de la tienda                                                                                                                                         | string        |
 | isLink   | `true`                                                                                                                                                                                                                                                                 | Valor booleano que indica si la tienda tiene una página web dirigida al cliente (si tiene solo email, debe ser `false`). Se usa para renderizar el enlace como clicable | bool          |
 | email    | `"https://www.hortaldelcanal.es"`                                                                                                                                                                                                                                      | Enlace al sitio web o dirección de correo electrónico de la tienda                                                                                                      | string        |
@@ -315,7 +315,7 @@ const stores = [
   ...
 ```
 
-Por lo tanto, la información necesaria para rellenar completamente un nuevo objeto de tienda es la siguiente:
+Por lo tanto, la información que Jose Luis te debe dar para rellenar correctamente un nuevo objeto de tienda es la siguiente:
 | Información |
 | --- |
 | Nombre de la tienda |
@@ -326,11 +326,11 @@ Por lo tanto, la información necesaria para rellenar completamente un nuevo obj
 | Productos disponibles en la tienda |
 | Enlace a la tienda en Google Maps |
 
-## Agregar un testimonio
+## Añadir un testimonio
 
 Los datos de los testimonios se encuentran en el archivo `public/data/text/testimonials.js` y se importan al componente `Testimonial.jsx` durante la compilación.
 
-Estos datos se pueden editar, eliminar o añadir editando la matriz `testimonials` en el objeto `testimonialsText` de este archivo, con el siguiente formato (NOTA: este componente solo mostrará un máximo de 6 testimonios, por lo que para añadir uno nuevo, es necesario eliminar uno):
+Estos datos se pueden editar, eliminar o añadir editando la matriz `testimonials` en el objeto `testimonialsText` de este archivo, con el siguiente formato (NOTA: este componente solo mostrará un máximo de 6 testimonios, por lo que para añadir uno nuevo, Jose Luis tiene que eliminar uno):
 
 | Clave     | Ejemplo                                                                                      | Descripción                                                                                                 | Tipo de datos |
 | --------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------- |
@@ -355,7 +355,7 @@ testimonials: [
 
 ## Editar texto
 
-Todo el texto del sitio web se encuentra en la carpeta `public/data/text/` y está dividido por página. Esto facilita la edición del texto sin tener que revisar los archivos de los componentes; simplemente busca y reemplaza.
+Todo el texto de la página web se encuentra en la carpeta `public/data/text/` y está dividido por página. Esto facilita la edición del texto sin tener que revisar los archivos de los componentes; simplemente busca y reemplaza.
 
 El texto tiene el formato de un objeto para cada página, con claves para cada sección. Por ejemplo, el texto del elemento de título `<h1>` de la página de inicio se encuentra en `public/data/text/hero.js` y se puede encontrar en `heroText.title`.
 

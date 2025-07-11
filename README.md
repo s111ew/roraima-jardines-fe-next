@@ -2,6 +2,9 @@
 
 Static information website for Roraima Jardines.
 
+🇬🇧 NOTE: This README is available in Spanish in the file /README_ES.md
+🇪🇸 NOTA: Este README está disponible en español en el archivo /README_ES.md
+
 # Tech Stack
 
 - [Next.js](https://nextjs.org/) Routing and bundling
