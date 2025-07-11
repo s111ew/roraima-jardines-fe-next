@@ -3,11 +3,11 @@ const homepageProductsText = {
   cards: [
     {
       title: "Sustrato Universal",
-      desc: "Para uso en macetas y jardinería",
+      desc: "Uso en macetas y jardinería",
     },
     {
       title: "Huerto & Jardin",
-      desc: "Para uso exterior",
+      desc: "Uso exterior",
     },
     {
       title: "Plantas ornamentales",

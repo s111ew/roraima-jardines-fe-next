@@ -10,11 +10,10 @@ const footerText = {
   ],
   title: "Consulta Con Nosotros",
   bodyText: [
-    "Si necesitas contactarnos por algo, escríbenos aquí y te responderemos lo antes posible.",
-    "También puedes llamarnos o escribirnos por WhatsApp:",
+    "Si tienes alguna duda o consulta, escríbenos aquí y te responderemos lo antes posible.",
+    "También puedes llamarnos o escribirnos:",
   ],
   telNum: "+34 616626407",
-  subtitle: "Síguenos en redes",
   facebookLink:
     "https://www.facebook.com/people/Roraima-Jardines/100063591625020/",
   instagramLink: "https://www.instagram.com/roraimajardines/",
