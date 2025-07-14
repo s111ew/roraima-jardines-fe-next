@@ -26,15 +26,15 @@ function Footer() {
 
   }, []);
 
-  const bodyText = footerText.bodyText.map(text => {
+  const bodyText = footerText.bodyText.map((text, index) => {
     return(
-      <p>{text}</p>
+      <p key={index}>{text}</p>
     )
   })
 
-  const creditText = footerText.credit.map(credit => {
+  const creditText = footerText.credit.map((credit, index) => {
     return(
-      <p>{credit.title}<a href={credit.link} target="_blank" noreferrer="true">{credit.linkBody}</a></p>
+      <p key={index}>{credit.title}<a href={credit.link} target="_blank" noreferrer="true">{credit.linkBody}</a></p>
     )
   })
 
@@ -65,15 +65,15 @@ function Footer() {
                 ) }
               <div className={styles.contactLinks}>
                 <a className={styles.contactLink} href={`https://wa.me/${footerText.telNum.replace(/\D/g, '')}`} target="_blank">
-                  <img src={`${prefix}/whatsapp_black.svg`}></img>
+                  <img src={`${prefix}/whatsapp_black.svg`} alt="whatsapp logo"></img>
                   <span>WhatsApp</span>
                 </a>
                 <a className={styles.contactLink} href={footerText.facebookLink} target="_blank" noreferrer="true">
-                  <img src={`${prefix}/facebook_black.svg`}></img>
+                  <img src={`${prefix}/facebook_black.svg`} alt="facebook logo"></img>
                   <span>Facebook</span>
                 </a>
                 <a className={styles.contactLink} href={footerText.instagramLink} target="_blank" noreferrer="true">
-                  <img src={`${prefix}/instagram_black.svg`}></img>
+                  <img src={`${prefix}/instagram_black.svg`} alt="instagram logo"></img>
                   <span>Instagram</span>
                 </a>
           </div>
