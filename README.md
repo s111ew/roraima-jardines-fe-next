@@ -270,6 +270,37 @@ The relevant section is in the file `components/ContactForm.jsx` on line `49` wi
 
 # How To:
 
+## Configure SEO
+
+Each file in the `/pages/` folder represents an HTML page rendered. These files also contain the `<head>` element for each page. This is where the metadata for each page can be configured. For example, see below the `<head>` element for the Productos page at `/pages/productos.js`:
+
+```
+import Head from "next/head";
+import Products from "@/components/Products";
+import { useEffect } from "react";
+
+export default function Productos({ setCurrentPage }) {
+  useEffect(() => {
+    setCurrentPage(1);
+  }, []);
+
+  return (
+    <>
+      <Head>
+        <title>Productos - Roraima Jardines</title>
+        <meta name="Productos" content="" /> /* EDIT PAGE METADATA HERE */
+        <meta name="theme-color" content="#1e3321" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
+      </Head>
+      <Products />
+    </>
+  );
+}
+```
+
 ## Add a stockist
 
 Stockist data lives in the file `public/data/stores.js` and is imported into the `PuntosDeVenta.jsx` component at build time.

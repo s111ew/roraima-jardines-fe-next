@@ -267,6 +267,38 @@ La sección correspondiente se encuentra en el archivo `components/ContactForm.j
 
 # Cómo hacer cambios o añadir contenido:
 
+## Configurar SEO
+
+Cada archivo en la carpeta `/pages/` representa una página HTML renderizada. Estos archivos también contienen el elemento `<head>` para cada página. Aquí es donde se pueden configurar los metadatos de cada página.
+Como ejemplo, puedes leer a continuación el elemento `<head>` para la página Productos en `/pages/productos.js`:
+
+```
+import Head from "next/head";
+import Products from "@/components/Products";
+import { useEffect } from "react";
+
+export default function Productos({ setCurrentPage }) {
+  useEffect(() => {
+    setCurrentPage(1);
+  }, []);
+
+  return (
+    <>
+      <Head>
+        <title>Productos - Roraima Jardines</title>
+        <meta name="Productos" content="" /> /* EDITAR METADATOS DE LA PÁGINA AQUÍ */
+        <meta name="theme-color" content="#1e3321" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
+      </Head>
+      <Products />
+    </>
+  );
+}
+```
+
 ## Añadir un punto de venta
 
 Los datos de las tiendas se encuentran en el archivo `public/data/stores.js` y se importan al componente `PuntosDeVenta.jsx` durante la compilación.
