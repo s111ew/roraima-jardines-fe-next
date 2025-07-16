@@ -2,7 +2,7 @@ import Button from "../components/Button"
 import Link from "next/link"
 import ImageCard from "./ImageCard"
 import { useState, useEffect } from "react";
-import { prefix } from "@/public/data/prefix";
+
 import heroText from "@/public/data/text/hero";
 import styles from "@/styles/Hero.module.css"
 
@@ -34,12 +34,12 @@ function Hero() {
     <section 
       className={styles.hero}
       style={{
-        backgroundImage: `url(${prefix}/Texture.png), var(--hero-background)`,
+        backgroundImage: `url(/Texture.png), var(--hero-background)`,
         backgroundRepeat: "repeat, no-repeat",
         backgroundSize: "auto, cover",
       }}>
       <ImageCard
-        src={`${prefix}/homepage_images/HP3.webp`}
+        src={`/homepage_images/HP3.webp`}
         alt={"Una planta aptenia con flores rosadas de cerca"}
         caption={"Aptenia"}
         width={pageWidth < 1200 ? 144 : 216}
@@ -54,7 +54,7 @@ function Hero() {
         }}
       />
       <ImageCard
-        src={`${prefix}/homepage_images/HP4.webp`}
+        src={`/homepage_images/HP4.webp`}
         alt={"Varias plantas aptenias floreadas de tamaño mediano"}
         caption={"Aptenias"}
         width={122}
@@ -69,7 +69,7 @@ function Hero() {
         }}
       />
       <ImageCard
-        src={`${prefix}/homepage_images/HP1.webp`}
+        src={`/homepage_images/HP1.webp`}
         alt={"Planta Jade adulta rodeada por plantas similares de menor tamaño"}
         caption={"Jade"}
         width={122}
@@ -83,7 +83,7 @@ function Hero() {
         }}
       />
       <ImageCard
-        src={`${prefix}/homepage_images/HP2.webp`}
+        src={`/homepage_images/HP2.webp`}
         alt={"Primer plano de las hojas de una planta Jade con los bordes rojizos"}
         caption={"Jade"}
         width={145}

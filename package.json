@@ -6,11 +6,13 @@
     "dev": "CHOKIDAR_USEPOLLING=true CHOKIDAR_INTERVAL=1000 next dev",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "gh-pages -d out --nojekyll",
+    "deploy": "node deploy.mjs",
     "build": "NODE_ENV=production next build",
     "predeploy": "npm run build"
   },
   "dependencies": {
+    "basic-ftp": "^5.0.5",
+    "dotenv": "^17.2.0",
     "leaflet": "^1.9.4",
     "next": "15.2.4",
     "react": "^19.0.0",

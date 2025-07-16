@@ -1,4 +1,4 @@
-import { prefix } from '@/public/data/prefix'
+
 import styles from '../styles/Productos.module.css'
 import ProductCard from './ProductCardProduct'
 import { useEffect } from 'react';
@@ -26,7 +26,7 @@ export default function Products() {
       <div 
         className={`${styles.segment} ${styles.first}`}
         style={{
-        backgroundImage: `url(${prefix}/Texture.png), var(--hero-background)`,
+        backgroundImage: `url(/Texture.png), var(--hero-background)`,
         backgroundRepeat: "repeat, no-repeat",
         backgroundSize: "auto, cover",
       }}>
@@ -50,7 +50,7 @@ export default function Products() {
       <div 
         className={`${styles.segment} ${styles.second}`}
         style={{
-          backgroundImage: `url(${prefix}/Texture.png), var(--product-segment-2-background)`,
+          backgroundImage: `url(/Texture.png), var(--product-segment-2-background)`,
           backgroundRepeat: "repeat, no-repeat",
           backgroundSize: "auto, cover",
         }}>
@@ -73,7 +73,7 @@ export default function Products() {
       <div 
         className={`${styles.segment} ${styles.third}`}
         style={{
-          backgroundImage: `url(${prefix}/Texture.png), var(--product-segment-3-background)`,
+          backgroundImage: `url(/Texture.png), var(--product-segment-3-background)`,
           backgroundRepeat: "repeat, no-repeat",
           backgroundSize: "auto, cover",
         }}>

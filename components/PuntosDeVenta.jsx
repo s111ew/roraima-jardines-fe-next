@@ -5,7 +5,7 @@ import React from "react"
 import { useState, useEffect, useRef } from "react"
 import StoreCard from "./StoreCard"
 import stores from "@/public/data/stores"
-import { prefix } from "@/public/data/prefix"
+
 import locations from "@/public/data/locations"
 import calculateDistance from "@/public/tools/tools"
 import L, { map } from "leaflet"
@@ -47,7 +47,7 @@ export default function PuntosDeVenta() {
        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       }).addTo(mapRef.current);
       const icon = L.icon({
-        iconUrl: `${prefix}/marker.png`,
+        iconUrl: `/marker.png`,
         iconSize: [25, 41],
         iconAnchor: [12, 41]
       })
@@ -149,7 +149,7 @@ export default function PuntosDeVenta() {
       <div 
         className={`${styles.section} ${styles.intro}`}
         style={{
-          backgroundImage: `url(${prefix}/Texture.png), var(--hero-background)`,
+          backgroundImage: `url(/Texture.png), var(--hero-background)`,
           backgroundRepeat: "repeat, no-repeat",
           backgroundSize: "auto, cover",
         }}>
@@ -161,7 +161,7 @@ export default function PuntosDeVenta() {
       <div 
         className={`${styles.section} ${styles.body}`}
         style={{
-          backgroundImage: `url(${prefix}/Texture.png), var(--product-segment-2-background)`,
+          backgroundImage: `url(/Texture.png), var(--product-segment-2-background)`,
           backgroundRepeat: "repeat, no-repeat",
           backgroundSize: "auto, cover",
         }}>

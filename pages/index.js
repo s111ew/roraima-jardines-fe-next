@@ -13,7 +13,10 @@ export default function Home({ setCurrentPage }) {
     <>
       <Head>
         <title>Roraima Jardines</title>
-        <meta name="description" content="Discover our amazing products!" />
+        <meta
+          name="description"
+          content="Sustrato y abono 100% ecológico, hecho en Aragón. Para plantas, jardín o huerto. Notarás la diferencia en la salud de tus plantas y el sabor de tus frutos."
+        />
         <meta name="theme-color" content="#1e3321" />
         <meta
           name="viewport"

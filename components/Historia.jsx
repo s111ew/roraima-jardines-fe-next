@@ -1,4 +1,4 @@
-import { prefix } from "@/public/data/prefix";
+
 import styles from "../styles/Historia.module.css"
 import ImageCard from "./ImageCard"
 import { useState, useEffect } from "react"
@@ -51,7 +51,7 @@ export default function Historia() {
         <div 
           className={`${styles.section} ${styles.first}`}
           style={{
-            backgroundImage: `url(${prefix}/Texture.png), var(--hero-background)`,
+            backgroundImage: `url(/Texture.png), var(--hero-background)`,
             backgroundRepeat: "repeat, no-repeat",
             backgroundSize: "auto, cover",
           }}>
@@ -60,7 +60,7 @@ export default function Historia() {
             {section1Text}
               <div className={styles.imageContainerFirst}>
                 <ImageCard
-                    src={`${prefix}/historia_images/Story3.webp`}
+                    src={`/historia_images/Story3.webp`}
                     width={pageWidth < 1200 ? 121/1.5 : 121}
                     height={pageWidth < 1200 ? 216/1.5 : 216}
                     alt="Primer plano de dos flores de Echinopsis blancas saliendo del mismo cáctus"
@@ -71,7 +71,7 @@ export default function Historia() {
                   { pageWidth < 650 ? "" :
                     <ImageCard
                     className={styles.image}
-                    src={`${prefix}/historia_images/Story11.webp`}
+                    src={`/historia_images/Story11.webp`}
                     width={pageWidth < 1200 ? 479/1.5 : 479}
                     height={pageWidth < 1200 ? 222/1.5 : 222}
                     alt="Grupo de cáctus Echinopsis de diferentes tamaños con flores blancas y rosadas abiertas hacia el sol"
@@ -79,7 +79,7 @@ export default function Historia() {
                     segment={1}
                   />}
                 <ImageCard
-                  src={`${prefix}/historia_images/Story1.webp`}
+                  src={`/historia_images/Story1.webp`}
                   width={pageWidth < 1200 ? 163/1.5 : 163}
                   height={pageWidth < 1200 ? 122/1.5 : 122}
                   alt="Primer plano de flores de Echinopsis"
@@ -94,7 +94,7 @@ export default function Historia() {
         <div 
           className={`${styles.section} ${styles.second}`}
           style={{
-            backgroundImage: `url(${prefix}/Texture.png), var(--product-segment-2-background)`,
+            backgroundImage: `url(/Texture.png), var(--product-segment-2-background)`,
             backgroundRepeat: "repeat, no-repeat",
             backgroundSize: "auto, cover",
           }}>
@@ -104,7 +104,7 @@ export default function Historia() {
               { pageWidth < 1200 ? '' :
                 <ImageCard
                   className={styles.image}
-                  src={`${prefix}/historia_images/Story 5.webp`}
+                  src={`/historia_images/Story 5.webp`}
                   width={257}
                   height={238}
                   alt="Diferentes variedades de cáctus y suculentas en diferentes tamaños plantados en el sustrato de Roraima Jardines"
@@ -115,7 +115,7 @@ export default function Historia() {
               }
               <ImageCard
                 className={styles.image}
-                src={`${prefix}/historia_images/Story 6.webp`}
+                src={`/historia_images/Story 6.webp`}
                 width={pageWidth < 1200 ? 185/1.5 : 185}
                 height={pageWidth < 1200 ? 169/1.5 : 169}
                 alt="Cáctus arcoiris"
@@ -127,7 +127,7 @@ export default function Historia() {
               { pageWidth < 521 ? '' :
                 <ImageCard
                   className={styles.image}
-                  src={`${prefix}/historia_images/Story7.webp`}
+                  src={`/historia_images/Story7.webp`}
                   width={pageWidth < 1200 ? 208/1.5 : 208}
                   height={pageWidth < 1200 ? 267/1.5 : 267}
                   alt="Suculenta Euphorbia Meloformis de la variedad 'Variegata'"
@@ -138,7 +138,7 @@ export default function Historia() {
               }
               <ImageCard
                 className={styles.image}
-                src={`${prefix}/historia_images/Story8.webp`}
+                src={`/historia_images/Story8.webp`}
                 width={pageWidth < 1200 ? 204/1.5 : 204}
                 height={pageWidth < 1200 ? 234/1.5 : 234}
                 alt="Vista superior de un cáctus 'Eriocyse senilis' con espinas largas rizadas y flores rosadas"
@@ -153,7 +153,7 @@ export default function Historia() {
         <div 
           className={`${styles.section} ${styles.third}`}
           style={{
-            backgroundImage: `url(${prefix}/Texture.png), var(--product-segment-3-background)`,
+            backgroundImage: `url(/Texture.png), var(--product-segment-3-background)`,
             backgroundRepeat: "repeat, no-repeat",
             backgroundSize: "auto, cover",
           }}>
@@ -162,7 +162,7 @@ export default function Historia() {
             <div className={styles.imageContainerThird}>
               <ImageCard
                 className={styles.image}
-                src={`${prefix}/historia_images/Story 10.webp`}
+                src={`/historia_images/Story 10.webp`}
                 width={613}
                 height={407}
                 alt="Monte Roraima en el Parque Nacional Canaima en Venezuela"

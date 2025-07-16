@@ -2,7 +2,7 @@ import Input from "./Input";
 import Button from "./Button";
 import styles from "../styles/ContactForm.module.css";
 import { useState } from "react";
-import { prefix } from "@/public/data/prefix";
+
 
 export default function ContactForm() {
   const [isSent, setIsSent] = useState(false);
@@ -78,7 +78,7 @@ export default function ContactForm() {
       <div className={`${styles.successMessage} ${isSent ? styles.visible : ''}`}>
         <p onClick={handleClose} className={styles.closeButton}>X</p>
         <div className={styles.messageContainer}>
-          <img className={styles.messageImage} src={`${prefix}/LogoBlk.svg`} alt="Logo" />
+          <img className={styles.messageImage} src={`/LogoBlk.svg`} alt="Logo" />
           <div className={styles.messageText}>
             <p>¡Gracias por tu mensaje!</p>
             <p>Hemos recibido tu consulta y te responderemos lo antes posible</p>

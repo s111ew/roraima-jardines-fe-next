@@ -1,7 +1,7 @@
 import styles from "../styles/Footer.module.css"
 import RollingText from "./RollingText"
 import Accordion from "./Accordion"
-import { prefix } from "@/public/data/prefix"
+
 import ContactForm from "./ContactForm"
 import footerText from "@/public/data/text/footer"
 import { useEffect, useState } from "react"
@@ -26,12 +26,6 @@ function Footer() {
 
   }, []);
 
-  const bodyText = footerText.bodyText.map((text, index) => {
-    return(
-      <p key={index}>{text}</p>
-    )
-  })
-
   const creditText = footerText.credit.map((credit, index) => {
     return(
       <p key={index}>{credit.title}<a href={credit.link} target="_blank" noreferrer="true">{credit.linkBody}</a></p>
@@ -43,7 +37,7 @@ function Footer() {
       id="footer" 
       className={`${styles.footer} section`}
       style={{
-        backgroundImage: `url(${prefix}/Texture.png), var(--footer-background)`,
+        backgroundImage: `url(/Texture.png), var(--footer-background)`,
         backgroundRepeat: "repeat, no-repeat",
         backgroundSize: "auto, cover",
       }}>
@@ -53,35 +47,22 @@ function Footer() {
         </div>
         <div className={styles.middle}>
           <h4 className={styles.subtitle}>{footerText.title}</h4>
-          <div className={styles.formContainer} >
-            <div className={styles.contactInfo}>
-              { pageWidth > 1199 ? (
-                <div className={styles.contactText}>
-                  {bodyText}
-                </div>) : (
-                <p>
-                  {footerText.bodyText[1]}
-                </p>
-                ) }
-              <div className={styles.contactLinks}>
-                <a className={styles.contactLink} href={`https://wa.me/${footerText.telNum.replace(/\D/g, '')}`} target="_blank">
-                  <img src={`${prefix}/whatsapp_black.svg`} alt="whatsapp logo"></img>
-                  <span>WhatsApp</span>
-                </a>
-                <a className={styles.contactLink} href={footerText.facebookLink} target="_blank" noreferrer="true">
-                  <img src={`${prefix}/facebook_black.svg`} alt="facebook logo"></img>
-                  <span>Facebook</span>
-                </a>
-                <a className={styles.contactLink} href={footerText.instagramLink} target="_blank" noreferrer="true">
-                  <img src={`${prefix}/instagram_black.svg`} alt="instagram logo"></img>
-                  <span>Instagram</span>
-                </a>
+          <p>{footerText.bodyText}</p>
+          <div className={styles.contactLinks}>
+            <a className={styles.contactLink} href={`https://wa.me/${footerText.telNum.replace(/\D/g, '')}`} target="_blank">
+              <img src={`/whatsapp_black.svg`} alt="whatsapp logo"></img>
+              <span>WhatsApp</span>
+            </a>
+            <a className={styles.contactLink} href={footerText.facebookLink} target="_blank" noreferrer="true">
+              <img src={`/facebook_black.svg`} alt="facebook logo"></img>
+              <span>Facebook</span>
+            </a>
+            <a className={styles.contactLink} href={footerText.instagramLink} target="_blank" noreferrer="true">
+              <img src={`/instagram_black.svg`} alt="instagram logo"></img>
+              <span>Instagram</span>
+            </a>
           </div>
-            </div>
-            <ContactForm />
-            { pageWidth < 1200 && <p>{footerText.bodyText[0]}</p> }
-            </div>
-          </div>
+        </div>
         <div className={styles.creditContainer}>
           <span>{footerText.copyright}</span>
           <Accordion
@@ -94,7 +75,7 @@ function Footer() {
             }
             location="footer"/>
         </div>
-      </div>
+        </div>
     </footer>
   )
 }

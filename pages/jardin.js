@@ -11,7 +11,10 @@ export default function Jardin({ setCurrentPage }) {
     <>
       <Head>
         <title>Jardín - Roraima Jardines</title>
-        <meta name="description" content="Discover our amazing products!" />
+        <meta
+          name="description"
+          content="Sigue nuestro calendario de preparaciones, sembrado, abonado y mantenimiento para sacarle el mejor partido a tu jardín durante todo el año. "
+        />
         <meta name="theme-color" content="#1e3321" />
         <meta
           name="viewport"

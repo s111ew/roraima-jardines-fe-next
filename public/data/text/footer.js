@@ -9,10 +9,8 @@ const footerText = {
     "jardines",
   ],
   title: "Consulta Con Nosotros",
-  bodyText: [
-    "Si tienes alguna duda o consulta, escríbenos aquí y te responderemos lo antes posible.",
-    "También puedes llamarnos o escribirnos:",
-  ],
+  bodyText:
+    "Si necesitas contactarnos puedes  llamarnos o escribirnos y te responderemos lo antes posible.",
   telNum: "+34 616626407",
   facebookLink:
     "https://www.facebook.com/people/Roraima-Jardines/100063591625020/",

@@ -11,7 +11,10 @@ export default function Productos({ setCurrentPage }) {
     <>
       <Head>
         <title>Productos - Roraima Jardines</title>
-        <meta name="Productos" content="" />
+        <meta
+          name="description"
+          content="Enceuntra la información mas detallada sobre todos nuestros productos y cómo usarlos."
+        />
         <meta name="theme-color" content="#1e3321" />
         <meta
           name="viewport"

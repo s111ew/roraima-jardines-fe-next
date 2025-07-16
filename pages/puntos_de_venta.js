@@ -15,7 +15,10 @@ export default function Puntos({ setCurrentPage }) {
     <>
       <Head>
         <title>Puntos de Venta - Roraima Jardines</title>
-        <meta name="description" content="Discover our amazing products!" />
+        <meta
+          name="description"
+          content="Si quieres probar nuestra tierra, encuentra aquí tu jardinería o vivero más cercano y los productos que ofrecen."
+        />
         <meta name="theme-color" content="#1e3321" />
         <meta
           name="viewport"

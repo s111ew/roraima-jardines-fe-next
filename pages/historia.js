@@ -11,7 +11,10 @@ export default function NuestraHistoria({ setCurrentPage }) {
     <>
       <Head>
         <title>Historia - Roraima Jardines</title>
-        <meta name="description" content="Discover our amazing products!" />
+        <meta
+          name="description"
+          content="Conoce más sobre nosotros, nuestros valores y compromiso con el medio ambiente."
+        />
         <meta name="theme-color" content="#1e3321" />
         <meta
           name="viewport"

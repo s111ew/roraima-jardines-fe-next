@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image';
 import Button from '../components/Button';
 import styles from '../styles/Navbar.module.css'
-import { prefix } from '@/public/data/prefix';
+;
 
 function Navbar({ currentPage }) {
   const [pageWidth, setPageWidth] = useState(0);
@@ -71,7 +71,7 @@ function Navbar({ currentPage }) {
     <nav 
       className={styles.navbar}
       style={{
-        backgroundImage: `url(${prefix}/Texture.png), var(--navbar-background)`,
+        backgroundImage: `url(/Texture.png), var(--navbar-background)`,
         backgroundRepeat: "repeat, no-repeat",
         backgroundSize: "auto, cover",
         ...(isOpen && pageWidth < 1200 ? { height: "100vh" } : {}),
@@ -91,14 +91,14 @@ function Navbar({ currentPage }) {
           }}
         >
           <Image 
-            src={`${prefix}/LogoCol.svg`}
+            src={`/LogoCol.svg`}
             alt="Roraima Jardines logo"
             style={{zIndex: "10000", transition: "opacity 0.3s ease", opacity: isVisible ? "1" : "0"}} 
             fill
             priority
           />
           <Image 
-            src={`${prefix}/Logo.svg`}
+            src={`/Logo.svg`}
             alt="Roraima Jardines logo" 
             fill
             priority
@@ -110,7 +110,7 @@ function Navbar({ currentPage }) {
               className={styles.burgerContainer}
               onClick={toggleOpen}
             >
-              {isOpen ? <img src={`${prefix}/close.svg`}></img> : <img src={`${prefix}/burger.svg`}></img>}
+              {isOpen ? <img src={`/close.svg`}></img> : <img src={`/burger.svg`}></img>}
             </div>
           )
         }

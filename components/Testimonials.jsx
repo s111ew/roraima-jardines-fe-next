@@ -2,7 +2,7 @@ import TestimonialCard from "../components/TestimonialCard";
 import TestimonialCarousel from "./TestimonialCarousel";
 import ImageCard from "./ImageCard";
 import { useState, useEffect } from "react";
-import { prefix } from "@/public/data/prefix";
+
 import styles from "@/styles/Testimonials.module.css"
 import testimonialText from "@/public/data/text/testimonials";
 
@@ -29,7 +29,7 @@ function Testimonial() {
     <section 
       className={styles.testimonials}
       style={{
-        backgroundImage: `url(${prefix}/Texture.png), var(--testimonial-background)`,
+        backgroundImage: `url(/Texture.png), var(--testimonial-background)`,
         backgroundRepeat: "repeat, no-repeat",
         backgroundSize: "auto, cover",
       }}>
@@ -54,7 +54,7 @@ function Testimonial() {
         {
           pageWidth < 1200 ? '' : (
             <ImageCard
-              src={`${prefix}/homepage_images/HP12.webp`}
+              src={`/homepage_images/HP12.webp`}
               width={200}
               height={194}
               alt={'Cientos de plantas Mesen floreadas cubren el suelo creando un tapiz verde, naranja y violeta'}
@@ -66,7 +66,7 @@ function Testimonial() {
           )
         }
         <ImageCard
-          src={`${prefix}/homepage_images/HP13.webp`}
+          src={`/homepage_images/HP13.webp`}
           width={pageWidth < 1200 ? 170 : 262}
           height={pageWidth < 1200 ? 226 : 384}
           alt={'Primer plano de las flores violetas de las plantas Mesen'}
@@ -75,7 +75,7 @@ function Testimonial() {
           rateOfScroll={pageWidth < 1200 ? 1.015 : 1.035}
         />
         <ImageCard
-          src={`${prefix}/homepage_images/HP14.webp`}
+          src={`/homepage_images/HP14.webp`}
           width={pageWidth < 1200 ? 121 : 186}
           height={pageWidth < 1200 ? 160 : 248}
           alt={'Primer plano de las flores violetas de las plantas Mesen'}
@@ -87,7 +87,7 @@ function Testimonial() {
         {
           pageWidth < 1200 ? '' : (
             <ImageCard
-              src={`${prefix}/homepage_images/HP15.webp`}
+              src={`/homepage_images/HP15.webp`}
               width={232}
               height={383}
               alt={'Plano general de las plantas Mesen con flores naranjas'}

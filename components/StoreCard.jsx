@@ -1,4 +1,3 @@
-import { prefix } from "@/public/data/prefix"
 import styles from "../styles/StoreCard.module.css"
 import Accordion from "./Accordion"
 import Button from "./Button"
@@ -16,7 +15,7 @@ export default function StoreCard({ storeName, distance, address, zip, phone, is
     <div className={styles.storeCard}>
       <div className={styles.titleContainer}>
         <div className={styles.title}>
-          <img style={{ width: "25px", height: "41px"}} src={`${prefix}/marker.png`}></img>
+          <img style={{ width: "25px", height: "41px"}} src={`/marker.png`}></img>
           <h2 className={styles.name}>{storeName}</h2>
         </div>
         {isSearched && (

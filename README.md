@@ -164,7 +164,6 @@ Modular CSS file corresponding to each component, used to style them.
     ├── close.svg
     ├── [data]
         ├── locations.js
-        ├── prefix.js
         ├── seasons.js
         ├── stores.js
         └── [text]
@@ -365,12 +364,12 @@ Testimonial data lives in the file `public/data/text/testimonials.js` and is imp
 
 These can be edited/removed/added by editing the `testimonials` array in the `testimonialsText` object in this file, in the following format (NOTE: this component will only render a maximum of 6 testimonials so in order to add a new one, one must be removed):
 
-| Key       | Example                                                                                      | Description                                                                                 | Data Type |
-| --------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | --------- |
-| text      | `"Gran calidad de los productos, precio adecuado y buen servicio de entrega a las tiendas."` | Body of testimonial/review                                                                  | string    |
-| logo      | `"${prefix}/testimonial_images/flores-carmen.webp"`                                          | Path to image file of store's logo (NOTE: relative path must be prefixed with `${prefix}/`) | string    |
-| storeName | `"Flores Carmen"`                                                                            | Name of store giving review                                                                 | string    |
-| ownerName | `"Nacho y Leticia"`                                                                          | Name of owner(s) of store                                                                   | string    |
+| Key       | Example                                                                                      | Description                        | Data Type |
+| --------- | -------------------------------------------------------------------------------------------- | ---------------------------------- | --------- |
+| text      | `"Gran calidad de los productos, precio adecuado y buen servicio de entrega a las tiendas."` | Body of testimonial/review         | string    |
+| logo      | `"/testimonial_images/flores-carmen.webp"`                                                   | Path to image file of store's logo | string    |
+| storeName | `"Flores Carmen"`                                                                            | Name of store giving review        | string    |
+| ownerName | `"Nacho y Leticia"`                                                                          | Name of owner(s) of store          | string    |
 
 Resulting in an object that looks like this:
 
@@ -379,7 +378,7 @@ Resulting in an object that looks like this:
 testimonials: [
     {
       text: "Gran calidad de los productos, precio adecuado y buen servicio de entrega a las tiendas.",
-      logo: `${prefix}/testimonial_images/flores-carmen.webp`,
+      logo: `/testimonial_images/flores-carmen.webp`,
       storeName: "Flores Carmen",
       ownerName: "Nacho y Leticia",
     },

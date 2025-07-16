@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from '../styles/Accordion.module.css'
-import { prefix } from '@/public/data/prefix'
+
 
 export default function Accordion({ isOpenDefault, title, content, location }) {
   const [isOpen, setIsOpen] = useState(isOpenDefault)
@@ -21,12 +21,12 @@ export default function Accordion({ isOpenDefault, title, content, location }) {
               >
               <img
                 className={`${styles.icon} ${styles.top} ${isOpen ? styles.animating : ''}`} 
-                src={`${prefix}/arrow_black.svg`} 
+                src={`/arrow_black.svg`} 
                 alt="arrow" 
               />
               <img 
                 className={`${styles.icon} ${styles.bottom} ${isOpen ? styles.animating : ''}`} 
-                src={`${prefix}/arrow_black.svg`}
+                src={`/arrow_black.svg`}
                 alt="arrow"
               />
             </div>

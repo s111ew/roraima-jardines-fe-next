@@ -1,14 +1,12 @@
-import { prefix } from "@/out/data/prefix";
-
 const productsText = {
   title: "Nuestros Productos",
   products: [
     {
       images: [
-        { key: 1, src: `${prefix}/product_showcase/Sustrato1.webp` },
-        { key: 2, src: `${prefix}/product_showcase/Sustrato2.webp` },
-        { key: 3, src: `${prefix}/product_showcase/Sustrato3.webp` },
-        { key: 4, src: `${prefix}/product_showcase/Sustrato4.webp` },
+        { key: 1, src: `/product_showcase/Sustrato1.webp` },
+        { key: 2, src: `/product_showcase/Sustrato2.webp` },
+        { key: 3, src: `/product_showcase/Sustrato3.webp` },
+        { key: 4, src: `/product_showcase/Sustrato4.webp` },
       ],
       title: "Sustrato Universal",
       desc: "Nuestro sustrato contiene los nutrientes necesarios de liberación lenta para que tus plantas se desarrollen sanas y fuertes, tanto en jardín como en maceta.",
@@ -30,10 +28,10 @@ const productsText = {
     },
     {
       images: [
-        { key: 1, src: `${prefix}/product_showcase/Huerto1.webp` },
-        { key: 2, src: `${prefix}/product_showcase/Huerto2.webp` },
-        { key: 3, src: `${prefix}/product_showcase/Huerto3.webp` },
-        { key: 4, src: `${prefix}/product_showcase/Huerto4.webp` },
+        { key: 1, src: `/product_showcase/Huerto1.webp` },
+        { key: 2, src: `/product_showcase/Huerto2.webp` },
+        { key: 3, src: `/product_showcase/Huerto3.webp` },
+        { key: 4, src: `/product_showcase/Huerto4.webp` },
       ],
       title: "Huerto & Jardin",
       desc: "Nuestro abono permite aumentar la fertilidad del suelo, intensificando su capacidad para absorber los nutrientes necesarios para el desarrollo de las hortalizas.",
@@ -54,16 +52,16 @@ const productsText = {
     },
     {
       images: [
-        { key: 1, src: `${prefix}/product_showcase/Plantas1.webp` },
-        { key: 2, src: `${prefix}/product_showcase/Plantas2.webp` },
-        { key: 3, src: `${prefix}/product_showcase/Plantas3.webp` },
-        { key: 4, src: `${prefix}/product_showcase/Plantas4.webp` },
+        { key: 1, src: `/product_showcase/Plantas1.webp` },
+        { key: 2, src: `/product_showcase/Plantas2.webp` },
+        { key: 3, src: `/product_showcase/Plantas3.webp` },
+        { key: 4, src: `/product_showcase/Plantas4.webp` },
       ],
       imagesSmall: [
-        { key: 1, src: `${prefix}/product_showcase/Plantas1small.webp` },
-        { key: 2, src: `${prefix}/product_showcase/Plantas2.webp` },
-        { key: 3, src: `${prefix}/product_showcase/Plantas3.webp` },
-        { key: 4, src: `${prefix}/product_showcase/Plantas4small.webp` },
+        { key: 1, src: `/product_showcase/Plantas1small.webp` },
+        { key: 2, src: `/product_showcase/Plantas2.webp` },
+        { key: 3, src: `/product_showcase/Plantas3.webp` },
+        { key: 4, src: `/product_showcase/Plantas4small.webp` },
       ],
       title: "Plantas Ornamentales",
       desc: "Cultivamos variedades de plantas ornamentales poco comunes para hogares y jardines con nuestro sustrato. Disponible por encargo y próximamente en Etsy.",

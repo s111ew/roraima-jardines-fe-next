@@ -1,5 +1,5 @@
 import styles from "../styles/Button.module.css"
-import { prefix } from "@/public/data/prefix";
+
 import { useState } from "react";
 
 function Button({ text, onClick, colour }) {
@@ -40,13 +40,13 @@ function Button({ text, onClick, colour }) {
               <img
                 className={`${styles.icon} ${styles.top} ${isMoused ? styles.animating : ''}`} 
                 style={colour === 'white' ? {filter: 'invert(1)'} : undefined}
-                src={`${prefix}/arrow_white.svg`} 
+                src={`/arrow_white.svg`} 
                 alt="arrow" 
               />
               <img 
                 className={`${styles.icon} ${styles.bottom} ${isMoused ? styles.animating : ''}`} 
                 style={colour === 'white' ? {filter: 'invert(1)'} : undefined}
-                src={`${prefix}/arrow_white.svg`} 
+                src={`/arrow_white.svg`} 
                 alt="arrow" 
               />
             </div>

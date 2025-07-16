@@ -7,7 +7,7 @@ import Button from "./Button"
 import ButtonAlt from "./ButtonAlt"
 import { useState, useEffect } from "react"
 import seasons from "@/public/data/seasons"
-import { prefix } from "@/public/data/prefix"
+
 import jardinText from "@/public/data/text/hazTuJardin"
 
 export default function HazTuJardin() {
@@ -55,7 +55,7 @@ export default function HazTuJardin() {
 
   const downloadPDF = () => {
     const link = document.createElement('a');
-    link.href = `${prefix}/files/${jardinText.pdfName}`;
+    link.href = `/files/${jardinText.pdfName}`;
     link.download = `${jardinText.pdfName}`;
     document.body.appendChild(link);
     link.click();
@@ -67,7 +67,7 @@ export default function HazTuJardin() {
       <div 
         className={`${styles.section} ${styles.intro}`}
         style={{
-          backgroundImage: `url(${prefix}/Texture.png), var(--hero-background)`,
+          backgroundImage: `url(/Texture.png), var(--hero-background)`,
           backgroundRepeat: "repeat, no-repeat",
           backgroundSize: "auto, cover",
         }}>

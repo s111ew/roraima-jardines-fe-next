@@ -1,4 +1,4 @@
-import { prefix } from "@/public/data/prefix";
+
 import styles from "../styles/Input.module.css"
 
 function Input({ text, isTextArea, isErr, value, onChange }) {
@@ -27,7 +27,7 @@ function Input({ text, isTextArea, isErr, value, onChange }) {
       )}
       { isErr ? 
         <div className={styles.errContainer}>
-          <img className={styles.errIcon} src={`${prefix}/ErrorIcon.svg`} alt="error icon" />
+          <img className={styles.errIcon} src={`/ErrorIcon.svg`} alt="error icon" />
           <p className={styles.errMessage}>Información inválida</p>
         </div> : ''
       }

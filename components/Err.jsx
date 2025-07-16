@@ -2,7 +2,7 @@ import Button from "../components/Button"
 import Link from "next/link"
 import ImageCard from "./ImageCard"
 import { useState, useEffect } from "react";
-import { prefix } from "@/public/data/prefix";
+
 import styles from "../styles/Err.module.css"
 import notFoundText from "@/public/data/text/notFound";
 
@@ -34,7 +34,7 @@ function Error() {
     <section 
       className={styles.err}
       style={{
-        backgroundImage: `url(${prefix}/Texture.png), var(--hero-background)`,
+        backgroundImage: `url(/Texture.png), var(--hero-background)`,
         backgroundRepeat: "repeat, no-repeat",
         backgroundSize: "auto, cover",
       }}>
@@ -47,7 +47,7 @@ function Error() {
         { pageWidth < 670 ? "" :
           <>
             <ImageCard
-              src={`${prefix}/not_found_images/NF4.webp`}
+              src={`/not_found_images/NF4.webp`}
               alt={"Plantas aptenias en diferentes etapas de crecimiento en macetas pequeñas con Sustrato Universal"}
               caption={"Aptenias"}
               width={pageWidth < 1200 ? 173 : 259}
@@ -56,7 +56,7 @@ function Error() {
               rateOfScroll={1.1}
             />
             <ImageCard
-              src={`${prefix}/not_found_images/NF3.webp`}
+              src={`/not_found_images/NF3.webp`}
               alt={"Sustrato Universal"}
               caption={"Sustrato Universal"}
               width={pageWidth < 1200 ? 127 : 190}
@@ -68,7 +68,7 @@ function Error() {
           </>
         }
         <ImageCard
-          src={`${prefix}/not_found_images/NF2.webp`}
+          src={`/not_found_images/NF2.webp`}
           alt={"Aptenias en una bandeja de plántulas"}
           caption={"Aptenias"}
           width={pageWidth < 1200 ? 124 : 187}
@@ -77,7 +77,7 @@ function Error() {
           rateOfScroll={1.1}
         />
         <ImageCard
-          src={`${prefix}/not_found_images/NF1.webp`}
+          src={`/not_found_images/NF1.webp`}
           alt={"Aptenias recién plantadas en una bandeja de plántulas"}
           caption={"Aptenias"}
           width={pageWidth < 1200 ? 137 : 205}
