@@ -1,5 +1,5 @@
 const heroText = {
-  title: "Sustrato y abono 100% ecológico",
+  title: "Sustrato de interior y exterior, 100% ecológico",
   subtitle: "Para plantas más sanas y cultivos más sabrosos",
   buttonText: "Encuentra un punto de venta",
   information: [
@@ -13,7 +13,7 @@ const heroText = {
     },
     {
       title: "Hecho en Aragón",
-      subtitle: "Producico y envasado en Pinseque, Zaragoza.",
+      subtitle: "Producido y envasado en Pinseque, Zaragoza.",
     },
   ],
 };

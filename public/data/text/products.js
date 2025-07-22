@@ -34,7 +34,7 @@ const productsText = {
         { key: 4, src: `/product_showcase/Huerto4.webp` },
       ],
       title: "Huerto & Jardin",
-      desc: "Nuestro abono permite aumentar la fertilidad del suelo, intensificando su capacidad para absorber los nutrientes necesarios para el desarrollo de las hortalizas.",
+      desc: "Nuestro de sustrato de exterior permite aumentar la fertilidad del suelo, intensificando su capacidad para absorber los nutrientes necesarios para el desarrollo de las hortalizas.",
       sizes: "50l",
       accordionTitlePrimary: "Propiedades Físicas",
       accordionContentPrimary: [
@@ -46,7 +46,6 @@ const productsText = {
       ],
       accordionTitleSecondary: "Producción",
       accordionContentSecondary: [
-        "Vaporizada: Con este proceso se eliminan hongos, larvas, bacterias y pequeños insectos que perjudican el crecimiento de las plantas",
         "Envasada húmeda: ahorra agua desde el inicio",
       ],
     },
@@ -76,7 +75,7 @@ const productsText = {
       ],
       accordionTitleSecondary: "Producción",
       accordionContentSecondary: [
-        "Todas nuestras plantas son producidas y cuidadas en Zaragoza, en sustrato o abono de Roraima Jardines.",
+        "Todas nuestras plantas son producidas y cuidadas en Zaragoza, en sustrato de Roraima Jardines.",
       ],
     },
   ],

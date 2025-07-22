@@ -45,7 +45,7 @@ const jardinText = {
       list: [
         "Grava o piedras para el drenaje.",
         "Rellenar la maceta con Sustrato Universal",
-        "Colocar el cepellón de la planta y terminar de llenar con abono Huerto & Jardín.",
+        "Colocar el cepellón de la planta y terminar de llenar con sustrato de exterior Huerto & Jardín.",
       ],
     },
     {
